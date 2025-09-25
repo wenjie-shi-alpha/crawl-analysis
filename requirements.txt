@@ -1,0 +1,9 @@
+# 项目依赖
+requests>=2.31.0
+jieba>=0.42.1
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+wordcloud>=1.9.0
+tavily>=0.3.3

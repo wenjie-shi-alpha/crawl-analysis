@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+build/
+dist/
+.venv/
+.env/
+venv/
+
+# Project outputs
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/analysis/*
+!data/analysis/.gitkeep
+data/output/*
+!data/output/.gitkeep
+
+# Node leftovers
+node_modules/
+
+# Misc
+.DS_Store

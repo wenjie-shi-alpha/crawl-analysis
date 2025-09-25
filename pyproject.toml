@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "green-power-analysis"
+version = "0.1.0"
+description = "中国居民绿色电力消费驱动机制与障碍分析系统"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Research Team"}
+]
+dependencies = [
+    "requests>=2.31.0",
+    "jieba>=0.42.1",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "wordcloud>=1.9.0",
+    "tavily>=0.3.3",
+]
+
+[project.scripts]
+green-power-analysis = "green_power_analysis.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
