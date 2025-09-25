@@ -49,6 +49,8 @@ class GreenPowerPipeline:
             output_dir=str(self.paths.raw_dir),
             search_depth=self.config.tavily_search_depth,
             max_results_per_keyword=self.config.tavily_results_per_keyword,
+            api_base_url=self.config.tavily_api_base_url,
+            request_timeout=self.config.tavily_request_timeout,
         )
         results = crawler.crawl()
         if not results:

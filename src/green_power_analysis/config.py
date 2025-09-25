@@ -61,6 +61,8 @@ class PipelineConfig:
     keywords: List[str] = field(default_factory=lambda: list(DEFAULT_KEYWORDS))
     tavily_search_depth: str = "advanced"
     tavily_results_per_keyword: int = 10
+    tavily_api_base_url: str = "https://api.tavily.com/search"
+    tavily_request_timeout: int = 30
     ollama_model: str = "qwen2.5:7b"
     ollama_base_url: str = "http://localhost:11434"
 

@@ -44,6 +44,7 @@ projectResearch/
    ```
 
 2. **配置 Tavily API**
+   Tavily 调用通过官方 REST 接口完成，无需安装额外 Python 包，仅需提供 API Key。
    ```bash
    export TAVILY_API_KEY="your_api_key"  # Windows 使用 set 或 $Env:
    ```

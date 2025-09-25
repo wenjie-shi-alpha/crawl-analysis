@@ -20,7 +20,6 @@ dependencies = [
     "matplotlib>=3.7.0",
     "seaborn>=0.12.0",
     "wordcloud>=1.9.0",
-    "tavily>=0.3.3",
 ]
 
 [project.scripts]
