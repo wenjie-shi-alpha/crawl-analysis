@@ -22,8 +22,26 @@ dependencies = [
     "wordcloud>=1.9.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "black>=24.4.0",
+]
+
 [project.scripts]
 green-power-analysis = "green_power_analysis.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+include = "\\.pyi?$"
+extend-exclude = """
+(
+  ^/build/
+  | ^/dist/
+  | ^/node_modules/
+  | ^/venv/
+)
+"""

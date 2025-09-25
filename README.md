@@ -88,6 +88,10 @@ python -m green_power_analysis.cli --status
 - `--tavily-depth`: Tavily 搜索深度（`basic` / `advanced`）
 - `--tavily-max`: 每个关键词返回结果数量
 
+## 代码风格
+- 项目使用 Black 统一 Python 代码格式，可通过 `pip install -e .[dev]` 安装开发依赖，或在虚拟环境中单独执行 `pip install black`。
+- 激活虚拟环境后运行 `black .` 会按照 `pyproject.toml` 中的配置格式化代码，建议在提交代码前执行。
+
 ## 输出内容
 完整流程结束后，工作目录将生成以下内容：
 ```
