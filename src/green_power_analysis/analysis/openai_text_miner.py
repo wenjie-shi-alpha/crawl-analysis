@@ -1,4 +1,4 @@
-"""Text mining powered by a local Ollama model."""
+"""Text mining powered by the OpenAI API."""
 
 from __future__ import annotations
 
@@ -7,9 +7,9 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Iterable, List, Sequence
+from typing import Dict, List, Optional, Sequence
 
-import requests
+from openai import OpenAI
 
 from ..utils.io import read_json, write_json, write_text
 
@@ -31,43 +31,85 @@ BARRIER_FRAMEWORK: Dict[str, List[str]] = {
 
 
 @dataclass(slots=True)
-class OllamaClient:
-    """Minimal HTTP client for the Ollama REST API."""
+class OpenAIClient:
+    """Lightweight wrapper around the OpenAI SDK."""
 
-    base_url: str = "http://localhost:11434"
-    model: str = "qwen2.5:7b"
+    api_key: str
+    model: str
+    base_url: Optional[str] = None
+    organization: Optional[str] = None
+    project: Optional[str] = None
     timeout: int = 120
+    _client: OpenAI = field(init=False, repr=False)
+
+    def __post_init__(self) -> None:
+        if not self.api_key:
+            raise RuntimeError("未配置 OPENAI_API_KEY，无法调用 OpenAI 接口")
+        client_kwargs = {
+            "api_key": self.api_key,
+            "timeout": self.timeout,
+        }
+        if self.base_url:
+            client_kwargs["base_url"] = self.base_url
+        if self.organization:
+            client_kwargs["organization"] = self.organization
+        if self.project:
+            client_kwargs["project"] = self.project
+        self._client = OpenAI(**client_kwargs)
 
     def generate(self, prompt: str) -> str:
-        payload = {"model": self.model, "prompt": prompt, "stream": False}
         try:
-            response = requests.post(
-                f"{self.base_url.rstrip('/')}/api/generate",
-                json=payload,
-                timeout=self.timeout,
+            response = self._client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are an energy policy analyst. Respond in strict JSON."
+                        ),
+                    },
+                    {"role": "user", "content": prompt},
+                ],
+                response_format={"type": "json_object"},
             )
-            response.raise_for_status()
-        except requests.RequestException as exc:  # pragma: no cover - network errors
+        except Exception as exc:  # pragma: no cover - network errors
             raise RuntimeError(
-                "调用本地 Ollama 服务失败，请确认 ollama 正在运行并且模型已拉取"
+                "调用 OpenAI 模型失败，请检查网络、API Key 或模型配置"
             ) from exc
-        data = response.json()
-        return (data.get("response") or "").strip()
+        if not response.choices:
+            return ""
+        message = response.choices[0].message
+        content = getattr(message, "content", None)
+        if isinstance(content, str):
+            return content.strip()
+        if isinstance(content, list):
+            parts = [segment.get("text", "") for segment in content if isinstance(segment, dict)]
+            return "".join(parts).strip()
+        return ""
 
 
 @dataclass(slots=True)
-class OllamaTextMiner:
-    """Run high-level analysis with a local Ollama model."""
+class OpenAITextMiner:
+    """Run high-level analysis with an OpenAI-hosted model."""
 
     input_dir: Path
     output_dir: Path
-    model_name: str = "qwen2.5:7b"
-    base_url: str = "http://localhost:11434"
-    client: OllamaClient = field(init=False)
+    api_key: str
+    model_name: str
+    base_url: Optional[str] = None
+    organization: Optional[str] = None
+    project: Optional[str] = None
+    client: OpenAIClient = field(init=False)
 
     def __post_init__(self) -> None:
         self.output_dir.mkdir(parents=True, exist_ok=True)
-        self.client = OllamaClient(self.base_url, self.model_name)
+        self.client = OpenAIClient(
+            api_key=self.api_key,
+            model=self.model_name,
+            base_url=self.base_url,
+            organization=self.organization,
+            project=self.project,
+        )
 
     def run_analysis(self) -> str:
         processed_files = sorted(self.input_dir.glob("processed_*.json"))

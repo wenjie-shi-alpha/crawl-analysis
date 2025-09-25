@@ -5,7 +5,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
-from typing import List
+from typing import List, Optional
+
+import os
 
 
 DEFAULT_KEYWORDS: List[str] = [
@@ -63,8 +65,21 @@ class PipelineConfig:
     tavily_results_per_keyword: int = 10
     tavily_api_base_url: str = "https://api.tavily.com/search"
     tavily_request_timeout: int = 30
-    ollama_model: str = "qwen2.5:7b"
-    ollama_base_url: str = "http://localhost:11434"
+    openai_api_key: Optional[str] = field(
+        default_factory=lambda: os.getenv("OPENAI_API_KEY")
+    )
+    openai_model: str = field(
+        default_factory=lambda: os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+    )
+    openai_base_url: str = field(
+        default_factory=lambda: os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
+    )
+    openai_organization: Optional[str] = field(
+        default_factory=lambda: os.getenv("OPENAI_ORG") or None
+    )
+    openai_project: Optional[str] = field(
+        default_factory=lambda: os.getenv("OPENAI_PROJECT") or None
+    )
 
     def paths(self) -> PipelinePaths:
         paths = PipelinePaths(self.base_dir)

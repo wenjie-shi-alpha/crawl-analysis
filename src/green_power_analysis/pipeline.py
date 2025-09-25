@@ -6,7 +6,7 @@ import logging
 from dataclasses import asdict, dataclass
 from typing import Dict, List, Optional
 
-from .analysis import OllamaTextMiner
+from .analysis import OpenAITextMiner
 from .config import PipelineConfig
 from .crawling import TavilyCrawler
 from .processing import TextPreprocessor
@@ -69,12 +69,18 @@ class GreenPowerPipeline:
         return outputs
 
     def analyze(self) -> str:
-        logger.info("阶段三: 使用本地 Ollama 进行文本挖掘")
-        miner = OllamaTextMiner(
+        if not self.config.openai_api_key:
+            raise RuntimeError("未检测到 OPENAI_API_KEY，请在 .env 或环境变量中配置后重试")
+
+        logger.info("阶段三: 使用 OpenAI 模型进行文本挖掘")
+        miner = OpenAITextMiner(
             input_dir=self.paths.processed_dir,
             output_dir=self.paths.analysis_dir,
-            model_name=self.config.ollama_model,
-            base_url=self.config.ollama_base_url,
+            api_key=self.config.openai_api_key,
+            model_name=self.config.openai_model,
+            base_url=self.config.openai_base_url,
+            organization=self.config.openai_organization,
+            project=self.config.openai_project,
         )
         report_path = miner.run_analysis()
         logger.info("文本挖掘完成 -> %s", report_path)

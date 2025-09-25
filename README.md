@@ -49,13 +49,16 @@ projectResearch/
    export TAVILY_API_KEY="your_api_key"  # Windows 使用 set 或 $Env:
    ```
 
-3. **准备 Ollama 模型**
-   - 安装 [Ollama](https://ollama.com/) 并启动服务：`ollama serve`
-   - 拉取默认模型（可选其他模型）：
-     ```bash
-     ollama pull qwen2.5:7b
-     ```
-   - 若使用自定义模型或非默认地址，可在命令行参数中覆盖 `--ollama-model` 与 `--ollama-url`。
+3. **配置 OpenAI 接口**
+   项目依赖 OpenAI 兼容接口完成 LLM 分析，可在根目录创建 `.env`（或直接设置环境变量）：
+   ```bash
+   OPENAI_API_KEY=sk-your-key
+   OPENAI_MODEL=gpt-4o-mini          # 可选，默认为 gpt-4o-mini
+   OPENAI_BASE_URL=https://api.openai.com/v1  # 可选，兼容服务地址
+   OPENAI_ORG=your-org-id            # 可选，用于企业账号
+   OPENAI_PROJECT=your-project-id    # 可选，用于分项目计费
+   ```
+   运行时会自动读取上述配置，确保 API Key 拥有调用对应模型的权限。
 
 ## 快速上手
 ### 运行完整分析流程
@@ -83,8 +86,11 @@ python -m green_power_analysis.cli --status
 ### 常用参数
 - `--dir`: 指定数据工作目录（默认 `data`）
 - `--keywords`: 传入自定义检索关键词列表
-- `--ollama-model`: 指定 Ollama 模型名称
-- `--ollama-url`: 指定 Ollama 服务地址
+- `--openai-model`: 指定 OpenAI 模型名称
+- `--openai-base-url`: 覆盖 OpenAI 兼容服务地址
+- `--openai-api-key`: 临时覆盖 API Key（如需在命令行传递）
+- `--openai-org`: 设置 OpenAI 组织 ID
+- `--openai-project`: 设置 OpenAI 项目 ID
 - `--tavily-depth`: Tavily 搜索深度（`basic` / `advanced`）
 - `--tavily-max`: 每个关键词返回结果数量
 
@@ -108,7 +114,7 @@ data/
 - 项目遵循 `src` 布局，可通过 `pip install -e .` 安装到环境中。
 - `green_power_analysis/pipeline.py` 集中描述流水线逻辑，便于定制各阶段实现。
 - 预处理阶段依赖 `jieba` 分词，如需自定义词典可在 `TextPreprocessor` 中扩展。
-- 若 Ollama 输出非 JSON，系统会自动回退到基于关键词的统计逻辑。
+- 若 OpenAI 输出非 JSON，系统会自动回退到基于关键词的统计逻辑。
 
 ## 许可证
 MIT License

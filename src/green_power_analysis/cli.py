@@ -46,14 +46,29 @@ def build_parser() -> argparse.ArgumentParser:
         help="覆盖默认检索关键词",
     )
     parser.add_argument(
-        "--ollama-model",
+        "--openai-model",
         default=None,
-        help="指定 Ollama 模型名称",
+        help="指定 OpenAI 模型名称 (默认读取 OPENAI_MODEL)",
     )
     parser.add_argument(
-        "--ollama-url",
+        "--openai-base-url",
         default=None,
-        help="本地 Ollama 服务地址 (默认 http://localhost:11434)",
+        help="OpenAI 兼容服务地址 (默认读取 OPENAI_BASE_URL)",
+    )
+    parser.add_argument(
+        "--openai-api-key",
+        default=None,
+        help="覆盖 OPENAI_API_KEY 环境变量",
+    )
+    parser.add_argument(
+        "--openai-org",
+        default=None,
+        help="覆盖 OPENAI_ORG 环境变量",
+    )
+    parser.add_argument(
+        "--openai-project",
+        default=None,
+        help="覆盖 OPENAI_PROJECT 环境变量",
     )
     parser.add_argument(
         "--tavily-depth",
@@ -75,10 +90,16 @@ def apply_overrides(config: PipelineConfig, args: argparse.Namespace) -> Pipelin
         kwargs["base_dir"] = Path(args.dir)
     if args.keywords:
         kwargs["keywords"] = args.keywords
-    if args.ollama_model:
-        kwargs["ollama_model"] = args.ollama_model
-    if args.ollama_url:
-        kwargs["ollama_base_url"] = args.ollama_url
+    if args.openai_model:
+        kwargs["openai_model"] = args.openai_model
+    if args.openai_base_url:
+        kwargs["openai_base_url"] = args.openai_base_url
+    if args.openai_api_key:
+        kwargs["openai_api_key"] = args.openai_api_key
+    if args.openai_org:
+        kwargs["openai_organization"] = args.openai_org
+    if args.openai_project:
+        kwargs["openai_project"] = args.openai_project
     if args.tavily_depth:
         kwargs["tavily_search_depth"] = args.tavily_depth
     if args.tavily_max is not None:

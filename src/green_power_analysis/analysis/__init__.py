@@ -1,5 +1,5 @@
-"""Analysis modules leveraging local Ollama models."""
+"""Analysis modules leveraging OpenAI models."""
 
-from .ollama_text_miner import OllamaTextMiner
+from .openai_text_miner import OpenAITextMiner
 
-__all__ = ["OllamaTextMiner"]
+__all__ = ["OpenAITextMiner"]
