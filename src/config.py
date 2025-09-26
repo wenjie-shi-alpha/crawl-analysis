@@ -27,30 +27,36 @@ class PipelinePaths:
     """Container for all directories used by the pipeline."""
 
     base_dir: Path
+    results_dir: Path = field(init=False)
     raw_dir: Path = field(init=False)
     processed_dir: Path = field(init=False)
     analysis_dir: Path = field(init=False)
     output_dir: Path = field(init=False)
     charts_dir: Path = field(init=False)
     reports_dir: Path = field(init=False)
+    meta_dir: Path = field(init=False)
 
     def __post_init__(self) -> None:
-        self.raw_dir = self.base_dir / "raw"
-        self.processed_dir = self.base_dir / "processed"
-        self.analysis_dir = self.base_dir / "analysis"
-        self.output_dir = self.base_dir / "output"
+        self.results_dir = self.base_dir / "output"
+        self.raw_dir = self.results_dir / "raw"
+        self.processed_dir = self.results_dir / "processed"
+        self.analysis_dir = self.results_dir / "analysis"
+        self.output_dir = self.results_dir / "final"
         self.charts_dir = self.output_dir / "charts"
         self.reports_dir = self.output_dir / "reports"
+        self.meta_dir = self.results_dir / "meta"
 
     def ensure_directories(self) -> None:
         for path in (
             self.base_dir,
+            self.results_dir,
             self.raw_dir,
             self.processed_dir,
             self.analysis_dir,
             self.output_dir,
             self.charts_dir,
             self.reports_dir,
+            self.meta_dir,
         ):
             path.mkdir(parents=True, exist_ok=True)
 

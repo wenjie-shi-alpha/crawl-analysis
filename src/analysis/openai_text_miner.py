@@ -11,7 +11,7 @@ from typing import Dict, List, Optional, Sequence
 
 from openai import OpenAI
 
-from ..utils.io import read_json, write_json, write_text
+from utils.io import read_json, write_json, write_text
 
 DRIVING_FRAMEWORK: Dict[str, List[str]] = {
     "经济因素": ["成本效益", "价格优势", "补贴政策", "税收优惠", "投资回报"],

@@ -11,7 +11,7 @@ from typing import Dict, Iterable, List, Optional
 import requests
 from requests import Response, Session
 
-from ..utils.io import write_json
+from utils.io import write_json
 
 
 @dataclass(slots=True)
@@ -34,10 +34,12 @@ class TavilyCrawler:
             raise RuntimeError("未检测到 Tavily API 密钥，请设置环境变量 TAVILY_API_KEY")
         self._api_key = api_key
         self.session = requests.Session()
+        # 将请求头更新为正确的格式
         self.session.headers.update(
             {
                 "Content-Type": "application/json",
-                "X-Tavily-Api-Key": self._api_key,
+                # 修正：使用 Authorization 请求头，并添加 "Bearer " 前缀
+                "Authorization": f"Bearer {self._api_key}",
             }
         )
 

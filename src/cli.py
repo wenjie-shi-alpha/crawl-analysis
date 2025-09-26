@@ -9,8 +9,16 @@ from dataclasses import replace
 from pathlib import Path
 from typing import Dict
 
-from .config import PipelineConfig
-from .pipeline import GreenPowerPipeline
+try:
+    from dotenv import load_dotenv
+except ImportError:  # pragma: no cover - optional dependency
+    def load_dotenv() -> None:
+        return None
+
+from config import PipelineConfig
+from pipeline import GreenPowerPipeline
+
+load_dotenv()
 
 logging.basicConfig(
     level=logging.INFO,

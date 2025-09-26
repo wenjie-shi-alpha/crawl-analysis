@@ -13,7 +13,7 @@ from typing import Dict, Iterable, List, Set
 import jieba
 import jieba.analyse
 
-from ..utils.io import write_json
+from utils.io import write_json
 
 
 @dataclass(slots=True)

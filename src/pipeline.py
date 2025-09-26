@@ -6,12 +6,12 @@ import logging
 from dataclasses import asdict, dataclass
 from typing import Dict, List, Optional
 
-from .analysis import OpenAITextMiner
-from .config import PipelineConfig
-from .crawling import TavilyCrawler
-from .processing import TextPreprocessor
-from .reporting import ResultAnalyzer
-from .utils.io import write_json
+from analysis import OpenAITextMiner
+from config import PipelineConfig
+from crawling import TavilyCrawler
+from processing import TextPreprocessor
+from reporting import ResultAnalyzer
+from utils.io import write_json
 
 logger = logging.getLogger(__name__)
 
@@ -97,8 +97,11 @@ class GreenPowerPipeline:
         return outputs
 
     def _write_config(self) -> None:
-        config_path = self.paths.base_dir / "config.json"
+        config_path = self.paths.meta_dir / "config.json"
         data = asdict(self.config)
-        data["paths"] = {"base": str(self.paths.base_dir)}
+        data["paths"] = {
+            "base": str(self.paths.base_dir),
+            "results": str(self.paths.results_dir),
+        }
         write_json(config_path, data)
         logger.debug("保存配置文件 -> %s", config_path)

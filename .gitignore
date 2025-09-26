@@ -10,14 +10,20 @@ dist/
 venv/
 
 # Project outputs
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-data/analysis/*
-!data/analysis/.gitkeep
-data/output/*
-!data/output/.gitkeep
+data/output/raw/*
+!data/output/raw/.gitkeep
+data/output/processed/*
+!data/output/processed/.gitkeep
+data/output/analysis/*
+!data/output/analysis/.gitkeep
+data/output/final/*
+!data/output/final/.gitkeep
+data/output/final/charts/*
+!data/output/final/charts/.gitkeep
+data/output/final/reports/*
+!data/output/final/reports/.gitkeep
+data/output/meta/*
+!data/output/meta/.gitkeep
 
 # Node leftovers
 node_modules/

@@ -13,20 +13,24 @@
 ```
 projectResearch/
 ├── data/                     # 工作目录（默认忽略内容，仅保留结构）
-│   ├── raw/
-│   ├── processed/
-│   ├── analysis/
 │   └── output/
+│       ├── raw/              # Tavily 原始检索结果
+│       ├── processed/        # 结构化文本与统计
+│       ├── analysis/         # LLM 深度分析输出
+│       ├── final/            # 报告与图表
+│       │   ├── charts/
+│       │   └── reports/
+│       └── meta/             # 运行元数据（配置快照等）
 ├── src/
-│   └── green_power_analysis/
-│       ├── analysis/         # Ollama 文本挖掘
-│       ├── crawling/         # Tavily 检索
-│       ├── processing/       # 文本预处理
-│       ├── reporting/        # 报告与可视化
-│       ├── utils/
-│       ├── cli.py            # 命令行入口
-│       └── pipeline.py       # 流水线编排
-├── main.py                   # 兼容入口（等同于 `python -m green_power_analysis.cli`）
+│   ├── analysis/             # OpenAI 文本挖掘
+│   ├── crawling/             # Tavily 检索
+│   ├── processing/           # 文本预处理
+│   ├── reporting/            # 报告与可视化
+│   ├── utils/
+│   ├── cli.py                # 命令行入口
+│   ├── config.py
+│   └── pipeline.py           # 流水线编排
+├── main.py                   # 兼容入口（自动将 src 加入 PYTHONPATH）
 ├── pyproject.toml            # 项目配置 & 安装信息
 ├── requirements.txt          # 运行依赖
 ├── .vscode/settings.json     # VSCode 推荐配置
@@ -63,24 +67,22 @@ projectResearch/
 ## 快速上手
 ### 运行完整分析流程
 ```bash
-python -m green_power_analysis.cli --full
-# 或使用脚本入口
 python main.py --full
-# 安装后也可直接调用
+# 安装为包后，也可直接使用命令行脚本
 # green-power-analysis --full
 ```
 
 ### 分步骤执行
 ```bash
-python -m green_power_analysis.cli --step crawl
-python -m green_power_analysis.cli --step preprocess
-python -m green_power_analysis.cli --step analyze
-python -m green_power_analysis.cli --step report
+python main.py --step crawl
+python main.py --step preprocess
+python main.py --step analyze
+python main.py --step report
 ```
 
 ### 查看目录状态
 ```bash
-python -m green_power_analysis.cli --status
+python main.py --status
 ```
 
 ### 常用参数
@@ -102,17 +104,19 @@ python -m green_power_analysis.cli --status
 完整流程结束后，工作目录将生成以下内容：
 ```
 data/
-├── raw/                 # Tavily 搜索原始结果
-├── processed/           # 预处理后的结构化文本与统计
-├── analysis/            # LLM 分析产物（详细&综合报告）
 └── output/
-    ├── charts/          # 因素对比图、词云等
-    └── reports/         # HTML / Markdown 综合报告
+    ├── raw/             # Tavily 搜索原始结果
+    ├── processed/       # 预处理后的结构化文本与统计
+    ├── analysis/        # LLM 分析产物（详细&综合报告）
+    ├── final/
+    │   ├── charts/      # 因素对比图、词云等
+    │   └── reports/     # HTML / Markdown 综合报告
+    └── meta/            # 运行配置与其他元信息
 ```
 
 ## 开发提示
 - 项目遵循 `src` 布局，可通过 `pip install -e .` 安装到环境中。
-- `green_power_analysis/pipeline.py` 集中描述流水线逻辑，便于定制各阶段实现。
+- `src/pipeline.py` 集中描述流水线逻辑，便于定制各阶段实现。
 - 预处理阶段依赖 `jieba` 分词，如需自定义词典可在 `TextPreprocessor` 中扩展。
 - 若 OpenAI 输出非 JSON，系统会自动回退到基于关键词的统计逻辑。
 
