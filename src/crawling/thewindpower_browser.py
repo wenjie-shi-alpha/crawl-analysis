@@ -6,6 +6,7 @@ import argparse
 import csv
 import logging
 import time
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Iterable, List, Optional, Sequence
@@ -58,12 +59,40 @@ class TheWindPowerBrowser:
         (By.CSS_SELECTOR, "div.gsc-webResult a"),
         (By.CSS_SELECTOR, "table tr td a"),
     )
+    _DETAIL_URL_ALLOW_KEYWORDS: Sequence[str] = (
+        "windfarm",
+        "wind_farm",
+        "wind-farm",
+        "farm_en",
+        "windpower.net/wind",
+    )
+    _DETAIL_URL_DENY_KEYWORDS: Sequence[str] = (
+        "store_",
+        "premium",
+        "subscribe",
+        "account",
+        "shop",
+        "order",
+        "commercial",
+    )
 
-    _DETAIL_PROVINCE_LOCATORS: Sequence[tuple[str, str]] = (
-        (By.XPATH, "//td[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'province')]/following-sibling::td"),
-        (By.XPATH, "//td[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'state')]/following-sibling::td"),
-        (By.XPATH, "//td[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'region')]/following-sibling::td"),
-        (By.XPATH, "//b[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'province')]/parent::td/following-sibling::td"),
+    _COUNTY_LABEL_TOKENS: Sequence[str] = (
+        "county / zone",
+        "county/zone",
+        "county /zone",
+        "county/ zone",
+        "departement / zone",
+        "departement/zone",
+        "departement /zone",
+        "departement/ zone",
+        "departamento / zona",
+        "departamento/ zona",
+        "departamento /zona",
+        "departamento/zone",
+        "region / gebiet",
+        "region/gebiet",
+        "region /gebiet",
+        "region/ gebiet",
     )
 
     def __init__(self, config: BrowserConfig) -> None:
@@ -194,7 +223,29 @@ class TheWindPowerBrowser:
                 links.append((title, href))
             if links:
                 break
-        return links
+        return self._prioritize_links(links)
+
+    def _prioritize_links(
+        self, links: List[tuple[str, Optional[str]]]
+    ) -> List[tuple[str, Optional[str]]]:
+        def score(item: tuple[str, Optional[str]]) -> tuple[int, int]:
+            title, url = item
+            if not url:
+                return (3, 0)
+            url_lower = url.lower()
+            deny_match = any(keyword in url_lower for keyword in self._DETAIL_URL_DENY_KEYWORDS)
+            allow_match = any(keyword in url_lower for keyword in self._DETAIL_URL_ALLOW_KEYWORDS)
+            # Prefer allowed URLs first, neutral next, then denied ones last.
+            if deny_match and not allow_match:
+                rank = 2
+            elif allow_match:
+                rank = 0
+            else:
+                rank = 1
+            # Use length of URL as minor tie breaker to prioritise direct detail pages.
+            return (rank, len(url_lower))
+
+        return sorted(links, key=score)
 
     def _open_detail_and_extract(self, url: str) -> Optional[str]:
         if not self.driver or not self._wait:
@@ -204,21 +255,44 @@ class TheWindPowerBrowser:
         self.driver.get(url)
         try:
             self._wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-            province = self._locate_text(self._DETAIL_PROVINCE_LOCATORS)
+            province = self._locate_region_text()
         finally:
             self.driver.close()
             self.driver.switch_to.window(base_window)
         return province
 
-    def _locate_text(self, locators: Sequence[tuple[str, str]]) -> Optional[str]:
+    def _locate_region_text(self) -> Optional[str]:
         if not self.driver:
             return None
-        for by, selector in locators:
-            for element in self.driver.find_elements(by, selector):
-                text = element.text.strip()
-                if text:
-                    return text
+        return self._extract_county_zone_value()
+
+    def _extract_county_zone_value(self) -> Optional[str]:
+        if not self.driver:
+            return None
+        tokens = {token.strip() for token in self._COUNTY_LABEL_TOKENS}
+        for element in self.driver.find_elements(By.CSS_SELECTOR, "li.puce_texte"):
+            raw_text = element.text.strip()
+            if not raw_text:
+                continue
+            normalized = self._normalize_label(raw_text)
+            label_part = normalized.split(":", 1)[0].strip()
+            if label_part not in tokens:
+                continue
+            for anchor in element.find_elements(By.TAG_NAME, "a"):
+                anchor_text = anchor.text.strip()
+                if anchor_text:
+                    return anchor_text
+            if ":" in raw_text:
+                value_candidate = raw_text.split(":", 1)[1].strip()
+                if value_candidate:
+                    return value_candidate
         return None
+
+    @staticmethod
+    def _normalize_label(text: str) -> str:
+        normalized = unicodedata.normalize("NFKD", text or "")
+        no_diacritics = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+        return no_diacritics.lower().strip()
 
     @staticmethod
     def _wait_for_any(wait: WebDriverWait, locators: Sequence[tuple[str, str]]):
