@@ -96,6 +96,49 @@ python main.py --status
 - `--tavily-depth`: Tavily 搜索深度（`basic` / `advanced`）
 - `--tavily-max`: 每个关键词返回结果数量
 
+## 自动化风电厂省份查询
+为满足在 [thewindpower.net](https://www.thewindpower.net/) 上批量查询风电厂所属省份的需求，新增了基于 Selenium 的浏览器自动化脚本 `src/crawling/thewindpower_browser.py`。
+
+### 准备工作
+- 安装 Chrome/Chromium 浏览器。
+- 安装与浏览器版本匹配的 `chromedriver` 并放入 PATH，或在运行脚本时通过 `--driver-path` 指定驱动路径。使用 Selenium 4 自带的 Selenium Manager 也可自动下载驱动（首次运行需外网访问）。
+- 准备包含风电厂名称的 CSV 文件，默认列名为 `name`。
+
+### 运行示例
+```bash
+# 建议在虚拟环境中运行；如未安装为包，可先将 src 加入 PYTHONPATH
+PYTHONPATH=src python -m crawling.thewindpower_browser \
+  data/windfarms.csv \
+  data/output/windfarms_province.csv \
+  --name-column name \
+  --delay 2.0
+```
+
+常用选项：
+- `--headed`：以可视化方式启动浏览器，便于调试；默认后台无界面运行。
+- `--wait`：控制元素查找超时时间（秒），默认 15。
+- `--delay`：每次查询之间的休眠秒数，默认 1.5，建议视服务器限制适当增大。
+- `--driver-path`：当驱动不在 PATH 中时，显式指定 `chromedriver` 位置。
+- `--remote-url`：连接远程 WebDriver 服务（例如 `http://192.168.1.10:62256`）。
+
+### 远程 chromedriver（Windows 主机 + Ubuntu 虚拟机）
+若脚本运行在 Windows 上的 Ubuntu 虚拟机，而 `chromedriver` 在宿主 Windows 中运行，可按以下流程连接：
+1. 在 Windows 上启动 `chromedriver.exe`，指定监听端口：
+   ```powershell
+   .\chromedriver.exe --port=62256 --allowed-origins=* --allowed-ips=* 
+   ```
+   如需绑定到特定地址，可使用 `--ip=0.0.0.0`。
+2. 确认 Windows 防火墙或安全软件放行该端口；若两台机器跨网络，还需在路由器或 VPN 中开放 62256。
+3. 在 Ubuntu 虚拟机上运行脚本，通过 `--remote-url` 指定宿主 Windows 的局域网/桥接地址（在宿主中执行 `ipconfig` 获取）：
+   ```bash
+   PYTHONPATH=src python -m crawling.thewindpower_browser \
+     data/windfarms.csv \
+     data/output/windfarms_province.csv \
+     --remote-url http://WINDOWS_IP:62256 \
+     --delay 2.5
+   ```
+   如需观察浏览器，请在启动 chromedriver 时加入 `--verbose` 并在脚本侧添加 `--headed`。
+
 ## 代码风格
 - 项目使用 Black 统一 Python 代码格式，可通过 `pip install -e .[dev]` 安装开发依赖，或在虚拟环境中单独执行 `pip install black`。
 - 激活虚拟环境后运行 `black .` 会按照 `pyproject.toml` 中的配置格式化代码，建议在提交代码前执行。
