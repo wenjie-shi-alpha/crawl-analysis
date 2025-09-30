@@ -12,6 +12,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Iterable, List, Optional, Sequence
 
+from pypinyin import lazy_pinyin
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
@@ -145,24 +146,43 @@ class TheWindPowerBrowser:
     ) -> List[dict]:
         results: List[dict] = []
         cache: dict[str, dict] = {}
+        pinyin_cache: dict[str, dict] = {}
         if preloaded_results:
             for key, value in preloaded_results.items():
                 if not key:
                     continue
-                status = value.get("status")
-                if status == "ok":
-                    cache[key] = dict(value)
+                cached_value = dict(value)
+                cache[key] = dict(cached_value)
+                pinyin_key = self._compute_pinyin_key(key)
+                if pinyin_key:
+                    pinyin_cache[pinyin_key] = dict(cached_value)
         for name in names:
             clean_name = name.strip()
             if not clean_name:
                 continue
+            pinyin_key = self._compute_pinyin_key(clean_name)
             cached = cache.get(clean_name)
+            cache_hit_reason = "exact"
+            if not cached and pinyin_key:
+                cached = pinyin_cache.get(pinyin_key)
+                cache_hit_reason = "pinyin"
             if cached:
-                logger.info("Skipping %s; already processed successfully", clean_name)
                 cached_row = dict(cached)
+                cached_row["name"] = clean_name
+                if cache_hit_reason == "pinyin" and cached.get("name") != clean_name:
+                    logger.info(
+                        "Skipping %s; pinyin matches previously processed name %s",
+                        clean_name,
+                        cached.get("name"),
+                    )
+                else:
+                    logger.info("Skipping %s; already processed successfully", clean_name)
                 results.append(cached_row)
                 if on_result:
                     on_result(cached_row)
+                cache[clean_name] = dict(cached_row)
+                if pinyin_key:
+                    pinyin_cache[pinyin_key] = dict(cached_row)
                 continue
             logger.info("Searching province for %s", clean_name)
             try:
@@ -181,8 +201,10 @@ class TheWindPowerBrowser:
             if on_result:
                 on_result(data)
             time.sleep(self.config.delay_between_queries)
-            if data.get("status") == "ok":
-                cache[clean_name] = dict(data)
+            cached_data = dict(data)
+            cache[clean_name] = cached_data
+            if pinyin_key:
+                pinyin_cache[pinyin_key] = dict(cached_data)
         return results
 
     def lookup_province(self, name: str) -> dict:
@@ -328,6 +350,18 @@ class TheWindPowerBrowser:
         normalized = unicodedata.normalize("NFKD", text or "")
         no_diacritics = "".join(ch for ch in normalized if not unicodedata.combining(ch))
         return no_diacritics.lower().strip()
+
+    @staticmethod
+    def _compute_pinyin_key(text: str) -> str:
+        if not text:
+            return ""
+        normalized = unicodedata.normalize("NFKC", text)
+        tokens = lazy_pinyin(normalized, errors="ignore")
+        candidate = "".join(tokens)
+        if not candidate:
+            candidate = normalized
+        filtered = "".join(ch for ch in candidate if ch.isalnum())
+        return filtered.lower()
 
     @staticmethod
     def _wait_for_any(wait: WebDriverWait, locators: Sequence[tuple[str, str]]):
