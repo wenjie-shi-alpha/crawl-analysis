@@ -7,6 +7,7 @@ import csv
 import logging
 import time
 import unicodedata
+from urllib.parse import urljoin, urlparse
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Iterable, List, Optional, Sequence
@@ -140,11 +141,28 @@ class TheWindPowerBrowser:
         self,
         names: Iterable[str],
         on_result: Optional[Callable[[dict], None]] = None,
+        preloaded_results: Optional[dict[str, dict]] = None,
     ) -> List[dict]:
         results: List[dict] = []
+        cache: dict[str, dict] = {}
+        if preloaded_results:
+            for key, value in preloaded_results.items():
+                if not key:
+                    continue
+                status = value.get("status")
+                if status == "ok":
+                    cache[key] = dict(value)
         for name in names:
             clean_name = name.strip()
             if not clean_name:
+                continue
+            cached = cache.get(clean_name)
+            if cached:
+                logger.info("Skipping %s; already processed successfully", clean_name)
+                cached_row = dict(cached)
+                results.append(cached_row)
+                if on_result:
+                    on_result(cached_row)
                 continue
             logger.info("Searching province for %s", clean_name)
             try:
@@ -163,6 +181,8 @@ class TheWindPowerBrowser:
             if on_result:
                 on_result(data)
             time.sleep(self.config.delay_between_queries)
+            if data.get("status") == "ok":
+                cache[clean_name] = dict(data)
         return results
 
     def lookup_province(self, name: str) -> dict:
@@ -215,15 +235,30 @@ class TheWindPowerBrowser:
         for by, selector in self._RESULT_LINK_LOCATORS:
             for element in self.driver.find_elements(by, selector):
                 title = element.text.strip()
-                href = element.get_attribute("data-ctorig") or element.get_attribute("href")
+                href_raw = element.get_attribute("data-ctorig") or element.get_attribute("href")
+                href = self._normalise_detail_url(href_raw)
+                if not href:
+                    continue
                 key = f"{title}|{href}"
-                if not href or key in seen:
+                if key in seen:
                     continue
                 seen.add(key)
                 links.append((title, href))
             if links:
                 break
         return self._prioritize_links(links)
+
+    def _normalise_detail_url(self, href: Optional[str]) -> Optional[str]:
+        if not href:
+            return None
+        trimmed = href.strip()
+        if not trimmed or trimmed.lower().startswith("javascript:"):
+            return None
+        absolute = urljoin(SEARCH_URL, trimmed)
+        parsed = urlparse(absolute)
+        if parsed.scheme not in {"http", "https"}:
+            return None
+        return absolute
 
     def _prioritize_links(
         self, links: List[tuple[str, Optional[str]]]
@@ -318,6 +353,14 @@ def read_names(path: Path, column: str) -> List[str]:
         return [row[column] for row in reader if row.get(column)]
 
 
+def load_existing_results(path: Path) -> List[dict]:
+    if not path.exists():
+        return []
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        return list(reader)
+
+
 def write_output(path: Path, rows: Iterable[dict]) -> None:
     rows = list(rows)
     if not rows:
@@ -398,6 +441,16 @@ def run(argv: Optional[Sequence[str]] = None) -> None:
     if not names:
         logger.warning("No names found in %s", config.input_path)
         return
+    existing_rows = load_existing_results(config.output_path)
+    preloaded_index: dict[str, dict] = {}
+    for row in existing_rows:
+        name_value = (row.get("name") or "").strip()
+        if not name_value:
+            continue
+        if row.get("status") == "ok":
+            preloaded_index[name_value] = dict(row)
+    if preloaded_index:
+        logger.info("Loaded %d previously successful records", len(preloaded_index))
     config.output_path.parent.mkdir(parents=True, exist_ok=True)
     with config.output_path.open("w", encoding="utf-8", newline="") as handle:
         writer: Optional[csv.DictWriter] = None
@@ -413,7 +466,7 @@ def run(argv: Optional[Sequence[str]] = None) -> None:
             handle.flush()
 
         with TheWindPowerBrowser(config) as browser:
-            rows = browser.process(names, on_result=emit)
+            rows = browser.process(names, on_result=emit, preloaded_results=preloaded_index)
     logger.info("Saved %d rows to %s", len(rows), config.output_path)
 
 
