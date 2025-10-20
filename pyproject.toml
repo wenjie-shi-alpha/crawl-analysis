@@ -38,7 +38,15 @@ green-power-analysis = "cli:main"
 where = ["src"]
 
 [tool.setuptools]
-py-modules = ["cli", "config", "pipeline"]
+py-modules = [
+    "cli",
+    "config",
+    "pipeline",
+    "crawl_all_years",
+    "crawl_noaa_complete",
+    "fetch_noaa_archive",
+    "fetch_noaa_forecast",
+]
 
 [tool.black]
 line-length = 88

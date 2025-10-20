@@ -57,7 +57,7 @@ projectResearch/
    项目依赖 OpenAI 兼容接口完成 LLM 分析，可在根目录创建 `.env`（或直接设置环境变量）：
    ```bash
    OPENAI_API_KEY=sk-your-key
-   OPENAI_MODEL=gpt-4o-mini          # 可选，默认为 gpt-4o-mini
+   OPENAI_MODEL=gpt-4.1-mini          # 可选，默认为 gpt-4o-mini
    OPENAI_BASE_URL=https://api.openai.com/v1  # 可选，兼容服务地址
    OPENAI_ORG=your-org-id            # 可选，用于企业账号
    OPENAI_PROJECT=your-project-id    # 可选，用于分项目计费
