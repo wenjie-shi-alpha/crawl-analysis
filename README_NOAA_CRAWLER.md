@@ -2,35 +2,11 @@
 
 ## 概述
 
-这个项目包含三个用于从NOAA（美国国家飓风中心）获取飓风预报数据的爬虫脚本。
+这个项目提供一个交互式脚本，用于从NOAA（美国国家飓风中心）批量获取完整的飓风预报数据。同时，`crawling.noaa_crawler` 模块还暴露了按需下载档案索引与单页预报文本的工具类。
 
 ## 脚本说明
 
-### 1. `src/fetch_noaa_archive.py` - 档案索引爬虫
-获取NOAA飓风档案主页和年份索引页面的HTML。
-
-**用途：**
-- 获取档案主页列表
-- 下载特定年份的索引页
-
-**运行：**
-```bash
-python3 src/fetch_noaa_archive.py
-```
-
-### 2. `src/fetch_noaa_forecast.py` - 单个预报文本提取器
-从单个预报页面提取纯文本内容（灰色框中的预报文本）。
-
-**用途：**
-- 测试单个URL的文本提取
-- 批量下载同一风暴的多个预报
-
-**运行：**
-```bash
-python3 src/fetch_noaa_forecast.py
-```
-
-### 3. `src/crawl_noaa_complete.py` - 完整数据爬虫 ⭐ **推荐使用**
+### `src/crawl_all_years.py` - 完整数据爬虫 ⭐ **推荐使用**
 系统化下载每年所有气旋的完整预报数据。
 
 **功能：**
@@ -46,7 +22,7 @@ python3 src/fetch_noaa_forecast.py
 
 **运行：**
 ```bash
-python3 src/crawl_noaa_complete.py
+python3 src/crawl_all_years.py
 ```
 
 **交互式选项：**
@@ -99,25 +75,29 @@ data/output/raw/noaa_complete/
 
 ### 快速开始 - 下载2023年所有数据
 ```bash
-python3 src/crawl_noaa_complete.py
+python3 src/crawl_all_years.py
 # 选择 1，然后输入 2023
 ```
 
 ### 批量下载多年数据
 ```bash
-python3 src/crawl_noaa_complete.py
+python3 src/crawl_all_years.py
 # 选择 2，然后输入 2020,2021,2022,2023
 ```
 
 ### 查看已下载内容
 ```bash
-python3 src/crawl_noaa_complete.py
+python3 src/crawl_all_years.py
 # 选择 5
 ```
 
 ### 编程方式使用
 ```python
-from crawling.noaa_complete_crawler import NOAACompleteCrawler
+from crawling.noaa_crawler import (
+    NOAAArchiveCrawler,
+    NOAACompleteCrawler,
+    NOAAForecastExtractor,
+)
 
 # 创建爬虫实例
 crawler = NOAACompleteCrawler(output_dir="my_data")
@@ -130,6 +110,10 @@ crawler.crawl_years([2021, 2022, 2023])
 
 # 查看统计
 print(crawler.stats)
+
+# 其他工具
+archive_crawler = NOAAArchiveCrawler()
+forecast_extractor = NOAAForecastExtractor()
 ```
 
 ## 依赖要求

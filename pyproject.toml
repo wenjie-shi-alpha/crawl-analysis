@@ -43,9 +43,6 @@ py-modules = [
     "config",
     "pipeline",
     "crawl_all_years",
-    "crawl_noaa_complete",
-    "fetch_noaa_archive",
-    "fetch_noaa_forecast",
 ]
 
 [tool.black]

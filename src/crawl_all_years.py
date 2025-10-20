@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """一键爬取所有年份的NOAA飓风数据."""
 
-from crawling.noaa_complete_crawler import NOAACompleteCrawler
+from crawling.noaa_crawler import NOAACompleteCrawler
 
 def main():
     print("=" * 70)

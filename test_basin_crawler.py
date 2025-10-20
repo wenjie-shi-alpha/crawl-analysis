@@ -3,7 +3,7 @@
 测试海区分类功能的爬虫
 """
 
-from crawling.noaa_complete_crawler import NOAACompleteCrawler
+from crawling.noaa_crawler import NOAACompleteCrawler
 
 def main():
     print("="*70)

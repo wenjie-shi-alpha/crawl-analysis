@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
-"""
-NOAA飓风数据完整爬虫
-系统化下载每年所有气旋的4种预报数据类型
-目录结构: 年份/气旋名/数据类型/时间序列文件
-"""
+"""NOAA飓风数据抓取与提取相关工具集合."""
 
-import os
 import re
 import time
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import Dict, List, Optional
 from datetime import datetime
 from urllib.parse import urljoin
 
@@ -580,6 +575,299 @@ class NOAACompleteCrawler:
                         
                         file_count = len(list(data_type_dir.glob('*.txt')))
                         print(f"      {data_type_dir.name}/  ({file_count} 文件)")
+
+
+class NOAAArchiveCrawler:
+    """从NOAA飓风档案网站获取HTML内容的爬虫."""
+
+    def __init__(
+        self,
+        base_url: str = "https://www.nhc.noaa.gov/archive/",
+        output_dir: str = "data/output/raw/noaa_archive",
+        timeout: int = 30,
+    ):
+        """
+        初始化NOAA档案爬虫.
+
+        Args:
+            base_url: NOAA档案基础URL
+            output_dir: 输出目录路径
+            timeout: 请求超时时间(秒)
+        """
+        self.base_url = base_url
+        self.output_dir = Path(output_dir)
+        self.timeout = timeout
+        self.session = requests.Session()
+
+        self.session.headers.update(
+            {
+                "User-Agent": (
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/91.0.4472.124 Safari/537.36"
+                )
+            }
+        )
+
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+
+    def fetch_page(self, url: Optional[str] = None) -> str:
+        """
+        获取指定URL的HTML内容.
+
+        Args:
+            url: 要获取的URL，如果为None则使用base_url
+
+        Returns:
+            页面的HTML内容
+        """
+        target_url = url or self.base_url
+
+        print(f"正在获取: {target_url}")
+
+        response = self.session.get(target_url, timeout=self.timeout)
+        response.raise_for_status()
+
+        print(f"✓ 成功获取页面 (状态码: {response.status_code})")
+        return response.text
+
+    def save_html(
+        self,
+        html_content: str,
+        filename: Optional[str] = None,
+        subdirectory: Optional[str] = None,
+    ) -> Path:
+        """
+        将HTML内容保存到本地文件.
+
+        Args:
+            html_content: HTML内容
+            filename: 文件名，如果为None则自动生成
+            subdirectory: 子目录名称
+
+        Returns:
+            保存文件的路径
+        """
+        save_dir = self.output_dir
+        if subdirectory:
+            save_dir = save_dir / subdirectory
+            save_dir.mkdir(parents=True, exist_ok=True)
+
+        if filename is None:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"noaa_archive_{timestamp}.html"
+
+        if not filename.endswith(".html"):
+            filename += ".html"
+
+        filepath = save_dir / filename
+
+        with open(filepath, "w", encoding="utf-8") as file:
+            file.write(html_content)
+
+        print(f"✓ HTML内容已保存到: {filepath}")
+        print(f"  文件大小: {len(html_content):,} 字符")
+
+        return filepath
+
+    def fetch_and_save(
+        self,
+        url: Optional[str] = None,
+        filename: Optional[str] = None,
+        subdirectory: Optional[str] = None,
+    ) -> Path:
+        """获取页面HTML并保存到本地."""
+        html_content = self.fetch_page(url)
+        return self.save_html(html_content, filename, subdirectory)
+
+    def parse_archive_index(self, html_content: str) -> List[Dict[str, str]]:
+        """解析档案索引页面，提取所有年份链接."""
+        soup = BeautifulSoup(html_content, "html.parser")
+        links: List[Dict[str, str]] = []
+
+        for link in soup.find_all("a", href=True):
+            href = link["href"]
+            text = link.get_text(strip=True)
+
+            if href.startswith("http"):
+                full_url = href
+            else:
+                full_url = self.base_url.rstrip("/") + "/" + href.lstrip("/")
+
+            links.append(
+                {
+                    "text": text,
+                    "href": href,
+                    "full_url": full_url,
+                }
+            )
+
+        print(f"✓ 解析到 {len(links)} 个链接")
+        return links
+
+    def crawl_multiple_years(self, years: List[int]) -> List[Path]:
+        """抓取多个年份的档案页面."""
+        saved_files: List[Path] = []
+
+        for year in years:
+            try:
+                year_url = f"{self.base_url.rstrip('/')}/{year}/"
+                filename = f"archive_{year}.html"
+
+                filepath = self.fetch_and_save(
+                    url=year_url,
+                    filename=filename,
+                    subdirectory=str(year),
+                )
+                saved_files.append(filepath)
+            except Exception as exc:
+                print(f"✗ 获取 {year} 年数据失败: {exc}")
+                continue
+
+        return saved_files
+
+
+class NOAAForecastExtractor:
+    """NOAA飓风预报文本提取器."""
+
+    def __init__(self, output_dir: str = "data/output/raw/noaa_forecasts"):
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+
+        self.session = requests.Session()
+        self.session.headers.update(
+            {
+                "User-Agent": (
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36"
+                )
+            }
+        )
+
+    def fetch_page(self, url: str) -> Optional[str]:
+        """获取网页HTML内容."""
+        try:
+            print(f"正在获取: {url}")
+            response = self.session.get(url, timeout=30)
+            response.raise_for_status()
+            print(f"✓ 成功获取 (状态码: {response.status_code})")
+            return response.text
+        except Exception as exc:
+            print(f"✗ 获取失败: {exc}")
+            return None
+
+    def extract_forecast_text(self, html_content: str) -> Optional[str]:
+        """从HTML中提取预报文本内容."""
+        soup = BeautifulSoup(html_content, "html.parser")
+
+        pre_tags = soup.find_all("pre")
+        if pre_tags:
+            forecast_pre = max(pre_tags, key=lambda tag: len(tag.get_text()))
+            forecast_text = forecast_pre.get_text().strip()
+            if len(forecast_text) > 100:
+                return forecast_text
+
+        content_divs = soup.find_all(
+            "div", class_=["textproduct", "text-product", "forecast-text"]
+        )
+        for div in content_divs:
+            text = div.get_text().strip()
+            if len(text) > 100:
+                return text
+
+        text = soup.get_text()
+        if "ZCZC" in text:
+            lines = text.split("\n")
+            in_forecast = False
+            forecast_lines: List[str] = []
+
+            for line in lines:
+                if "ZCZC" in line or in_forecast:
+                    in_forecast = True
+                    forecast_lines.append(line)
+                    if "NNNN" in line:
+                        break
+
+            if forecast_lines:
+                return "\n".join(forecast_lines).strip()
+
+        print("⚠ 未能提取到预报文本")
+        return None
+
+    def save_forecast(
+        self,
+        forecast_text: str,
+        filename: str,
+        save_html: bool = False,
+        html_content: Optional[str] = None,
+    ) -> Path:
+        """保存预报文本到文件."""
+        txt_file = self.output_dir / f"{filename}.txt"
+        with open(txt_file, "w", encoding="utf-8") as file:
+            file.write(forecast_text)
+
+        print(f"✓ 预报文本已保存: {txt_file}")
+        print(f"  文本长度: {len(forecast_text):,} 字符")
+        print(f"  行数: {len(forecast_text.splitlines())}")
+
+        if save_html and html_content:
+            html_file = self.output_dir / f"{filename}.html"
+            with open(html_file, "w", encoding="utf-8") as file:
+                file.write(html_content)
+            print(f"✓ HTML已保存: {html_file}")
+
+        return txt_file
+
+    def fetch_and_extract(
+        self,
+        url: str,
+        filename: Optional[str] = None,
+        save_html: bool = False,
+    ) -> Optional[Path]:
+        """获取页面并提取预报文本."""
+        if filename is None:
+            url_parts = url.rstrip("/").split("/")
+            filename = (
+                url_parts[-1].replace(".shtml", "").replace(".html", "")
+                if url_parts
+                else f"forecast_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            )
+
+        html_content = self.fetch_page(url)
+        if not html_content:
+            return None
+
+        forecast_text = self.extract_forecast_text(html_content)
+        if not forecast_text:
+            print("⚠ 未能提取预报文本，保存原始HTML供检查")
+            save_html = True
+
+        if forecast_text:
+            return self.save_forecast(forecast_text, filename, save_html, html_content)
+
+        if save_html:
+            html_file = self.output_dir / f"{filename}_raw.html"
+            with open(html_file, "w", encoding="utf-8") as file:
+                file.write(html_content)
+            print(f"✓ 原始HTML已保存: {html_file}")
+            return html_file
+
+        return None
+
+    def display_preview(self, forecast_text: str, lines: int = 30) -> None:
+        """显示预报文本预览."""
+        print("\n" + "=" * 70)
+        print(f"预报文本预览 (前{lines}行):")
+        print("=" * 70)
+
+        text_lines = forecast_text.split("\n")
+        for idx, line in enumerate(text_lines[:lines], 1):
+            print(line)
+
+        if len(text_lines) > lines:
+            print(f"\n... (还有 {len(text_lines) - lines} 行未显示)")
+
+        print("=" * 70)
 
 
 def main():
