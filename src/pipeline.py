@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import logging
+from pathlib import Path
 from dataclasses import asdict, dataclass
 from typing import Dict, List, Optional
 
 from analysis import OpenAITextMiner
 from config import PipelineConfig
-from crawling import TavilyCrawler
+from crawling import LocalSiteCrawler, TavilyCrawler
 from processing import TextPreprocessor
 from reporting import ResultAnalyzer
 from utils.io import write_json
@@ -43,18 +44,45 @@ class GreenPowerPipeline:
         return PipelineResult(raw_file, processed, analysis_report, reporting_outputs)
 
     def crawl(self) -> str:
-        logger.info("阶段一: 调用 Tavily 执行数据检索")
-        crawler = TavilyCrawler(
-            keywords=self.config.keywords,
-            output_dir=str(self.paths.raw_dir),
-            search_depth=self.config.tavily_search_depth,
-            max_results_per_keyword=self.config.tavily_results_per_keyword,
-            api_base_url=self.config.tavily_api_base_url,
-            request_timeout=self.config.tavily_request_timeout,
-        )
+        mode = self.config.crawler_mode
+        if mode == "sites":
+            logger.info("阶段一: 抓取固定网站内容 (requests + BeautifulSoup)")
+        else:
+            logger.info("阶段一: 调用 Tavily 执行数据检索")
+        if self.config.crawler_mode == "sites":
+            crawler = LocalSiteCrawler(
+                keywords=self.config.keywords,
+                output_dir=str(self.paths.raw_dir),
+                max_articles_per_site=self.config.manual_sites_max_results,
+                request_timeout=self.config.manual_sites_request_timeout,
+            )
+        else:
+            # Use EnhancedTavilyCrawler for better results
+            import asyncio
+            from crawling import EnhancedTavilyCrawler
+            
+            crawler = EnhancedTavilyCrawler(
+                keywords=self.config.keywords,
+                output_dir=str(self.paths.raw_dir),
+                search_depth=self.config.tavily_search_depth,
+                max_results_per_keyword=self.config.tavily_results_per_keyword,
+                request_timeout=self.config.tavily_request_timeout,
+            )
+            
+            # Run async crawl synchronously
+            results = asyncio.run(crawler.crawl_async())
+            
+            # Skip the crawler.crawl() call below since we already have results
+            if not results:
+                raise RuntimeError("抓取阶段未返回任何结果，请检查关键词或站点配置")
+            output_path = crawler.save(results)
+            logger.info("已保存 %s 条搜索结果 -> %s", len(results), output_path)
+            return output_path
+            
+        # Legacy code path for LocalSiteCrawler
         results = crawler.crawl()
         if not results:
-            raise RuntimeError("Tavily 未返回任何结果，请检查关键词或配额")
+            raise RuntimeError("抓取阶段未返回任何结果，请检查关键词或站点配置")
         output_path = crawler.save(results)
         logger.info("已保存 %s 条搜索结果 -> %s", len(results), output_path)
         return output_path
@@ -99,6 +127,9 @@ class GreenPowerPipeline:
     def _write_config(self) -> None:
         config_path = self.paths.meta_dir / "config.json"
         data = asdict(self.config)
+        # Convert Path objects to serialisable values to avoid json.dump errors
+        if isinstance(data.get("base_dir"), Path):
+            data["base_dir"] = str(data["base_dir"])
         data["paths"] = {
             "base": str(self.paths.base_dir),
             "results": str(self.paths.results_dir),

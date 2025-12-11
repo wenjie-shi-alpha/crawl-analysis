@@ -54,6 +54,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="覆盖默认检索关键词",
     )
     parser.add_argument(
+        "--crawler",
+        choices=["tavily", "sites"],
+        help="选择数据抓取方式 (tavily 或固定站点)",
+    )
+    parser.add_argument(
+        "--manual-max",
+        type=int,
+        help="每个固定站点最多抓取多少条记录 (仅 --crawler sites 有效)",
+    )
+    parser.add_argument(
         "--openai-model",
         default=None,
         help="指定 OpenAI 模型名称 (默认读取 OPENAI_MODEL)",
@@ -98,6 +108,10 @@ def apply_overrides(config: PipelineConfig, args: argparse.Namespace) -> Pipelin
         kwargs["base_dir"] = Path(args.dir)
     if args.keywords:
         kwargs["keywords"] = args.keywords
+    if args.crawler:
+        kwargs["crawler_mode"] = args.crawler
+    if args.manual_max is not None:
+        kwargs["manual_sites_max_results"] = args.manual_max
     if args.openai_model:
         kwargs["openai_model"] = args.openai_model
     if args.openai_base_url:

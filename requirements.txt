@@ -1,13 +1,9 @@
-# 项目依赖
+openai>=1.0.0
 requests>=2.31.0
-httpx>=0.24.0
-jieba>=0.42.1
-pypinyin>=0.50.0
-pandas>=2.0.0
-numpy>=1.24.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-wordcloud>=1.9.0
 python-dotenv>=1.0.0
-openai>=1.12.0
-selenium>=4.20.0
+tavily-python>=0.3.0
+beautifulsoup4>=4.12.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+pandas>=2.0.0
+plotly>=5.18.0

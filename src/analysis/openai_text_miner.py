@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import logging
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -12,6 +13,19 @@ from typing import Dict, List, Optional, Sequence
 from openai import OpenAI
 
 from utils.io import read_json, write_json, write_text
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import matplotlib
+
+# Set non-interactive backend
+matplotlib.use('Agg')
+# Set Chinese font support if available, otherwise fallback
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Arial Unicode MS', 'sans-serif']
+plt.rcParams['axes.unicode_minus'] = False
+
+logger = logging.getLogger(__name__)
 
 DRIVING_FRAMEWORK: Dict[str, List[str]] = {
     "经济因素": ["成本效益", "价格优势", "补贴政策", "税收优惠", "投资回报"],
@@ -129,10 +143,24 @@ class OpenAITextMiner:
             detailed_results.append(result)
 
         comprehensive = self._generate_comprehensive_report(detailed_results)
+        
+        # Generate charts
+        chart_paths = self._generate_charts(comprehensive)
+        comprehensive["charts"] = chart_paths
+
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         detailed_path = self.output_dir / f"detailed_analysis_{timestamp}.json"
         report_path = self.output_dir / f"comprehensive_report_{timestamp}.json"
         markdown_path = self.output_dir / f"comprehensive_report_{timestamp}.md"
+
+        # Update markdown with charts
+        comprehensive["markdown_report"] = self._build_markdown(
+            comprehensive["driving_factors_analysis"],
+            comprehensive["barriers_analysis"],
+            comprehensive["recommendations"],
+            comprehensive["executive_summary"],
+            chart_paths
+        )
 
         write_json(detailed_path, detailed_results)
         write_json(report_path, comprehensive)
@@ -169,7 +197,13 @@ class OpenAITextMiner:
             return self._fallback_extraction(text, framework)
 
         prompt = self._build_prompt(text, framework, label)
-        response = self.client.generate(prompt)
+        try:
+            response = self.client.generate(prompt)
+        except RuntimeError as exc:
+            logger.warning(
+                "OpenAI 调用失败 (%s)，切换到关键词统计回退。", exc, exc_info=False
+            )
+            return self._fallback_extraction(text, framework)
         try:
             parsed = json.loads(response)
             if isinstance(parsed, dict):
@@ -183,14 +217,15 @@ class OpenAITextMiner:
             f"- {category}: {', '.join(factors)}" for category, factors in framework.items()
         )
         return (
-            "你是一名能源政策分析师，请阅读下列与中国居民绿色电力消费相关的片段，"
-            "明确归纳{label}。保持客观，并严格按照 JSON 输出。".format(label=label)
-            + "\n\n分类参考:\n"
+            "你是一名资深能源政策分析师，正在撰写关于中国居民绿色电力消费的学术报告。"
+            "请阅读下列文本片段，基于PESTEL（政治、经济、社会、技术、环境、法律）框架，"
+            "深入挖掘并归纳{label}。请保持学术严谨性，避免泛泛而谈。"
+            "\n\n分类参考:\n"
             + categories
             + "\n\n文本内容:\n"
             + text
-            + "\n\n请输出 JSON 对象，键为上述分类，值为对象数组，每个对象包含 factor、evidence、confidence 三个字段。"
-            + "confidence 取值 high/medium/low。"
+            + "\n\n请输出 JSON 对象，键为上述分类，值为对象数组，每个对象包含 factor (具体因素描述), "
+            + "evidence (原文依据), confidence (high/medium/low), impact_score (1-5, 影响程度) 四个字段。"
         )
 
     def _fallback_extraction(
@@ -283,12 +318,56 @@ class OpenAITextMiner:
             "建议方向": "从政策宣传、价格机制、基础设施与示范引导四个维度协同推进",
         }
 
+    def _generate_charts(self, data: Dict) -> Dict[str, str]:
+        """Generate visualizations for the report."""
+        charts = {}
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        # 1. Driving Factors Bar Chart
+        driving_data = []
+        for category, factors in data.get("driving_factors_analysis", {}).items():
+            count = len(factors)
+            driving_data.append({"Category": category, "Count": count})
+        
+        if driving_data:
+            df_driving = pd.DataFrame(driving_data)
+            plt.figure(figsize=(10, 6))
+            sns.barplot(data=df_driving, x="Category", y="Count", palette="viridis")
+            plt.title("Distribution of Driving Factors by Category")
+            plt.xticks(rotation=45)
+            plt.tight_layout()
+            path = self.output_dir / f"driving_factors_{timestamp}.png"
+            plt.savefig(path)
+            plt.close()
+            charts["driving_factors"] = str(path)
+
+        # 2. Barriers Bar Chart
+        barrier_data = []
+        for category, factors in data.get("barriers_analysis", {}).items():
+            count = len(factors)
+            barrier_data.append({"Category": category, "Count": count})
+            
+        if barrier_data:
+            df_barrier = pd.DataFrame(barrier_data)
+            plt.figure(figsize=(10, 6))
+            sns.barplot(data=df_barrier, x="Category", y="Count", palette="magma")
+            plt.title("Distribution of Barriers by Category")
+            plt.xticks(rotation=45)
+            plt.tight_layout()
+            path = self.output_dir / f"barriers_{timestamp}.png"
+            plt.savefig(path)
+            plt.close()
+            charts["barriers"] = str(path)
+
+        return charts
+
     def _build_markdown(
         self,
         driving: Dict[str, List[Dict]],
         barriers: Dict[str, List[Dict]],
         recommendations: List[str],
         executive_summary: Dict[str, str],
+        charts: Dict[str, str] = None,
     ) -> str:
         lines = ["# 中国居民绿色电力消费驱动机制与障碍分析报告", ""]
         lines.append(f"*报告生成时间: {datetime.now().strftime('%Y年%m月%d日 %H:%M:%S')}*")
@@ -300,6 +379,10 @@ class OpenAITextMiner:
 
         if driving:
             lines.append("## 驱动因素分析")
+            if charts and "driving_factors" in charts:
+                lines.append(f"![Driving Factors]({charts['driving_factors']})")
+                lines.append("")
+            
             for category, factors in driving.items():
                 lines.append(f"### {category}")
                 for factor in factors[:5]:
@@ -314,6 +397,10 @@ class OpenAITextMiner:
 
         if barriers:
             lines.append("## 障碍因素分析")
+            if charts and "barriers" in charts:
+                lines.append(f"![Barriers]({charts['barriers']})")
+                lines.append("")
+
             for category, factors in barriers.items():
                 lines.append(f"### {category}")
                 for factor in factors[:5]:
