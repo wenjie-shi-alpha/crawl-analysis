@@ -1,167 +1,182 @@
-# 中国绿色电力消费驱动机制与障碍分析系统
+# 综合网络信息爬取与分析工具集
 
-该项目重构为标准 Python 包结构，围绕“数据检索 → 文本预处理 → 本地 LLM 挖掘 → 结果可视化”四个核心环节构建全流程分析能力。搜索阶段依托 Tavily API，文本洞察由本地 Ollama 模型完成，确保数据合规与私有化部署需求。
+该项目构建了一条通用的"网络检索 → 文本处理 → LLM 分析 → 报告输出"数据处理流水线，适用于多领域信息追踪与分析。核心能力包括多源自动化爬取、批量数据清洗、调用 OpenAI 兼容模型完成深度分析，并输出图表/报告以辅助决策。项目已集成气象数据（NOAA、IEM）、网络搜索（Tavily）、特定行业数据源等多种爬虫，并可轻松扩展至新的数据源和应用场景。
 
-## 功能亮点
-- **Tavily 智能检索**：基于多关键词批量获取绿色电力相关资讯，自动生成原始语料库。
-- **中文文本预处理**：去重、清洗、关键词抽取与轻量情感判定，为后续分析提供结构化输入。
-- **本地 Ollama 挖掘**：调用本地 LLM（默认 `qwen2.5:7b`）提取驱动因素与障碍因素，自动生成执行摘要与政策建议。
-- **可视化与报告输出**：生成因素对比图、词云及 Markdown/HTML 报告，支持快速浏览研究结论。
-- **模块化流水线**：可按需运行 `crawl`、`preprocess`、`analyze`、`report` 任一阶段，便于调试与扩展。
+## 功能特性
+- **多源网络爬取**：集成 Tavily 通用搜索、NOAA 气象数据、IEM 天气产品、TheWindPower 风电场信息等多种爬虫，支持关键词批量检索与结构化存档，可扩展至任意网络数据源。
+- **多语言文本预处理**：支持中文和英文的去重、分词、关键词提取等加工流程，提供标准化的数据输入接口。
+- **LLM 驱动智能分析**：调用 OpenAI 兼容模型（如 `gpt-4o-mini`）进行深度文本挖掘、模式识别、因素提取，并生成结构化分析结果。
+- **数据匹配与关联**：内置气旋轨迹匹配、时空数据关联等算法，支持跨数据源的智能关联分析。
+- **结果可视化与报告**：自动生成对比图表、桑基图、词云等可视化，输出 Markdown/JSON 格式报告。
+- **模块化流水线架构**：通过命令行灵活控制 `crawl`、`preprocess`、`analyze`、`report` 等独立步骤，支持自定义扩展。
+- **丰富示例与文档**：`examples/` 提供即用脚本，`docs/` 收录详细的爬虫使用说明与技术文档。
 
-## 目录结构
+## 项目结构
 ```
 projectResearch/
-├── data/                     # 工作目录（默认忽略内容，仅保留结构）
-│   └── output/
-│       ├── raw/              # Tavily 原始检索结果
-│       ├── processed/        # 结构化文本与统计
-│       ├── analysis/         # LLM 深度分析输出
-│       ├── final/            # 报告与图表
-│       │   ├── charts/
-│       │   └── reports/
-│       └── meta/             # 运行元数据（配置快照等）
+├── data/                         # 默认数据工作区（运行后生成）
+│   ├── output/                   # 处理结果输出
+│   │   ├── raw/                  # 原始爬取数据
+│   │   ├── processed/            # 清洗后的结构化数据
+│   │   ├── analysis/             # LLM 分析结果
+│   │   ├── final/                # 最终报告与图表
+│   │   └── meta/                 # 元数据与配置快照
+├── cycloneTrack/                 # 气旋轨迹数据（IBTrACS）
+├── docs/                         # 技术文档与使用说明
+│   ├── README_IEM_CRAWLER.md
+│   ├── README_NOAA_CRAWLER.md
+│   └── CYCLONE_MATCHER_SUMMARY.md
+├── examples/                     # 功能演示脚本
+│   ├── cyclone_data_usage.py     # 气旋数据处理示例
+│   ├── iem_quickstart.py         # IEM 爬虫快速入门
+│   ├── iem_usage.py              # IEM 高级用法
+│   ├── noaa_basin_demo.py        # NOAA 数据查询演示
+│   └── quickchart_sankey.py      # 可视化图表生成
 ├── src/
-│   ├── analysis/             # OpenAI 文本挖掘
-│   ├── crawling/             # Tavily 检索
-│   ├── processing/           # 文本预处理
-│   ├── reporting/            # 报告与可视化
-│   ├── utils/
-│   ├── cli.py                # 命令行入口
-│   ├── config.py
-│   └── pipeline.py           # 流水线编排
-├── main.py                   # 兼容入口（自动将 src 加入 PYTHONPATH）
-├── pyproject.toml            # 项目配置 & 安装信息
-├── requirements.txt          # 运行依赖
-├── .vscode/settings.json     # VSCode 推荐配置
-├── .gitignore
-└── README.md
+│   └── green_power/              # 核心代码包
+│       ├── analysis/             # LLM 文本分析模块
+│       ├── crawling/             # 多源爬虫实现
+│       │   ├── tavily_crawler.py       # 通用搜索
+│       │   ├── noaa_crawler.py         # 气象数据
+│       │   ├── iem_crawler.py          # 天气产品
+│       │   └── thewindpower_browser.py # 风电场信息
+│       ├── processing/           # 数据处理与匹配
+│       │   ├── text_preprocessor.py
+│       │   ├── cyclone_matcher.py
+│       │   └── cyclone_query.py
+│       ├── reporting/            # 报告生成与可视化
+│       ├── utils/                # 通用工具函数
+│       ├── cli.py                # 命令行接口
+│       ├── config.py             # 配置管理
+│       ├── pipeline.py           # 流水线编排逻辑
+│       └── crawl_all_years.py    # 批量数据抓取
+├── main.py                       # 主入口文件
+├── pyproject.toml                # Python 项目配置
+├── requirements.txt              # 依赖包列表
+└── README.md                     # 项目说明文档
 ```
 
 ## 环境准备
 1. **创建虚拟环境并安装依赖**
    ```bash
    python3 -m venv .venv
-   source .venv/bin/activate  # Windows: .venv\Scripts\activate
+   source .venv/bin/activate          # Windows: .venv\Scripts\activate
    pip install --upgrade pip
    pip install -r requirements.txt
    ```
-
-2. **配置 Tavily API**
-   Tavily 调用通过官方 REST 接口完成，无需安装额外 Python 包，仅需提供 API Key。
+   或使用可编辑安装：
    ```bash
-   export TAVILY_API_KEY="your_api_key"  # Windows 使用 set 或 $Env:
+   pip install -e .[dev]
    ```
 
-3. **配置 OpenAI 接口**
-   项目依赖 OpenAI 兼容接口完成 LLM 分析，可在根目录创建 `.env`（或直接设置环境变量）：
+2. **配置 API 密钥**  
+   根据使用的数据源配置相应的 API 密钥：
+   
+   - **Tavily 搜索 API**（用于通用网络检索）：
+     ```bash
+     export TAVILY_API_KEY="your_api_key"    # Windows 使用 set / $Env:
+     ```
+   
+   - **OpenAI 兼容模型**（用于 LLM 分析）：
+     ```bash
+     export OPENAI_API_KEY="sk-your-key"
+     export OPENAI_MODEL="gpt-4o-mini"
+     export OPENAI_BASE_URL="https://api.openai.com/v1"  # 可选，支持兼容服务
+     ```
+   
+   也可在项目根目录创建 `.env` 文件统一管理配置：
    ```bash
+   TAVILY_API_KEY=your_tavily_key
    OPENAI_API_KEY=sk-your-key
-   OPENAI_MODEL=gpt-4o-mini          # 可选，默认为 gpt-4o-mini
-   OPENAI_BASE_URL=https://api.openai.com/v1  # 可选，兼容服务地址
-   OPENAI_ORG=your-org-id            # 可选，用于企业账号
-   OPENAI_PROJECT=your-project-id    # 可选，用于分项目计费
+   OPENAI_MODEL=gpt-4o-mini
+   OPENAI_BASE_URL=https://api.openai.com/v1
+   OPENAI_ORG=your-org-id                        # 可选
+   OPENAI_PROJECT=your-project-id                # 可选
    ```
-   运行时会自动读取上述配置，确保 API Key 拥有调用对应模型的权限。
 
-## 快速上手
-### 运行完整分析流程
-```bash
-python main.py --full
-# 安装为包后，也可直接使用命令行脚本
-# green-power-analysis --full
-```
+## 命令行使用
+安装为可执行脚本后，可直接调用 `green-power-analysis`；或在仓库根目录运行 `python main.py`。
 
-### 分步骤执行
-```bash
-python main.py --step crawl
-python main.py --step preprocess
-python main.py --step analyze
-python main.py --step report
-```
+- **运行完整流程**
+  ```bash
+  python main.py --full
+  # 或
+  green-power-analysis --full
+  ```
 
-### 查看目录状态
-```bash
-python main.py --status
-```
+- **执行单独阶段**
+  ```bash
+  python main.py --step crawl
+  python main.py --step preprocess
+  python main.py --step analyze
+  python main.py --step report
+  ```
 
-### 常用参数
-- `--dir`: 指定数据工作目录（默认 `data`）
-- `--keywords`: 传入自定义检索关键词列表
-- `--openai-model`: 指定 OpenAI 模型名称
-- `--openai-base-url`: 覆盖 OpenAI 兼容服务地址
-- `--openai-api-key`: 临时覆盖 API Key（如需在命令行传递）
-- `--openai-org`: 设置 OpenAI 组织 ID
-- `--openai-project`: 设置 OpenAI 项目 ID
-- `--tavily-depth`: Tavily 搜索深度（`basic` / `advanced`）
-- `--tavily-max`: 每个关键词返回结果数量
+- **查看数据目录状态**
+  ```bash
+  python main.py --status
+  ```
 
-## 自动化风电厂省份查询
-为满足在 [thewindpower.net](https://www.thewindpower.net/) 上批量查询风电厂所属省份的需求，新增了基于 Selenium 的浏览器自动化脚本 `src/crawling/thewindpower_browser.py`。
+- **常用参数**
+  - `--dir`：自定义数据工作目录（默认 `data`）
+  - `--keywords`：覆盖默认关键词列表
+  - `--openai-model` / `--openai-base-url` / `--openai-api-key`：临时指定 LLM 相关配置
+  - `--tavily-depth`：搜索深度（`basic` 或 `advanced`）
+  - `--tavily-max`：每个关键词最大返回条数
 
-### 准备工作
-- 安装 Chrome/Chromium 浏览器。
-- 安装与浏览器版本匹配的 `chromedriver` 并放入 PATH，或在运行脚本时通过 `--driver-path` 指定驱动路径。使用 Selenium 4 自带的 Selenium Manager 也可自动下载驱动（首次运行需外网访问）。
-- 准备包含风电厂名称的 CSV 文件，默认列名为 `name`。
-
-### 运行示例
-```bash
-# 建议在虚拟环境中运行；如未安装为包，可先将 src 加入 PYTHONPATH
-PYTHONPATH=src python -m crawling.thewindpower_browser \
-  data/windfarms.csv \
-  data/output/windfarms_province.csv \
-  --name-column name \
-  --delay 2.0
-```
-
-常用选项：
-- `--headed`：以可视化方式启动浏览器，便于调试；默认后台无界面运行。
-- `--wait`：控制元素查找超时时间（秒），默认 15。
-- `--delay`：每次查询之间的休眠秒数，默认 1.5，建议视服务器限制适当增大。
-- `--driver-path`：当驱动不在 PATH 中时，显式指定 `chromedriver` 位置。
-- `--remote-url`：连接远程 WebDriver 服务（例如 `http://192.168.1.10:62256`）。
-
-### 远程 chromedriver（Windows 主机 + Ubuntu 虚拟机）
-若脚本运行在 Windows 上的 Ubuntu 虚拟机，而 `chromedriver` 在宿主 Windows 中运行，可按以下流程连接：
-1. 在 Windows 上启动 `chromedriver.exe`，指定监听端口：
-   ```powershell
-   .\chromedriver.exe --port=62256 --allowed-origins=* --allowed-ips=* 
-   ```
-   如需绑定到特定地址，可使用 `--ip=0.0.0.0`。
-2. 确认 Windows 防火墙或安全软件放行该端口；若两台机器跨网络，还需在路由器或 VPN 中开放 62256。
-3. 在 Ubuntu 虚拟机上运行脚本，通过 `--remote-url` 指定宿主 Windows 的局域网/桥接地址（在宿主中执行 `ipconfig` 获取）：
-   ```bash
-   PYTHONPATH=src python -m crawling.thewindpower_browser \
-     data/windfarms.csv \
-     data/output/windfarms_province.csv \
-     --remote-url http://WINDOWS_IP:62256 \
-     --delay 2.5
-   ```
-   如需观察浏览器，请在启动 chromedriver 时加入 `--verbose` 并在脚本侧添加 `--headed`。
-
-## 代码风格
-- 项目使用 Black 统一 Python 代码格式，可通过 `pip install -e .[dev]` 安装开发依赖，或在虚拟环境中单独执行 `pip install black`。
-- 激活虚拟环境后运行 `black .` 会按照 `pyproject.toml` 中的配置格式化代码，建议在提交代码前执行。
-
-## 输出内容
-完整流程结束后，工作目录将生成以下内容：
+## 运行结果
+完整流程结束后，数据目录会生成如下结构：
 ```
 data/
 └── output/
-    ├── raw/             # Tavily 搜索原始结果
-    ├── processed/       # 预处理后的结构化文本与统计
-    ├── analysis/        # LLM 分析产物（详细&综合报告）
+    ├── raw/             # 原始检索结果
+    ├── processed/       # 预处理后的结构化文本
+    ├── analysis/        # LLM 分析输出（JSON/Markdown）
     ├── final/
-    │   ├── charts/      # 因素对比图、词云等
-    │   └── reports/     # HTML / Markdown 综合报告
-    └── meta/            # 运行配置与其他元信息
+    │   ├── charts/      # 可视化图表
+    │   └── reports/     # 汇总报告
+    └── meta/            # 配置快照等元信息
 ```
 
-## 开发提示
-- 项目遵循 `src` 布局，可通过 `pip install -e .` 安装到环境中。
-- `src/pipeline.py` 集中描述流水线逻辑，便于定制各阶段实现。
-- 预处理阶段依赖 `jieba` 分词，如需自定义词典可在 `TextPreprocessor` 中扩展。
-- 若 OpenAI 输出非 JSON，系统会自动回退到基于关键词的统计逻辑。
+## 示例脚本
+`examples/` 目录提供多种数据源的使用示例：
+
+### 气象数据爬取
+- `iem_quickstart.py`：快速入门 IEM（Iowa Environmental Mesonet）文本产品抓取
+- `iem_usage.py`：展示 IEM 爬虫的多种抓取方式与参数配置
+- `noaa_basin_demo.py`：查询 NOAA 气旋数据并演示分盆地分类处理
+
+### 数据处理与分析
+- `cyclone_data_usage.py`：气旋轨迹数据的读取、过滤与处理示例
+- `quickchart_sankey.py`：使用 QuickChart API 生成桑基图（Sankey Diagram）
+
+**运行提示**：所有示例需要在安装项目包后运行（`pip install -e .`），或在脚本开头添加 `sys.path.insert(0, "src")` 以导入 `green_power` 模块。
+
+## 技术文档
+`docs/` 目录包含详细的技术文档与研究记录：
+- `README_IEM_CRAWLER.md`：IEM 文本产品爬虫完整使用指南
+- `README_NOAA_CRAWLER.md`：NOAA 气象数据抓取接口说明
+- `CYCLONE_MATCHER_SUMMARY.md`：气旋轨迹匹配算法与实现细节
+- `CYCLONE_TRACKS_UPDATE.md`：气旋轨迹数据更新与维护指南
+- `IEM_CRAWLER_SUMMARY.md`：IEM 爬虫设计总结
+
+这些文档为不同数据源的集成提供了详细的技术参考，有助于扩展新的爬虫模块。
+
+## 应用场景
+该工具集适用于多种信息分析场景：
+- **气象研究**：气旋轨迹分析、天气产品数据挖掘
+- **行业研究**：可再生能源、电力市场等垂直领域信息追踪
+- **舆情监测**：多源网络信息的自动化采集与分析
+- **数据科学**：构建定制化的数据处理与分析流水线
+- **知识挖掘**：基于 LLM 的文本深度分析与知识提取
+
+## 开发指南
+- **项目结构**：遵循 `src` 布局，建议使用 `pip install -e .` 进行开发安装
+- **流水线扩展**：核心逻辑封装于 `green_power.pipeline.GreenPowerPipeline`，可继承或扩展
+- **添加新爬虫**：在 `src/green_power/crawling/` 下实现新的爬虫类，参考现有爬虫接口
+- **文本处理**：支持中英文处理，中文依赖 `jieba` 与 `pypinyin`，可通过 `TextPreprocessor` 自定义
+- **数据匹配算法**：参考 `cyclone_matcher.py` 实现自定义的数据关联逻辑
+- **代码规范**：使用 `black` 进行代码格式化（配置见 `pyproject.toml`）
 
 ## 许可证
 MIT License

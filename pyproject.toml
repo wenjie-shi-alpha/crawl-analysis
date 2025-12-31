@@ -32,13 +32,10 @@ dev = [
 ]
 
 [project.scripts]
-green-power-analysis = "cli:main"
+green-power-analysis = "green_power.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.setuptools]
-py-modules = ["cli", "config", "pipeline"]
 
 [tool.black]
 line-length = 88
