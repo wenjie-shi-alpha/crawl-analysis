@@ -35,27 +35,67 @@ class LLMConfig:
 class OllamaClient:
     """Client for local Ollama model - used for simple classification tasks."""
     
-    def __init__(self, base_url: str, model: str, timeout: int = 120):
+    def __init__(self, base_url: str, model: str, timeout: int = 600):
         self.base_url = base_url.rstrip('/')
         self.model = model
         self.timeout = timeout
-        self.client = httpx.Client(timeout=timeout)
+        # Note: for large local models (e.g. gpt-oss:20b) the first request can
+        # take a while due to model loading. A larger read timeout avoids
+        # mistaking “slow first token” for a connectivity issue.
+        self.client = httpx.Client(timeout=httpx.Timeout(timeout))
     
-    def generate(self, prompt: str, system_prompt: str = "") -> str:
-        """Generate response from Ollama model."""
+    def generate(
+        self,
+        prompt: str,
+        system_prompt: str = "",
+        *,
+        stream: bool = True,
+        options: Optional[Dict[str, Any]] = None,
+    ) -> str:
+        """Generate response from Ollama model.
+
+        Uses streaming by default to avoid long blocking waits on large models.
+        Accumulates the `response` field across chunks and ignores optional
+        fields like `thinking`.
+        """
         try:
-            response = self.client.post(
-                f"{self.base_url}/api/generate",
-                json={
-                    "model": self.model,
-                    "prompt": prompt,
-                    "system": system_prompt,
-                    "stream": False
-                }
-            )
+            payload: Dict[str, Any] = {
+                "model": self.model,
+                "prompt": prompt,
+                "system": system_prompt,
+                "stream": stream,
+            }
+            if options:
+                payload["options"] = options
+
+            url = f"{self.base_url}/api/generate"
+
+            if stream:
+                chunks: List[str] = []
+                with self.client.stream("POST", url, json=payload) as response:
+                    response.raise_for_status()
+                    for line in response.iter_lines():
+                        if not line:
+                            continue
+                        try:
+                            data = json.loads(line)
+                        except Exception:
+                            continue
+                        if isinstance(data, dict) and data.get("error"):
+                            raise RuntimeError(str(data.get("error")))
+                        piece = data.get("response") if isinstance(data, dict) else None
+                        if piece:
+                            chunks.append(piece)
+                        if isinstance(data, dict) and data.get("done") is True:
+                            break
+                return "".join(chunks)
+
+            response = self.client.post(url, json=payload)
             response.raise_for_status()
             result = response.json()
-            return result.get("response", "")
+            if isinstance(result, dict):
+                return result.get("response", "") or ""
+            return ""
         except Exception as e:
             logger.warning(f"Ollama调用失败: {e}")
             return ""

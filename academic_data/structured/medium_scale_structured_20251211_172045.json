@@ -1,0 +1,6855 @@
+[
+  {
+    "source_type": "policy",
+    "year": "2025",
+    "geography": "北京，中国",
+    "sectors": [
+      "企业",
+      "组织",
+      "园区"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "平台"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "绿色电力消费核算及溯源技术导则"
+    ],
+    "drivers": [
+      {
+        "factor": "政策支持",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "经各类主体自愿申请，对通过绿电交易、绿证交易、自发自用、绿电直连等方式消费可再生能源电力而获得环境权益进行的汇总和计算，形成绿色电力消费核算结果。"
+      },
+      {
+        "factor": "技术保障（区块链溯源）",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "用于核算的数据宜通过区块链等技术手段可靠记录，确保数据的溯源和可信查验。"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "数据获取困难",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "负责计量的机构无法提供数据时，可以由发电项目、电力用户提供电能量计量数据，数据应通过电能表计计量获取。"
+      },
+      {
+        "factor": "绿证核销程序复杂",
+        "category": "制度障碍",
+        "severity_score": 2,
+        "evidence": "绿色电力消费核算认可的绿色电力消费量应已获得并核销对应绿证。"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政府政策激励 -> 绿证核销 -> 绿色电力消费核算 -> 促进绿色电力消费"
+    ],
+    "confidence": "high",
+    "source_title": "绿色电力消费核算及溯源技术导则",
+    "url": "https://fgw.beijing.gov.cn/gzdt/tztg//202510/P020251029622219787453.pdf",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "report",
+    "year": "2019",
+    "geography": "中国",
+    "sectors": [
+      "企业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "可再生能源绿色电力证书自愿认购体系",
+      "关于实行可再生能源电力配额制的通知（征求意见稿）",
+      "可再生能源电力配额制"
+    ],
+    "drivers": [
+      {
+        "factor": "全球企业 CSR 与可持续发展目标提升绿电需求",
+        "category": "社会",
+        "strength_score": 4,
+        "evidence": "全球越来越多的企业从社会责任的角度自发提出了可持续发展目标"
+      },
+      {
+        "factor": "中国电力体制改革与市场化交易准入放宽",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "随着电力体制改革的重启，电力用户参与市场化交易的准入条件逐渐放宽"
+      },
+      {
+        "factor": "即将实施的可再生能源电力配额制",
+        "category": "法律",
+        "strength_score": 5,
+        "evidence": "即将实施的可再生能源电力配额制（简称“配额制”）要求电力用户承担清洁能源配额的消纳责任"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿电市场尚未完善，获取途径有限",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "绿电市场仍处于建设初期，用电企业对于有哪些可行的绿电消费途径存在疑虑"
+      },
+      {
+        "factor": "采购渠道不明、供电稳定性与项目经济性疑虑",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "企业对绿电的获取途径、供电稳定性、项目经济性等多方面存在疑虑"
+      },
+      {
+        "factor": "企业低碳发展意识薄弱",
+        "category": "心理障碍",
+        "severity_score": 3,
+        "evidence": "企业低碳发展的意识薄弱"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策开放 -> 参与渠道增加",
+      "配额制 -> 企业主动采购绿电",
+      "CSR -> 需求增长"
+    ],
+    "confidence": "medium",
+    "source_title": "企业绿色电力消费指导手册",
+    "url": "https://www.efchina.org/Attachments/Report/report-cpp-20190512/%E4%BC%81%E4%B8%9A%E7%BB%BF%E8%89%B2%E7%94%B5%E5%8A%9B.pdf",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "工业",
+      "能源",
+      "居民消费",
+      "交通",
+      "建筑"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "平台",
+      "金融"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "党的二十届四中全会",
+      "十五五规划建议"
+    ],
+    "drivers": [
+      {
+        "factor": "强化激励与可信度",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "强化激励与可信度"
+      },
+      {
+        "factor": "绿电消费纳入高质量发展评价体系",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "鼓励将绿电消费纳入高质量发展评价体系"
+      },
+      {
+        "factor": "支持绿电、绿氢为核心的生产线深度改造",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "支持以绿电、绿氢为核心的生产线深度改造"
+      },
+      {
+        "factor": "加快推广完善分时电价与负荷聚合商",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "加快推广完善分时电价，积极培育负荷聚合商"
+      },
+      {
+        "factor": "建立全国统一碳足迹核算标准",
+        "category": "法律",
+        "strength_score": 5,
+        "evidence": "建立全国统一、透明可溯的碳足迹核算标准"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "规则不完善",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "亟须建立全国统一、透明可溯的碳足迹核算标准"
+      }
+    ],
+    "metrics": [],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证全覆盖 -> 绿证成为核算企业碳排放的权威凭证",
+      "绿证全覆盖 -> 绿证权威凭证 -> 高质量发展评价体系纳入绿电消费",
+      "高质量发展评价体系纳入绿电消费 -> 稳定需求 -> 以消纳促建设",
+      "加快推广分时电价 -> 负荷聚合商发展 -> 源荷互动",
+      "建立碳足迹核算标准 -> 政府采购与项目招标要求 -> 绿色低碳产品清晰赛道"
+    ],
+    "confidence": "high",
+    "source_title": "以能源体系之“新”驱动发展方式之“绿”",
+    "url": "http://www.cppcc.gov.cn/zxww/2025/12/09/ARTI1765264353838213.shtml",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "policy",
+    "year": "2022",
+    "geography": "深圳市，中国",
+    "sectors": [
+      "电力用户"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "《绿色电力消费全量计算与核定规则》",
+      "GB/17167",
+      "DB15/T 2748—2022"
+    ],
+    "drivers": [
+      {
+        "factor": "欧盟碳边境调节机制（CBAM）和跨国企业对供应链可再生能源要求",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "受欧盟碳边境调节机制（CBAM） 、新电池法律法规等国际绿色贸易规则的影响，深圳市外向型出口产业亟须通过购买绿电绿证提升产品的绿色竞争力。"
+      },
+      {
+        "factor": "促进可再生能源开发利用",
+        "category": "政策",
+        "strength_score": 5,
+        "evidence": "制定绿色电力消费全量核算与评价标准将为绿色电力消费提供有效的认证工具和凭证，帮助企业与国家能耗和碳排放政策相衔接，满足深圳市外向型企业对绿色电力的需求。"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "沟通成本与标准接轨障碍",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "绿电消费与国际接轨仍存在一定沟通成本，迫切需要构建高质量的标准体系。"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿电消费需求增长 -> 促进可再生能源开发利用"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 《绿色电力消费全量计算与核定规则》解读 - 深圳市市场监督管理局",
+    "url": "https://amr.sz.gov.cn/attachment/1/1532/1532300/11935762.pdf",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "policy",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "钢铁",
+      "有色",
+      "建材",
+      "石化",
+      "化工",
+      "数据中心"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "平台",
+      "金融"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "关于促进可再生能源绿色电力证书市场高质量发展的意见"
+    ],
+    "drivers": [
+      {
+        "factor": "绿证强制消费要求",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "依法稳步推进绿证强制消费"
+      },
+      {
+        "factor": "绿色金融支持",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "加大绿色金融对企业...支持力度，强化绿色信贷支持"
+      },
+      {
+        "factor": "ESG报告纳入",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "将绿色电力消费信息纳入上市企业ESG报告体系"
+      },
+      {
+        "factor": "绿色电力消费认证与标准",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "制定绿色电力消费认证相关技术标准、规则、标识"
+      },
+      {
+        "factor": "新能源汽车充绿电",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "推广绿色充电桩，支持新能源汽车充绿电"
+      },
+      {
+        "factor": "绿证交易平台建设",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "鼓励电网企业、绿证交易平台为居民购买绿证提供便利服务"
+      }
+    ],
+    "barriers": [],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "绿证强制消费 -> 提高绿色电力消费比例 -> 降低碳排放",
+      "绿色金融支持 -> 促进企业绿色电力消费"
+    ],
+    "confidence": "high",
+    "source_title": "【关于促进可再生能源绿色电力证书市场高质量发展的意见(发改能源 ...",
+    "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202503/t20250318_1396627.html",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "policy",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "工商业",
+      "居民",
+      "交通",
+      "数据中心"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "平台"
+    ],
+    "stance_score": "2",
+    "policy_refs": [
+      "中国可再生能源绿色电力证书百问百答（2025年版）",
+      "国家绿证核发交易系统"
+    ],
+    "drivers": [
+      {
+        "factor": "国家能源局发布核销功能上线",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "绿证核销功能上线，国家能源局资质中心负责人介绍"
+      },
+      {
+        "factor": "全生命周期闭环管理提升规范性",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "全生命周期闭环管理进一步强化绿证基础性政策工具"
+      },
+      {
+        "factor": "满足多样化绿色电力消费需求",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "核销信息表支持个性化填报，满足经营主体需求"
+      }
+    ],
+    "barriers": [],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证核销功能上线 -> 绿色电力消费便捷化"
+    ],
+    "confidence": "high",
+    "source_title": "绿证核销功能上线！ - 国家能源局",
+    "url": "https://www.nea.gov.cn/20250425/c92ff15bd8234fe2ab6c71229a69b5e6/c.html",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "能源消费",
+      "电力",
+      "可再生能源",
+      "交通"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "十四五规划"
+    ],
+    "drivers": [
+      {
+        "factor": "非化石能源占比提升",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "非化石能源占比每年增加1个百分点，预计将超额完成“十四五”确定的20%目标"
+      },
+      {
+        "factor": "可再生能源装机规模扩大",
+        "category": "技术",
+        "strength_score": 5,
+        "evidence": "风光发电年度新增装机进入亿千瓦级规模，合计装机由2020年的5.3亿千瓦增加到2024年的16.8亿千瓦"
+      },
+      {
+        "factor": "能源供给体系建设完善",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "能源基础设施网络更加完善，有力带动了中西部地区资源优势加快转化"
+      },
+      {
+        "factor": "政府投资能源产业",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "能源工业年度投资额接连突破4万亿、5万亿、6万亿大关"
+      },
+      {
+        "factor": "居民电动汽车充电网络建设",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "建成全球最大的电动汽车充电网络，每5辆车就有2个充电桩"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "非化石能源占比",
+        "value": "20%",
+        "unit": "%",
+        "year": null
+      },
+      {
+        "name": "风光发电装机累计",
+        "value": "16.8亿",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "风光发电量占比",
+        "value": "18.6%",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "全社会用电量",
+        "value": "10万",
+        "unit": "亿千瓦时",
+        "year": "2024"
+      },
+      {
+        "name": "电动汽车充电桩密度",
+        "value": "每5辆车2个充电桩",
+        "unit": "充电桩/车辆",
+        "year": null
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政府推动非化石能源占比提升 -> 可再生能源装机规模扩大 -> 全社会用电中绿电比例提升"
+    ],
+    "confidence": "high",
+    "source_title": "每3度电就有1度绿电“十四五”能源消费“逐绿前行” - 国家能源局",
+    "url": "https://www.nea.gov.cn/20250829/1d8034e393254bef8789cee009ca2be6/c.html",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "policy",
+    "year": "2022",
+    "geography": "China",
+    "sectors": [
+      "电力"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "居民"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "关于建立健全可再生能源电力消纳保障机制的通知(2019)",
+      "CCER制度",
+      "绿证交易制度"
+    ],
+    "drivers": [
+      {
+        "factor": "配额制+绿证机制",
+        "category": "政策",
+        "strength_score": 4,
+        "evidence": "采用“配额制+绿证”机制，建立绿证消费强制市场是一种行之有效、符合市场化原则的 长效机制。"
+      },
+      {
+        "factor": "碳价格上升",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "若碳价按照预期逐步升高，绿色电力的成本势必随着技术发展和使用规模扩大而持续下降，则购买绿电扣减企业的碳排放量则可能成为企业更具经济效益的选择。"
+      },
+      {
+        "factor": "技术发展与规模扩大",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "技术发展和使用规模扩大而持续下降。"
+      },
+      {
+        "factor": "政府推动绿证与消纳保障机制衔接",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "我国可以考虑推动绿证交易与消纳保障机制的衔接。"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿证交易未强制",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "绿证交易尚未采取强制交易制度，绿证买卖完全属于自愿行为。"
+      },
+      {
+        "factor": "绿证核发范围有限",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "目前只有陆上风电、光伏发电企业可通过可再生能源发电项目信息管理系统申请绿证，其他可再生能源电力无法申请绿证。"
+      },
+      {
+        "factor": "失去可再生能源电价补贴",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "企业出售绿证后，相应的电量不再享受国家可再生能源电价附加资金的补贴。"
+      },
+      {
+        "factor": "绿证属性不统一",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "明确绿电属性。保证绿色电力定义及包含项目类型在各市场中的统一性。"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "减排边际成本",
+        "value": "4.3",
+        "unit": "分/kWh",
+        "year": null
+      },
+      {
+        "name": "碳价",
+        "value": "55",
+        "unit": "元/吨",
+        "year": null
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证交易 -> 绿色电力消费提升",
+      "碳价格上升 -> 企业购买绿电 -> 减排成本下降"
+    ],
+    "confidence": "medium",
+    "source_title": "绿证交易和绿色电力交易的政策梳理和衔接机制浅析",
+    "url": "https://climatecooperation.cn/wp-content/uploads/2022/07/%E4%B8%AD%E6%96%87-%E7%A2%B3%E4%BA%A4%E6%98%93%E5%92%8C%E7%BB%BF%E8%89%B2%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93-3.pdf",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "report",
+    "year": "2024",
+    "geography": "China (Beijing, Jiangsu, Guangdong, Shandong, Shanghai)",
+    "sectors": [
+      "企业",
+      "电解铝行业",
+      "高耗能行业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "平台"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "中央经济工作会议",
+      "《关于进一步做好新增可再生能源消费不纳入能源消费总量控制有关工作的通知》",
+      "《关于加强绿色电力证书与节 能降碳政策衔接大力促进非化石能源消费的通知》 (发改环资〔2024〕 113 号)",
+      "《建立健全可再生能源电力消纳保障机制的通知》",
+      "《江苏省促进绿色消费实施方案》",
+      "《电解铝行业节能降碳专项行动计划》",
+      "《2024 年可再生能源电力消纳责任权重及有关事项的通知》"
+    ],
+    "drivers": [
+      {
+        "factor": "中央经济工作会议提出可再生能源不纳入能源消费总量控制",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "中央经济工作会议明确提出“新增可再生能源和原料用能不纳入能源消费总量控制”的方针"
+      },
+      {
+        "factor": "绿证作为可再生能源电力消费认定凭证",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "明确将绿证作为可再生能源电力消费量认定的基本凭证"
+      },
+      {
+        "factor": "跨省输电通道扩增",
+        "category": "经济/技术",
+        "strength_score": 4,
+        "evidence": "输电通道的扩增带来的电力资源配置优化，会带动电力交易频次和规模的快速增长"
+      },
+      {
+        "factor": "省级高耗能企业绿色电力占比目标",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "江苏省促进绿色消费实施方案提出到2025年，高耗能企业电力消费中绿色电力占比不低于30%"
+      },
+      {
+        "factor": "电解铝行业可再生能源利用比例目标",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "电解铝行业节能降碳专项行动计划提出到2025年底，行业可再生能源利用比例达到25%以上"
+      },
+      {
+        "factor": "交易中心平台服务升级",
+        "category": "技术/经济",
+        "strength_score": 3,
+        "evidence": "交易中心不断开发升级平台服务，推进绿电消费核算认证"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "交易平台服务尚未完善",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "交易中心不断开发升级平台服务，推进绿电消费核算认证"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "绿色电力占比",
+        "value": "≥30",
+        "unit": "%",
+        "year": "2025"
+      },
+      {
+        "name": "可再生能源利用比例",
+        "value": "≥25",
+        "unit": "%",
+        "year": "2025"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证认定 -> 企业绿色电力消费增加",
+      "跨省通道建设 -> 绿电供给量提升 -> 绿电交易频次增加"
+    ],
+    "confidence": "high",
+    "source_title": "企业绿色电力采购机制与应用场景",
+    "url": "https://rmi.org.cn/wp-content/uploads/2025/01/RMI%E4%BC%81%E4%B8%9A%E9%87%87%E8%B4%AD%E7%BB%BF%E7%94%B5%E7%94%B5%E5%8A%9B2024%E5%B9%B4%E6%8A%A5.pdf",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "policy",
+    "year": "2022",
+    "geography": "中国",
+    "sectors": [
+      "工业",
+      "建筑",
+      "交通",
+      "公共机构",
+      "能源消费"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "平台"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "《十四五》可再生能源发展规划"
+    ],
+    "drivers": [
+      {
+        "factor": "绿证交易机制",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "积极开展绿证交易，建立绿证与可再生能源电力消纳保障机制"
+      },
+      {
+        "factor": "政府采购政策支持",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "运用政府采购政策支持可再生能源消费"
+      },
+      {
+        "factor": "国际合作与平台",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "加强应对气候变化国际合作，参与全球能源转型"
+      },
+      {
+        "factor": "媒体宣传与公益教育",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "发挥媒体作用，开展绿色能源消费公益宣传和教育"
+      },
+      {
+        "factor": "示范工程与技术创新",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "推动新能源直供电、风光氢储耦合、柔性负荷等技术"
+      }
+    ],
+    "barriers": [],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政府政策 -> 绿证交易机制 -> 可再生能源消费占比提升"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] “十四五”可再生能源发展规划",
+    "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202206/P020220602315650388122.pdf",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "policy",
+    "year": "2024",
+    "geography": "中国",
+    "sectors": [],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "平台"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "电力中长期交易基本规则——绿色电力交易专章"
+    ],
+    "drivers": [
+      {
+        "factor": "绿色优先",
+        "category": "政策",
+        "strength_score": 4,
+        "evidence": "绿色电力交易应坚持绿色优先"
+      },
+      {
+        "factor": "市场导向",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "绿色电力交易应坚持...市场导向"
+      },
+      {
+        "factor": "鼓励长期采购协议",
+        "category": "政策",
+        "strength_score": 3,
+        "evidence": "鼓励发用双方签订多年期绿色电力购买协议"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "价格机制限制",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "除国家有明确规定的情况外不得对交易进行限价或指定价格"
+      },
+      {
+        "factor": "价格变相降价限制",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "不得以绿电交易名义组织开展以变相降价为目的的专场交易"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 促进跨省区绿色电力供给 -> 满足跨省区绿色电力消费需求"
+    ],
+    "confidence": "high",
+    "source_title": "电力中长期交易基本规则——绿色电力交易专章",
+    "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202408/P020240823339199168752.pdf",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "news",
+    "year": "2023",
+    "geography": "China",
+    "sectors": [
+      "电力"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "国际组织"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "《2023年可再生能源电力消纳责任权重及有关事项的通知》",
+      "《推动能耗双控逐步转向碳排放双控的意见》",
+      "《关于做好可再生能源绿色电力证书全覆盖工作 促进可再生能源电力消费的通知》",
+      "《132 号文件》"
+    ],
+    "drivers": [
+      {
+        "factor": "政府支持政策",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "国家能源局联合印发《关于2023年可再生能源电力消纳责任权重及有关事项的通知》"
+      },
+      {
+        "factor": "绿色电力消费核算方式改进",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "明确各承担消纳责任的市场主体可通过购买绿证完成消纳责任权重"
+      },
+      {
+        "factor": "绿证全覆盖核发门槛放宽",
+        "category": "法律",
+        "strength_score": 4,
+        "evidence": "《关于做好可再生能源绿色电力证书全覆盖工作 促进可再生能源电力消费的通知》发布，放宽了绿证核发的门槛"
+      },
+      {
+        "factor": "碳市场与绿证衔接",
+        "category": "环境",
+        "strength_score": 3,
+        "evidence": "绿证与国内碳市场、国际绿色消费和碳减排体系做好衔接"
+      }
+    ],
+    "barriers": [],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证全覆盖核发 -> 绿色电力消费提升",
+      "政府支持政策 -> 绿色电力消费核算方式改进 -> 市场主体绿色消费增加"
+    ],
+    "confidence": "high",
+    "source_title": "【科普】一文读懂绿证的来源、用途、交易方式！",
+    "url": "http://m.ecopv.org.cn/site/content/1368.html",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "policy",
+    "year": "2023",
+    "geography": "中国",
+    "sectors": [
+      "高耗能行业",
+      "企业",
+      "园区",
+      "城市"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "党的二十大精神",
+      "习近平总书记能源安全新战略"
+    ],
+    "drivers": [
+      {
+        "factor": "完善可再生能源绿色电力证书制度",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "进一步健全完善可再生能源绿色电力证书制度"
+      },
+      {
+        "factor": "扩大绿电消费",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "扩大绿电消费，完善绿证应用"
+      },
+      {
+        "factor": "健全绿证交易机制",
+        "category": "制度",
+        "strength_score": 4,
+        "evidence": "健全绿证交易，支持绿证集中竞价方式进行交易"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "缺乏国际标准制定",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "加强绿证核发、计量、交易等国际标准研究制定"
+      },
+      {
+        "factor": "防范弄虚作假行为的监管压力",
+        "category": "制度障碍",
+        "severity_score": 2,
+        "evidence": "严格防范、严厉查处弄虚作假行为"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "完善绿证制度 -> 绿证全覆盖 -> 推动可再生能源电力消费"
+    ],
+    "confidence": "high",
+    "source_title": "做好可再生能源绿色电力证书全覆盖工作",
+    "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202308/t20230803_1359092.html",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "Global",
+    "sectors": [
+      "数据中心",
+      "能源",
+      "电力"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "国际组织"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "IEA Renewable Energy 2025",
+      "IRENA 2024 Renewable Energy Generation Cost Report",
+      "Azerbaijan Energy Department Green Electricity Plan"
+    ],
+    "drivers": [
+      {
+        "factor": "可再生能源成本低于化石燃料",
+        "category": "经济",
+        "strength_score": 5,
+        "evidence": "IRENA 2024 report shows solar PV cost 41% lower, wind 53% lower"
+      },
+      {
+        "factor": "AI相关电力需求增长",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "AI electricity consumption expected to rise from 20% to 49% by 2024"
+      },
+      {
+        "factor": "政府与国际组织政策支持",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "Azerbaijan Energy Dept. plans green electricity initiatives"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "审批延迟和电网容量限制",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "Europe and North America face approval delays and grid capacity constraints"
+      },
+      {
+        "factor": "贸易关税与原材料短缺",
+        "category": "经济障碍",
+        "severity_score": 2,
+        "evidence": "Risks of temporary cost hikes due to tariffs and material shortages"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "太阳能光伏发电成本",
+        "value": "0.043",
+        "unit": "USD/kWh",
+        "year": "2024"
+      },
+      {
+        "name": "陆上风电发电成本",
+        "value": "0.034",
+        "unit": "USD/kWh",
+        "year": "2024"
+      },
+      {
+        "name": "AI相关电力消耗比例",
+        "value": "49",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "数据中心用电占全国总消费比例",
+        "value": "6.7-12",
+        "unit": "%",
+        "year": "2028"
+      },
+      {
+        "name": "全球电力占最终能源消耗比例",
+        "value": "70",
+        "unit": "%",
+        "year": "2050"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "可再生能源成本下降 -> 采用率提升",
+      "AI电力需求增长 -> 可再生能源部署加速"
+    ],
+    "confidence": "medium",
+    "source_title": "IEA: 近两年可再生能源将成为全球最大电力来源 - 索比光伏网",
+    "url": "https://m.solarbe.com/21-0-50005533-1.html",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "news",
+    "year": null,
+    "geography": "全球, 中国",
+    "sectors": [
+      "风电",
+      "光伏",
+      "电力",
+      "能源转型"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "金融",
+      "国际组织"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "中国十四五规划"
+    ],
+    "drivers": [
+      {
+        "factor": "全球风电和光伏成本下降",
+        "category": "技术",
+        "strength_score": 5,
+        "evidence": "过去10年风电和光伏发电项目的平均度电成本分别累计下降超60%和80%"
+      },
+      {
+        "factor": "政府支持和规划",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "中国计划在“十四五”期间进一步扩大可再生能源发电占比"
+      },
+      {
+        "factor": "投资规模",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "每年流向可再生能源项目的投资接近2万亿美元"
+      },
+      {
+        "factor": "IEA预测可再生能源增长",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "IEA预测到2030年将接近10000GW"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "风电成本下降幅度",
+        "value": ">60%",
+        "unit": "%",
+        "year": null
+      },
+      {
+        "name": "光伏成本下降幅度",
+        "value": ">80%",
+        "unit": "%",
+        "year": null
+      },
+      {
+        "name": "2023年可再生能源新增装机占比",
+        "value": "50%",
+        "unit": "%",
+        "year": 2023
+      },
+      {
+        "name": "全球非化石能源消费占比",
+        "value": "18.5%",
+        "unit": "%",
+        "year": 2023
+      },
+      {
+        "name": "2024全球可再生能源累计装机量",
+        "value": "4250",
+        "unit": "GW",
+        "year": 2024
+      },
+      {
+        "name": "2030预计累计装机量",
+        "value": "10000",
+        "unit": "GW",
+        "year": 2030
+      },
+      {
+        "name": "2030预测新增清洁能源装机容量中太阳能占比",
+        "value": "80%",
+        "unit": "%",
+        "year": 2030
+      },
+      {
+        "name": "2025全球电力供应中可再生能源占比",
+        "value": "40-45%",
+        "unit": "%",
+        "year": 2025
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政府规划 -> 产业发展 -> 可再生能源装机量增加"
+    ],
+    "confidence": "high",
+    "source_title": "国际能源署预测：未来5年可再生能源将快速增长，引领全球能源转型",
+    "url": "https://adenenergies.com/zh/iea-forecast-future-5-years-renewable-energy-growth/",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "report",
+    "year": "2021",
+    "geography": "China",
+    "sectors": [
+      "能源/电力",
+      "电网"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "平价制度",
+      "零碳电力消纳率"
+    ],
+    "drivers": [
+      {
+        "factor": "长期稳定价格保障",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "通过多样的采购形式继续为可再生能源发电企业的大部分发电量提供长期稳定的价格保障"
+      },
+      {
+        "factor": "技术解决方案确保高比例可再生能源系统稳定运行",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "已有多国开发解决方案保证高比例非水可再生能源电力系统的稳定运行"
+      },
+      {
+        "factor": "国家/地区零碳目标",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "中国非化石燃料发电比例到2030年达到50%"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "频率控制",
+        "category": "技术障碍",
+        "severity_score": 4,
+        "evidence": "非水可再生能源比例升高将增大频率控制难度"
+      },
+      {
+        "factor": "电压控制",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "频率控制同样涉及电压控制"
+      },
+      {
+        "factor": "故障穿越",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "故障穿越也是技术挑战之一"
+      },
+      {
+        "factor": "远距离高压直流输电线路利用",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "高压直流输电利用被列为技术挑战"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "非水可再生能源发电比例",
+        "value": "8.6",
+        "unit": "%",
+        "year": "2019"
+      },
+      {
+        "name": "非水可再生能源装机占比",
+        "value": "20.6",
+        "unit": "%",
+        "year": "2019"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 长期价格保障 -> 可再生能源装机增加",
+      "技术解决方案 -> 稳定运行 -> 高比例可再生能源实现"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 电力增长零碳化（2020–2030）： 中国实现碳中和的必经之路",
+    "url": "https://www.energy-transitions.org/wp-content/uploads/2021/01/RMI_ETC_China-Zero-Carbon-Electricity-Growth-report-2020_CN.pdf",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "亚洲新兴经济体, 中国, 印度, 美国, 欧盟, 英国",
+    "sectors": [
+      "制造业",
+      "建筑",
+      "数据中心",
+      "电动车充电",
+      "人工智能"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "国际组织"
+    ],
+    "stance_score": 1,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "AI驱动的数据中心扩张",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "人工智能（AI）驱动的电力需求增长将成为未来五年的长期趋势"
+      },
+      {
+        "factor": "数据中心快速扩张",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "美国因数据中心快速扩张，2025至2026年电力需求年增长率将保持在2%以上"
+      },
+      {
+        "factor": "可再生能源成本优势",
+        "category": "经济",
+        "strength_score": 5,
+        "evidence": "可再生能源的成本已持续低于化石燃料"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "化石燃料占比高",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "化石燃料仍占据54.8%的主导地位"
+      },
+      {
+        "factor": "天然气价格上涨导致煤炭发电占比上升",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "由于天然气价格上涨等因素的影响，煤炭发电在2025年上半年占比升至16%"
+      },
+      {
+        "factor": "能源结构“双轨”导致价格波动",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "能源结构的“双轨”格局将持续影响能源价格走势"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "中国电力消费增长率",
+        "value": "5.7",
+        "unit": "%",
+        "year": "2025"
+      },
+      {
+        "name": "印度电力消费增长率",
+        "value": "6.6",
+        "unit": "%",
+        "year": "2026"
+      },
+      {
+        "name": "可再生能源在电力结构中的占比",
+        "value": "45.2",
+        "unit": "%",
+        "year": "2025"
+      },
+      {
+        "name": "全球电力需求预测",
+        "value": "90000",
+        "unit": "TWh",
+        "year": "2050"
+      },
+      {
+        "name": "煤炭发电占比（2025年上半年）",
+        "value": "16",
+        "unit": "%",
+        "year": "2025"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "技术创新 -> 成本下降 -> 绿色电力消费提升",
+      "数据中心扩张 -> 电力需求增加 -> AI相关电力消耗占比提升"
+    ],
+    "confidence": "medium",
+    "source_title": "全球电力需求持续强劲能源转型节奏加快 - 经济参考报",
+    "url": "http://jjckb.xinhuanet.com/20250805/c3dbca94e677440ead5424e8da6cd085/c.html",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "report",
+    "year": "2024",
+    "geography": "全球",
+    "sectors": [
+      "发电",
+      "电力行业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 0,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "太阳能和风力发电快速增长",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "受太阳能和风力发电快速增长的推动"
+      },
+      {
+        "factor": "清洁能源占比创历史新高",
+        "category": "环境",
+        "strength_score": 3,
+        "evidence": "清洁能源占比创历史新高"
+      },
+      {
+        "factor": "全球发电二氧化碳排放强度下降",
+        "category": "环境",
+        "strength_score": 3,
+        "evidence": "2023 年全球发电二氧化碳排放强度的降低"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "化石燃料发电量仍占主要比例",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "燃煤和天然气发电量略有增加"
+      },
+      {
+        "factor": "清洁能源未能满足全部需求",
+        "category": "技术障碍",
+        "severity_score": 4,
+        "evidence": "清洁能源未能满足剩余需求增长"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "可再生能源占比",
+        "value": "30",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "清洁能源占比",
+        "value": "39",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "CO2排放强度",
+        "value": "480",
+        "unit": "gCO2/kWh",
+        "year": "2023"
+      },
+      {
+        "name": "总CO2排放量",
+        "value": "14153",
+        "unit": "MtCO2",
+        "year": "2023"
+      },
+      {
+        "name": "燃煤发电量",
+        "value": "10434",
+        "unit": "TWh",
+        "year": "2023"
+      }
+    ],
+    "method": "报告",
+    "sample_size": null,
+    "causal_links": [
+      "太阳能和风力发电快速增长 -> 可再生能源占比提升 -> 清洁能源占比提升",
+      "清洁能源占比提升 -> CO2排放强度下降"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 2024 - 全球电力评论",
+    "url": "https://ember-energy.org/app/uploads/2024/10/ZH_Global-Electricity-Review-2024.pdf",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "news",
+    "year": "2024",
+    "geography": "全球",
+    "sectors": [],
+    "stakeholders": [],
+    "stance_score": 1,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "技术创新",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "技术创新、竞争性供应链以及规模经济的推动下"
+      },
+      {
+        "factor": "竞争性供应链",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "技术创新、竞争性供应链以及规模经济的推动下"
+      },
+      {
+        "factor": "规模经济",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "技术创新、竞争性供应链以及规模经济的推动下"
+      }
+    ],
+    "barriers": [],
+    "metrics": [],
+    "method": "实证",
+    "sample_size": null,
+    "causal_links": [
+      "技术创新 -> 成本下降 -> 市场优势",
+      "竞争性供应链 -> 成本下降 -> 市场优势",
+      "规模经济 -> 成本下降 -> 市场优势"
+    ],
+    "confidence": "medium",
+    "source_title": "可再生能源在全球电力市场保持成本优势 - 中国石油报",
+    "url": "http://news.cnpc.com.cn/system/2025/07/29/030169779.shtml",
+    "keyword": "绿色电力消费",
+    "crawl_time": "2025-12-11T09:20:36.476104"
+  },
+  {
+    "source_type": "report",
+    "year": null,
+    "geography": "China",
+    "sectors": [
+      "企业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "平台",
+      "电网"
+    ],
+    "stance_score": "1",
+    "policy_refs": [
+      "绿色电力证书认购交易平台（2017）",
+      "可再生能源电力配额制政策（2018/2019）"
+    ],
+    "drivers": [
+      {
+        "factor": "中国积极推动能源生产与消费革命",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "中国也在积极推动能源生产与消费革命"
+      },
+      {
+        "factor": "电力体制改革的重启，电力用户参与市场化交易的准入条件逐渐放宽",
+        "category": "经济/技术",
+        "strength_score": 3,
+        "evidence": "电力价格机制的转变、交易方式和品种的放开"
+      },
+      {
+        "factor": "可再生能源电力配额制要求电力用户承担清洁能源配额的消纳责任",
+        "category": "政治/法律",
+        "strength_score": 5,
+        "evidence": "可再生能源电力配额制政策（2018/2019）"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿证与实体购电并无捆绑关系，证书价格较高",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "证书价格较高"
+      },
+      {
+        "factor": "市场对绿证观望态度",
+        "category": "心理障碍",
+        "severity_score": 3,
+        "evidence": "市场对其多持观望态度"
+      },
+      {
+        "factor": "绿证市场仍处于建设初期",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "绿电市场仍处于建设初期"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "可再生能源电力配额制 -> 企业必须购买绿电 -> 绿证交易需求提升",
+      "政府绿色电力证书平台 -> 绿证交易便利 -> 企业绿电消费增加"
+    ],
+    "confidence": "high",
+    "source_title": "企业绿色电力消费指导手册| WRI China - 世界资源研究所",
+    "url": "https://wri.org.cn/research/handbook-corporate-green-power-procurement-china",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "news",
+    "year": "2023",
+    "geography": "China",
+    "sectors": [
+      "企业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业"
+    ],
+    "stance_score": "2",
+    "policy_refs": [
+      "关于做好可再生能源绿色电力证书全覆盖工作 促进可再生能源电力消费的通知"
+    ],
+    "drivers": [
+      {
+        "factor": "响应国际绿电消费倡议",
+        "category": "社会",
+        "strength_score": 5,
+        "evidence": "苹果、高盛、微软等国际企业承诺在2050年前实现可再生能源100%绿色消费"
+      },
+      {
+        "factor": "践行社会责任",
+        "category": "社会",
+        "strength_score": 4,
+        "evidence": "国内大型企业将消费绿电作为实现碳中和的路径之一"
+      },
+      {
+        "factor": "满足产品出口需求",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "外向型企业通过消费绿电满足国外市场对产品生产过程中绿色属性的要求"
+      },
+      {
+        "factor": "满足消费者需求",
+        "category": "社会",
+        "strength_score": 4,
+        "evidence": "产品供应企业要求上游产业链全部使用绿电生产零配件"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿电市场供给不足",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "绿电消费以绿证为基础，当前存量绿证市场以陆上风电和集中式光伏发电项目绿证为主"
+      },
+      {
+        "factor": "社会认可度低",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "尚未建立统一的绿电消费认证标准、标识体系和公示制度"
+      },
+      {
+        "factor": "约束力不足，仍以自愿为主",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "绿电消费仍以自愿为主，缺乏强制约束"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "绿证交易量",
+        "value": "1381万",
+        "unit": "份",
+        "year": "2023"
+      },
+      {
+        "name": "绿电消费量",
+        "value": "138亿",
+        "unit": "千瓦时",
+        "year": "2023"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证全覆盖 -> 企业绿电消费增加",
+      "企业社会责任 -> 绿证购买 -> 绿电消费提升"
+    ],
+    "confidence": "high",
+    "source_title": "激发全社会绿电消费潜力 - 新华网",
+    "url": "http://www.news.cn/tech/20230807/0d5160a62e6a4396944c014c67fc3109/c.html",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "news",
+    "year": "2023",
+    "geography": "China",
+    "sectors": [
+      "Manufacturing",
+      "Leasing and business services",
+      "Mining",
+      "Black metal mining and ore selection",
+      "Finance",
+      "Wholesale and retail",
+      "Information transmission, software and IT services",
+      "Electricity, heat, gas and water production and supply"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "关于做好可再生能源绿色电力证书全覆盖工作 促进可再生能源电力消费的通知"
+    ],
+    "drivers": [
+      {
+        "factor": "完善绿证核发交易规则及实施细则",
+        "category": "政治/法律",
+        "strength_score": 4,
+        "evidence": "完善绿证核发交易规则及实施细则"
+      },
+      {
+        "factor": "加快建立基于绿证的绿电消费认证标准、标识体系和公示制度",
+        "category": "政治/法律",
+        "strength_score": 4,
+        "evidence": "加快建立基于绿证的绿电消费认证标准、标识体系和公示制度"
+      },
+      {
+        "factor": "推动以绿证为凭证计量可再生能源消费量",
+        "category": "政治/法律",
+        "strength_score": 3,
+        "evidence": "推动以绿证为凭证计量可再生能源消费量"
+      },
+      {
+        "factor": "绿证购买主体以企业为主",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "绿证购买主体以企业为主"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿电消费尚处于初级阶段",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "我国绿电消费尚处于初级阶段"
+      },
+      {
+        "factor": "绿证交易规模有限",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "截至2023年6月，全国绿证交易约4020万张"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "绿证交易量",
+        "value": "4020万",
+        "unit": "张",
+        "year": "2023"
+      },
+      {
+        "name": "绿电消费量",
+        "value": "402亿",
+        "unit": "千瓦时",
+        "year": "2023"
+      },
+      {
+        "name": "绿电交易占比",
+        "value": "70%以上",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "参与企业数量",
+        "value": "7500+",
+        "unit": "家",
+        "year": "2023"
+      },
+      {
+        "name": "制造业占比",
+        "value": "70%以上",
+        "unit": "%",
+        "year": "2023"
+      }
+    ],
+    "method": "新闻报道",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证交易规模扩大 -> 绿电消费提升",
+      "政府法规 -> 企业购买绿证 -> 绿电消费增加"
+    ],
+    "confidence": "high",
+    "source_title": "四问四答，搞懂什么是绿电！",
+    "url": "https://www.cpnn.com.cn/news/hy/202308/t20230807_1624105.html",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "钢铁",
+      "有色金属",
+      "建材",
+      "石化",
+      "化工",
+      "数据中心",
+      "重点用能单位"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "数据中心",
+      "电网"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "《关于促进可再生能源绿色电力证书市场高质量发展的意见》",
+      "《中华人民共和国能源法》"
+    ],
+    "drivers": [
+      {
+        "factor": "政府政策推动绿证市场交易制度",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "五部门联合印发《关于促进可再生能源绿色电力证书市场高质量发展的意见》"
+      },
+      {
+        "factor": "将绿色电力消费信息纳入上市企业ESG报告体系",
+        "category": "社会",
+        "strength_score": 4,
+        "evidence": "将绿色电力消费信息纳入上市企业ESG报告体系"
+      },
+      {
+        "factor": "绿证交易规模和用户数量快速扩大",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "交易规模和用户数量也快速扩大"
+      },
+      {
+        "factor": "国家枢纽节点新建数据中心绿电占比80%目标",
+        "category": "环境",
+        "strength_score": 3,
+        "evidence": "力争在2025年实现国家枢纽节点新建数据中心绿电占比达到80%"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "技术障碍（绿色电力供应不足）",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "鼓励其实现100%绿色电力消费"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "累计核发绿证",
+        "value": "49.55",
+        "unit": "亿个",
+        "year": "2024"
+      },
+      {
+        "name": "可交易绿证",
+        "value": "33.79",
+        "unit": "亿个",
+        "year": "2024"
+      },
+      {
+        "name": "参与绿证交易消费主体数量",
+        "value": "59000",
+        "unit": "个",
+        "year": "2024"
+      },
+      {
+        "name": "累计交易绿证",
+        "value": "5.53",
+        "unit": "亿个",
+        "year": "2024"
+      },
+      {
+        "name": "数据中心绿电占比目标",
+        "value": "80",
+        "unit": "%",
+        "year": "2025"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政府政策激励 -> 绿证市场交易规模扩大 -> 企业绿色电力消费提升"
+    ],
+    "confidence": "high",
+    "source_title": "五部门发力提升用电“含绿量” 多行业推进绿证强制消费 - 新华网",
+    "url": "http://www.xinhuanet.com/20250319/297c22eb95044f7ca8c8d47e446eafd8/c.html",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "news",
+    "year": "2017",
+    "geography": "China",
+    "sectors": [
+      "居民"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "绿证认购",
+      "碳排放权交易",
+      "强制配额制"
+    ],
+    "drivers": [
+      {
+        "factor": "政府补贴支持可再生能源发电",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "需要在燃煤标杆电价的基础上给予一定的补贴才能支撑其发展"
+      },
+      {
+        "factor": "政府通过购置绿证发挥示范作用",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "政府机关出钱认购绿证，更多的是起一个宣传和引领的表率作用"
+      },
+      {
+        "factor": "消费者对无碳、清洁、环保能源的需求",
+        "category": "社会/环境",
+        "strength_score": 3,
+        "evidence": "可再生能源具有无碳、清洁、环保、可再生的特点"
+      },
+      {
+        "factor": "企业和个人使用绿电可获得税收减免及贷款优惠",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "在荷兰，如果消费了绿色电力，可以适当减免企业的生态税；在美国一些州，使用绿电可享受贷款优惠"
+      },
+      {
+        "factor": "绿证自愿认购市场的迅速启动",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "绿证自愿认购交易正式启动以来"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "可再生能源发电成本相对较高",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "可再生能源电力发电成本相对较高，需要在燃煤标杆电价的基础上给予一定的补贴"
+      },
+      {
+        "factor": "缺乏足够的实质性激励措施",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "需要更多实质性的激励措施"
+      },
+      {
+        "factor": "公众误解绿证不改变实际用电",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "按照一般人的理解，申雪、赵宏博夫妇家庭用的物理电力并没有变化"
+      },
+      {
+        "factor": "缺乏强制推广机制",
+        "category": "制度障碍",
+        "severity_score": 2,
+        "evidence": "绿证似乎终究得靠强制推广才能取得较大成效"
+      },
+      {
+        "factor": "需与非水可再生能源强制配额制及碳排放权交易结合",
+        "category": "制度障碍",
+        "severity_score": 2,
+        "evidence": "未来，绿证会与非水可再生能源强制配额制、碳排放权交易结合起来吗"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "绿证代表电量",
+        "value": "1000",
+        "unit": "kWh",
+        "year": null
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政府补贴 -> 可再生能源成本下降 -> 绿证价格降低 -> 消费者购买绿证增加",
+      "政府购买绿证 -> 提升公众认知 -> 促使居民购买绿证"
+    ],
+    "confidence": "high",
+    "source_title": "让更多人参与绿色电力消费 - 国家能源局",
+    "url": "http://www.nea.gov.cn/2017-07/17/c_136449950.htm",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "policy",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "新能源",
+      "企业",
+      "电力"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "关于有序推动绿电直连发展有关事项的通知"
+    ],
+    "drivers": [
+      {
+        "factor": "满足企业绿色用能需求",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "通过明确绿电直连的适用范围、规范规划管理要求、健全市场价格机制"
+      },
+      {
+        "factor": "激发新能源企业投资建设热情",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "激发新能源企业投资建设的热情"
+      },
+      {
+        "factor": "加快规划建设新型能源体系",
+        "category": "政策",
+        "strength_score": 4,
+        "evidence": "加快规划建设新型能源体系"
+      },
+      {
+        "factor": "完善新能源消纳和调控政策措施",
+        "category": "政策",
+        "strength_score": 3,
+        "evidence": "完善新能源消纳和调控政策措施"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "企业自备电厂须足额清缴可再生能源发展基金",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "在企业自备电厂足额清缴可再生能源发展基金的前提下"
+      },
+      {
+        "factor": "需要通过调减自备电厂出力实现绿电直连",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "绿电直连的发电空间需通过调减自备电厂出力实现"
+      },
+      {
+        "factor": "电网接入工程建设或当地电网消纳空间不足",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "电网接入工程建设或当地电网消纳空间不足"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿电直连适用范围明确 -> 企业绿色用能需求满足 -> 绿电直连项目建设",
+      "政策激励 -> 规范规划管理要求 -> 提升新能源就近就地利用水平 -> 绿电直连项目发展"
+    ],
+    "confidence": "high",
+    "source_title": "政策解读丨绿电直连赋能新能源发展助力开启绿电消费新篇章",
+    "url": "https://www.nea.gov.cn/20250609/8799cdca0bf64f8f89d5068002de2708/c.html",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "policy",
+    "year": "2022",
+    "geography": "中国",
+    "sectors": [
+      "电力",
+      "高耗能企业",
+      "交通运输",
+      "旅游"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "金融",
+      "居民"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "促进绿色消费实施方案",
+      "中共中央、国务院关于完整准确全面贯彻新发展理念做好碳达峰碳中和工作的意见",
+      "2030年前碳达峰行动方案",
+      "绿色债券发行规模",
+      "绿证交易"
+    ],
+    "drivers": [
+      {
+        "factor": "完善分时电价政策",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "完善分时电价政策，有效拉大峰谷价差和浮动幅度"
+      },
+      {
+        "factor": "建立绿色电力交易与可再生能源消纳责任权重挂钩机制",
+        "category": "政策",
+        "strength_score": 5,
+        "evidence": "建立绿色电力交易与可再生能源消纳责任权重挂钩机制"
+      },
+      {
+        "factor": "鼓励行业龙头企业消费绿色电力",
+        "category": "政策/经济",
+        "strength_score": 4,
+        "evidence": "鼓励行业龙头企业、大型国有企业、跨国公司等消费绿色电力"
+      },
+      {
+        "factor": "引导用户签订绿色电力交易合同",
+        "category": "政策",
+        "strength_score": 4,
+        "evidence": "引导用户签订绿色电力交易合同，并在中长期交易合同中单列"
+      },
+      {
+        "factor": "加强金融支持力度",
+        "category": "经济",
+        "strength_score": 5,
+        "evidence": "加大金融支持力度，推动消费金融公司绿色业务发展"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿色电力消费潜力尚待激发",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "绿电消费潜力尚待激发和释放"
+      },
+      {
+        "factor": "高耗能企业绿色电力最低占比缺统一",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "各地可根据实际情况制定高耗能企业电力消费中绿色电力最低占比"
+      },
+      {
+        "factor": "缺乏完善的绿色电力交易市场机制",
+        "category": "技术障碍",
+        "severity_score": 2,
+        "evidence": "绿色电力交易与绿证交易仍需进一步完善"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 企业签订绿色电力交易合同 -> 绿色电力消费提升",
+      "绿色电力交易与可再生能源消纳责任挂钩 -> 市场化用户购买绿色电力 -> 绿色电力消费提升",
+      "完善分时电价政策 -> 用户错峰用电 -> 绿色电力消费提升"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 促进绿色消费实施方案 - 中华人民共和国国家发展和改革委员会",
+    "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202201/P020220121303052384813.pdf",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "China",
+    "sectors": [
+      "纺织",
+      "电子",
+      "电器",
+      "能源"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "国际组织"
+    ],
+    "stance_score": "1",
+    "policy_refs": [
+      "碳排放双控政策",
+      "RE100",
+      "绿证制度"
+    ],
+    "drivers": [
+      {
+        "factor": "绿证价格回升",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "绿证价格已上涨至约6元/个"
+      },
+      {
+        "factor": "碳排放双控政策衔接",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "碳排放双控政策衔接"
+      },
+      {
+        "factor": "国际组织RE100认可",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "RE100全面认可中国绿证"
+      },
+      {
+        "factor": "多元需求驱动绿色转型",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "多元需求驱动绿色转型"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "跨省跨区交易衔接机制不足",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "推动跨省、跨区绿电与电能量交易的衔接机制创新"
+      },
+      {
+        "factor": "企业缺乏能力建设和长期采购策略",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "需加强能力建设，提前布局长期采购策略"
+      },
+      {
+        "factor": "绿证价格不合理反映环境价值",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "绿电绿证价格合理反映环境价值"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "绿证成交量",
+        "value": "832亿",
+        "unit": "千瓦时",
+        "year": "2024"
+      },
+      {
+        "name": "绿电成交量",
+        "value": "97.5亿",
+        "unit": "千瓦时",
+        "year": "2024"
+      },
+      {
+        "name": "绿证价格",
+        "value": "6",
+        "unit": "元/个",
+        "year": "2024"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政策完善 -> 绿证价格回升 -> 绿电需求增加",
+      "国际组织认可 -> 绿证体系国际化 -> 绿电交易扩大"
+    ],
+    "confidence": "high",
+    "source_title": "绿电交易| 绿电市场进入高质量发展阶段，各方应如何携手抓住新机遇？",
+    "url": "https://wri.org.cn/xinwen/ludianjiaoyi-ludianshichangjinrugaozhiliangfazhanjieduangefangyingruhexieshouzhuazhuxinjiyu",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "news",
+    "year": null,
+    "geography": "China",
+    "sectors": [
+      "能源/电力"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "关于建立健全可再生能源消纳保障机制的通知",
+      "CCER"
+    ],
+    "drivers": [
+      {
+        "factor": "政府支持可再生能源消纳保障机制",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "国家于 2019 年发布了《关于建立健全可再生能源消纳保障机制的通知》"
+      },
+      {
+        "factor": "采用配额制+绿证机制符合市场化原则",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "采用“配额制 + 绿证”机制，建立绿证消费强制市场是一种行之有效、符合市场化原则的 长效机制"
+      },
+      {
+        "factor": "市场主体通过绿证满足配额考核需求",
+        "category": "经济",
+        "strength_score": 2,
+        "evidence": "将市场主体持有绿证所对应的电量作为配额考核 的依据，被考核市场主体可通过购买绿证完成考核"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿证交易为自愿认购，缺乏强制交易制度",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "绿证交易为自愿认购，尚未启动绿证强制交易"
+      },
+      {
+        "factor": "绿证覆盖的可再生能源电力来源单一",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "绿证覆盖的 可再生能源电力来源比较单一"
+      },
+      {
+        "factor": "缺乏统一的绿电消费认证体系",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "尚未形成统一的绿电消费认证体系"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证交易激活 -> 可再生能源消纳提高"
+    ],
+    "confidence": "high",
+    "source_title": "【双碳观察】 万亿“绿证”地位明确！绿证、绿电、CCER谁是未来主流？",
+    "url": "http://www.caeerr.com/i/2049.html",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "news",
+    "year": null,
+    "geography": "中国",
+    "sectors": [
+      "可再生能源发电",
+      "企业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "用户",
+      "平台"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "国家能源局核发绿证",
+      "可再生能源配额制 (RPS)",
+      "政府要求可再生能源消费比例"
+    ],
+    "drivers": [
+      {
+        "factor": "政府支持与补贴政策",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "国家能源局核发绿证"
+      },
+      {
+        "factor": "企业ESG评级提升",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "提升ESG评级与资本市场认可度"
+      },
+      {
+        "factor": "降低碳税/碳交易成本风险",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "降低未来碳税或碳交易成本上升的风险"
+      },
+      {
+        "factor": "应对欧盟碳边境调节机制 (CBAM)",
+        "category": "政治",
+        "strength_score": 3,
+        "evidence": "应对欧盟碳边境调节机制 (CBAM)"
+      }
+    ],
+    "barriers": [],
+    "metrics": [],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "国家能源局核发绿证 -> 绿色电力市场化 -> 企业收益提升"
+    ],
+    "confidence": "medium",
+    "source_title": "干货收藏|一文读懂绿电绿证 - 千瓦科技",
+    "url": "https://www.qianwa.com/news/976.html",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "other",
+    "year": "2017",
+    "geography": "China",
+    "sectors": [
+      "办公建筑",
+      "企业"
+    ],
+    "stakeholders": [
+      "企业",
+      "平台"
+    ],
+    "stance_score": 2,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "快速发展的市场：可再生能源装机量增长以及绿证的推行",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "快速发展的市场：可再生能源装机量增长以及绿证的推行"
+      },
+      {
+        "factor": "强制配额制和其它相应激励政策的出台",
+        "category": "法律",
+        "strength_score": 5,
+        "evidence": "强制配额制和其它相应激励政策的出台"
+      },
+      {
+        "factor": "监管机构追溯可再生能源生命周期",
+        "category": "法律",
+        "strength_score": 3,
+        "evidence": "监管机构追溯可再生能源的生命周期"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "总电能消耗",
+        "value": "6.67",
+        "unit": "MWh",
+        "year": null
+      },
+      {
+        "name": "空调电能消耗",
+        "value": "1.94",
+        "unit": "MWh",
+        "year": null
+      },
+      {
+        "name": "灯光及其他电能消耗",
+        "value": "4.73",
+        "unit": "MWh",
+        "year": null
+      },
+      {
+        "name": "绿证购买数量",
+        "value": "8",
+        "unit": "张",
+        "year": null
+      }
+    ],
+    "method": "案例",
+    "sample_size": 8,
+    "causal_links": [
+      "绿证购买 -> 碳排放抵消 -> 100%可再生能源电力消费",
+      "强制配额制 -> 绿证需求提升"
+    ],
+    "confidence": "high",
+    "source_title": "绿证自愿认购交易制度的试行助力绿色电力消费 - 落基山研究所",
+    "url": "https://rmi.org.cn/%E7%BB%BF%E8%AF%81%E8%87%AA%E6%84%BF%E8%AE%A4%E8%B4%AD%E4%BA%A4%E6%98%93%E5%88%B6%E5%BA%A6%E7%9A%84%E8%AF%95%E8%A1%8C%E5%8A%A9%E5%8A%9B%E7%BB%BF%E8%89%B2%E7%94%B5%E5%8A%9B%E6%B6%88%E8%B4%B9/",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "policy",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "企业",
+      "能源消纳"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": "2",
+    "policy_refs": [
+      "分布式光伏发电开发建设管理办法",
+      "中华人民共和国能源法"
+    ],
+    "drivers": [
+      {
+        "factor": "满足企业绿色用能需求",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "满足企业绿色用能需求"
+      },
+      {
+        "factor": "政府引导与政策鼓励",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "国家发展改革委制定本通知"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "多年期购电协议签订复杂",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "签订多年期购电协议或合同能源管理协议"
+      },
+      {
+        "factor": "自发自用比例和上网比例限制",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "自发自用电量占总可用发电量比例不低于60%，上网电量占总可用发电量比例不超过20%"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "自发自用比例",
+        "value": "≥60%",
+        "unit": "%",
+        "year": null
+      },
+      {
+        "name": "自发自用占用电比例",
+        "value": "≥30%",
+        "unit": "%",
+        "year": null
+      },
+      {
+        "name": "2030年前自发自用比例",
+        "value": "≥35%",
+        "unit": "%",
+        "year": "2030"
+      },
+      {
+        "name": "上网电量比例上限",
+        "value": "≤20%",
+        "unit": "%",
+        "year": null
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 直连项目投资 -> 企业绿色用能提升",
+      "政府引导 -> 直连项目建设 -> 新能源就近消纳"
+    ],
+    "confidence": "high",
+    "source_title": "关于有序推动绿电直连发展有关事项的通知(发改能源〔2025〕650号)",
+    "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202505/t20250530_1398138.html",
+    "keyword": "绿电消费",
+    "crawl_time": "2025-12-11T09:20:37.012571"
+  },
+  {
+    "source_type": "news",
+    "year": "2023",
+    "geography": "全球",
+    "sectors": [
+      "能源",
+      "可再生能源消费"
+    ],
+    "stakeholders": [
+      "政府",
+      "国际组织",
+      "金融"
+    ],
+    "stance_score": 0,
+    "policy_refs": [
+      "可持续发展目标7",
+      "2030年可持续发展议程"
+    ],
+    "drivers": [
+      {
+        "factor": "政府政策增加可再生能源投资",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "一些政府的政策已经表明将为此增加投资"
+      },
+      {
+        "factor": "全球能源危机刺激可再生能源部署",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "全球能源危机预计将继续刺激可再生能源的部署以及能源效率的提高"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "国际公共资金流向发展中国家低于平均水平",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "在2021年用于支持发展清洁能源的国际公共资金当中，流向发展中国家的为108亿美元，比2010年至2019年的平均水平低35%"
+      },
+      {
+        "factor": "资金分配高度集中在少数国家",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "资金只掌握在少数的发展中国家手中，其中19个国家就占到了八成的资金承诺"
+      },
+      {
+        "factor": "电力可获得人口增长放缓",
+        "category": "社会障碍",
+        "severity_score": 2,
+        "evidence": "2019年到2021年，这一增长趋势有所放缓"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "可再生能源消费占比",
+        "value": "26.3",
+        "unit": "%",
+        "year": "2019"
+      },
+      {
+        "name": "可再生能源消费占比",
+        "value": "28.2",
+        "unit": "%",
+        "year": "2020"
+      },
+      {
+        "name": "国际公共资金支持发展中国家",
+        "value": "108",
+        "unit": "亿美元",
+        "year": "2021"
+      },
+      {
+        "name": "电力可获得人口占比",
+        "value": "84",
+        "unit": "%",
+        "year": "2010"
+      },
+      {
+        "name": "电力可获得人口占比",
+        "value": "91",
+        "unit": "%",
+        "year": "2021"
+      },
+      {
+        "name": "无法获取电力的人口",
+        "value": "6.75",
+        "unit": "亿人",
+        "year": "2023"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政府政策激励 -> 投资增加 -> 可再生能源消费比例提升",
+      "能源危机 -> 投资刺激 -> 采用率提升",
+      "低国际公共资金 -> 发展中国家能源部署受限"
+    ],
+    "confidence": "medium",
+    "source_title": "最新报告：全球可再生能源消费增长，基本能源获取仍存鸿沟",
+    "url": "https://news.un.org/zh/story/2023/06/1118557",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "policy",
+    "year": "2010",
+    "geography": "中国",
+    "sectors": [
+      "能源",
+      "农村",
+      "西部地区"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "可再生能源法",
+      "可再生能源中长期发展规划"
+    ],
+    "drivers": [
+      {
+        "factor": "政府支持与规划",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "2006年我国开始实施《可再生能源法》，2007年又发布了《可再生能源中长期发展规划》"
+      },
+      {
+        "factor": "市场竞争力提升",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "化石能源价格上涨，导致我国新型可再生能源的市场竞争力有所提高"
+      },
+      {
+        "factor": "减排与环境保护",
+        "category": "环境",
+        "strength_score": 4,
+        "evidence": "2005年可再生能源利用量为1.66亿吨标准煤，每年可减少二氧化硫排放300万吨、二氧化碳排放4亿多吨"
+      },
+      {
+        "factor": "技术创新与高新技术属性",
+        "category": "技术",
+        "strength_score": 5,
+        "evidence": "可再生能源产业大部分属高新技术产业，发展前景十分广阔"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "可再生能源利用量",
+        "value": "2.5",
+        "unit": "亿吨标准煤",
+        "year": "2008"
+      },
+      {
+        "name": "可再生能源占一次能源消费量比例",
+        "value": "9",
+        "unit": "%",
+        "year": "2008"
+      },
+      {
+        "name": "水电装机容量",
+        "value": "1.72",
+        "unit": "亿千瓦",
+        "year": null
+      },
+      {
+        "name": "太阳能热水器装置保有量",
+        "value": "1.3",
+        "unit": "亿平方米",
+        "year": null
+      },
+      {
+        "name": "生物质液体燃料生产能力",
+        "value": "1.3",
+        "unit": "万吨",
+        "year": null
+      },
+      {
+        "name": "风电装机容量",
+        "value": "12",
+        "unit": "万千瓦",
+        "year": null
+      },
+      {
+        "name": "太阳能光伏电池装机容量",
+        "value": "2.6",
+        "unit": "万千瓦",
+        "year": null
+      },
+      {
+        "name": "二氧化硫减排量",
+        "value": "300",
+        "unit": "万吨",
+        "year": null
+      },
+      {
+        "name": "二氧化碳减排量",
+        "value": "4",
+        "unit": "亿吨",
+        "year": null
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政府政策激励 -> 可再生能源利用成本下降 -> 采用率提升"
+    ],
+    "confidence": "high",
+    "source_title": "可再生能源：经济持续发展的重要支撑 - 中国人大网",
+    "url": "http://www.npc.gov.cn/WZWSREL3pncmR3L25wYy8vLy8vLy94aW53ZW4vcmRsdC9zZC8yMDEwLTEwLzAzL2NvbnRlbnRfMTU5Nzg2Ny5odG0=",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "report",
+    "year": "2025",
+    "geography": "全球",
+    "sectors": [
+      "能源",
+      "电力",
+      "可再生能源",
+      "企业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "国际组织"
+    ],
+    "stance_score": -1,
+    "policy_refs": [
+      "巴黎协定",
+      "COP28",
+      "2035年禁售新燃气锅炉计划"
+    ],
+    "drivers": [
+      {
+        "factor": "技术成本下降",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "技术成本的下降"
+      },
+      {
+        "factor": "能源需求增长",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "2024年能源需求增长了2.2%"
+      },
+      {
+        "factor": "企业购电需求",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "企业购电协议预计增长69 GW"
+      },
+      {
+        "factor": "分散化趋势",
+        "category": "社会/技术",
+        "strength_score": 3,
+        "evidence": "发展中国家的屋顶光伏增长了22%"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "政策信号不一致",
+        "category": "政治",
+        "severity_score": 4,
+        "evidence": "政策信号的不一致和市场的不确定性"
+      },
+      {
+        "factor": "贸易限制",
+        "category": "经济/法律",
+        "severity_score": 5,
+        "evidence": "贸易管制从2015年的9项激增至2024年的212项"
+      },
+      {
+        "factor": "基础设施不足",
+        "category": "技术/经济",
+        "severity_score": 4,
+        "evidence": "缺乏一致的政策、协调整体规划和具备韧性的电网与储能系统"
+      },
+      {
+        "factor": "市场波动",
+        "category": "经济",
+        "severity_score": 3,
+        "evidence": "市场波动削弱"
+      },
+      {
+        "factor": "政策撤回",
+        "category": "政治",
+        "severity_score": 4,
+        "evidence": "美国宣布退出《巴黎协定》，新西兰撤销海上油气勘探禁令"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "新增可再生能源发电容量",
+        "value": "740",
+        "unit": "GW",
+        "year": "2024"
+      },
+      {
+        "name": "电力消费增长率",
+        "value": "4.3",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "能源需求增长率",
+        "value": "2.2",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "CO2排放量增加率",
+        "value": "0.8",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "太阳能光伏在新增容量中的占比",
+        "value": "81",
+        "unit": "%",
+        "year": null
+      },
+      {
+        "name": "贸易限制数量",
+        "value": "212",
+        "unit": "项",
+        "year": "2024"
+      },
+      {
+        "name": "企业购电协议新增容量",
+        "value": "69",
+        "unit": "GW",
+        "year": "2024"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "技术成本下降 -> 可再生能源新增容量增加",
+      "能源需求增长 -> 电力消费增加 -> 碳排放上升",
+      "政策不一致 -> 市场不确定性 -> 变革放缓",
+      "贸易限制 -> 清洁技术获取受限 -> 发展停滞"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 全球可再生能源发电突破记录——然而贸易壁垒 - REN21",
+    "url": "https://www.ren21.net/wp-content/uploads/2019/05/251606_GO_PR_Chinese_Final.pdf",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "policy",
+    "year": null,
+    "geography": "中国",
+    "sectors": [
+      "钢铁",
+      "电解铝",
+      "水泥",
+      "平板玻璃",
+      "新能源汽车",
+      "建筑",
+      "交通",
+      "工业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "金融"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "《意见》"
+    ],
+    "drivers": [
+      {
+        "factor": "政府推动可再生能源供给能力提升",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "《意见》明确，全面提升可再生能源供给能力"
+      },
+      {
+        "factor": "推进构网型技术应用，发展绿色燃料、可再生能源制氢和综合供热体系",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "推进构网型技术应用，发展绿色燃料、可再生能源制氢和综合供热体系"
+      },
+      {
+        "factor": "发展绿色低碳产业，推动传统产业绿色低碳转型",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "推动传统产业绿色低碳转型"
+      },
+      {
+        "factor": "绿色证书机制与节能降碳政策衔接",
+        "category": "法律",
+        "strength_score": 3,
+        "evidence": "使用绿证作为可再生能源电力消费核算的基础凭证"
+      },
+      {
+        "factor": "国际合作推动技术装备研发",
+        "category": "国际组织",
+        "strength_score": 3,
+        "evidence": "推动工业、交通、建筑、农业农村等重点领域可再生能源应用先进技术装备研发的国际合作"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "可再生能源消费量",
+        "value": "11",
+        "unit": "亿吨标煤",
+        "year": 2025
+      },
+      {
+        "name": "可再生能源消费量",
+        "value": "15",
+        "unit": "亿吨标煤",
+        "year": 2030
+      },
+      {
+        "name": "可再生能源装机规模",
+        "value": "17",
+        "unit": "亿千瓦",
+        "year": 2024
+      },
+      {
+        "name": "非化石能源消费比重",
+        "value": "17.9",
+        "unit": "%",
+        "year": 2023
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 可再生能源供给能力提升 -> 可再生能源消费量增加",
+      "绿色证书机制 -> 企业减排目标实现 -> 绿色能源消费提升"
+    ],
+    "confidence": "high",
+    "source_title": "中国大力实施可再生能源替代行动_政策解读 - 中国政府网",
+    "url": "https://www.gov.cn/zhengce/202411/content_6984676.htm",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "report",
+    "year": "2020",
+    "geography": "China",
+    "sectors": [
+      "energy production",
+      "energy consumption",
+      "energy statistics"
+    ],
+    "stakeholders": [
+      "政府",
+      "统计机构"
+    ],
+    "stance_score": 0,
+    "policy_refs": [
+      "国家能源统计报表制度"
+    ],
+    "drivers": [
+      {
+        "factor": "完善的能源统计报表制度",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "国家能源统计报表制度"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "可再生能源未充分纳入统计体系",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "尚未纳入的可再生能源很多"
+      },
+      {
+        "factor": "地热能数据更新滞后",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "地热能未升级"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "太阳能集热面积",
+        "value": "10000",
+        "unit": "平方米",
+        "year": null
+      }
+    ],
+    "method": "案例",
+    "sample_size": null,
+    "causal_links": [
+      "国家能源统计报表制度 -> 提升可再生能源数据采集"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 中国可再生能源数据采集和统计经验",
+    "url": "https://www.stats.gov.cn/english/InternationalTraining/2018/202009/P020201102535413560484.pdf",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "report",
+    "year": "2025",
+    "geography": "global",
+    "sectors": [
+      "能源",
+      "交通"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "平台",
+      "金融",
+      "国际组织"
+    ],
+    "stance_score": 0,
+    "policy_refs": [
+      "通胀削减法案",
+      "COP28",
+      "世界能源统计年鉴2025"
+    ],
+    "drivers": [
+      {
+        "factor": "全球能源需求增长",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "能源需求的增长也凸显了全球许多地区在经济发展与可持续增长之间面临的持续挑战"
+      },
+      {
+        "factor": "中国电动汽车普及",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "目前中国售出的新车中，一半以上都是电动汽车"
+      },
+      {
+        "factor": "通胀削减法案支持",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "美国现任政府提出拟减少基于《通胀削减法案》提供的支持"
+      },
+      {
+        "factor": "全球生物燃料需求增长",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "全球生物燃料需求在2024年创下历史新高"
+      },
+      {
+        "factor": "新统计方法与IEA对齐",
+        "category": "技术",
+        "strength_score": 2,
+        "evidence": "采用的新统计方法（该统计方法旨在更好地与国际能源署等其他数据源保持一致）"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "可再生能源增长不均衡",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "可再生能源的增长仍然不均衡，尤其是在经济逆风加剧和区域政策分歧加大的背景下"
+      },
+      {
+        "factor": "通胀削减法案支持削减",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "美国现任政府提出拟减少基于《通胀削减法案》提供的支持"
+      },
+      {
+        "factor": "欧盟生物柴油需求下降",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "欧盟却出现了11%的下降，主要体现在生物柴油领域"
+      },
+      {
+        "factor": "投资金融压力加大",
+        "category": "信息障碍",
+        "severity_score": 2,
+        "evidence": "加快进展可能在未来变得更加困难"
+      },
+      {
+        "factor": "非洲可再生能源增长缓慢",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "非洲整体仅占年度全球能源需求的4%，可再生能源增长也未及其他地区水平"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "非化石燃料占比",
+        "value": "13",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "美国可再生能源部署增长率",
+        "value": "7",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "欧洲可再生能源增长率",
+        "value": "6",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "中国可再生能源增量占比",
+        "value": "57",
+        "unit": "%",
+        "year": "2024"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "通胀削减法案支持 -> 可再生能源部署增长 -> 采用率提升"
+    ],
+    "confidence": "medium",
+    "source_title": "[PDF] 从无序到有序： 重塑全球能源转型的未来图景",
+    "url": "https://assets.kpmg.com/content/dam/kpmg/cn/pdf/zh/2025/08/redraw-the-future-landscape-of-global-energy-transformation.pdf",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "report",
+    "year": "2023",
+    "geography": "全球",
+    "sectors": [
+      "可再生能源"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "个人投资者",
+      "金融组织"
+    ],
+    "stance_score": 2,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "技术进步",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "技术进步和成本降低使可再生能源相对于传统能源更具竞争力"
+      },
+      {
+        "factor": "政府政策支持",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "有利的政府政策推动可再生能源需求"
+      },
+      {
+        "factor": "ESG要求",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "投资者对ESG标准的提高导致向可持续投资转变"
+      },
+      {
+        "factor": "成本下降",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "成本降低使可再生能源更具竞争力"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "美国市场规模",
+        "value": "1275.9",
+        "unit": "亿美元",
+        "year": "2025"
+      },
+      {
+        "name": "全球CAGR 2024-2032",
+        "value": "5.56",
+        "unit": "%",
+        "year": null
+      }
+    ],
+    "method": "报告",
+    "sample_size": null,
+    "causal_links": [
+      "技术进步 -> 成本降低 -> 采用率提升",
+      "政府政策支持 -> 市场需求增长",
+      "ESG要求 -> 投资者关注 -> 资本流入"
+    ],
+    "confidence": "high",
+    "source_title": "可再生能源市场规模、份额和趋势|成长[2032]",
+    "url": "https://www.fortunebusinessinsights.com/zh/renewable-energy-market-105511",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "report",
+    "year": "2024",
+    "geography": "G20",
+    "sectors": [
+      "发电",
+      "终端用能"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民"
+    ],
+    "stance_score": "0",
+    "policy_refs": [
+      "巴黎协定"
+    ],
+    "drivers": [
+      {
+        "factor": "政府支持与投资",
+        "category": "政治/经济",
+        "strength_score": 4,
+        "evidence": "中国在此进程中发挥了关键作用，2024 年新增太阳能发电 278 吉瓦、风电 80 吉瓦"
+      },
+      {
+        "factor": "经济与人口增速放缓",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "欧盟近期排放量下降主要源于经济与人口增速放缓"
+      },
+      {
+        "factor": "高能效技术推广",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "低排放与高能效技术不断涌现"
+      },
+      {
+        "factor": "电动汽车与热泵技术潜力",
+        "category": "技术",
+        "strength_score": 2,
+        "evidence": "电动汽车与热泵技术虽潜力巨大"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "可再生能源增速不足",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "可再生能源持续扩张，但其增速仍显不足"
+      },
+      {
+        "factor": "终端电气化进展有限",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "终端用途电气化进展依然有限"
+      },
+      {
+        "factor": "化石燃料消费持续攀升",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "化石燃料消费总量持续攀升"
+      },
+      {
+        "factor": "电动汽车与热泵推广放缓",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "已初现推广放缓迹象"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "能源消费增速",
+        "value": "2",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "新增太阳能发电装机容量",
+        "value": "278",
+        "unit": "吉瓦",
+        "year": "2024"
+      },
+      {
+        "name": "新增风电装机容量",
+        "value": "80",
+        "unit": "吉瓦",
+        "year": "2024"
+      },
+      {
+        "name": "中国新增太阳能装机份额",
+        "value": "69",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "中国新增风电装机份额",
+        "value": "76",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "风力发电量增速",
+        "value": "8",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "太阳能发电量增速",
+        "value": "29",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "风电占比",
+        "value": "9",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "太阳能占比",
+        "value": "7",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "中国能源消费增速",
+        "value": "4",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "印度能源消费增速",
+        "value": "5",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "印尼能源消费增速",
+        "value": "6",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "中国能源消费占比",
+        "value": "35",
+        "unit": "%",
+        "year": "2024"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政府支持与投资 -> 可再生能源装机增长",
+      "高能效技术推广 -> 发电脱碳",
+      "终端电气化不足 -> 化石燃料消费持续"
+    ],
+    "confidence": "medium",
+    "source_title": "《2025 年全球能源趋势》：综合能源统计数据和世界趋势 - 能源消耗",
+    "url": "https://www.enerdata.net.cn/publications/reports-presentations/world-energy-trends.html",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "policy",
+    "year": "2024",
+    "geography": "中国",
+    "sectors": [
+      "水电",
+      "风电",
+      "光伏",
+      "生物质"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "国家能源局"
+    ],
+    "drivers": [
+      {
+        "factor": "政府支持",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "国家能源局以习近平新时代中国特色社会主义思想为指导"
+      },
+      {
+        "factor": "技术进步",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "光伏新增装机2.78亿千瓦"
+      },
+      {
+        "factor": "低碳需求",
+        "category": "环境",
+        "strength_score": 4,
+        "evidence": "以碳达峰碳中和工作为引领"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "可再生能源发电量",
+        "value": "3.46万亿",
+        "unit": "千瓦时",
+        "year": "2024"
+      },
+      {
+        "name": "可再生能源占全部发电量比例",
+        "value": "35%",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "风电发电量",
+        "value": "9916亿",
+        "unit": "千瓦时",
+        "year": "2024"
+      },
+      {
+        "name": "光伏发电装机容量",
+        "value": "8.86亿",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "水电发电量",
+        "value": "14239亿",
+        "unit": "千瓦时",
+        "year": "2024"
+      },
+      {
+        "name": "水电平均利用小时数",
+        "value": "3349",
+        "unit": "小时",
+        "year": "2024"
+      },
+      {
+        "name": "风电平均利用率",
+        "value": "95.9%",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "可再生能源新增装机容量",
+        "value": "3.73亿",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "可再生能源新增装机比例",
+        "value": "86%",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "新增风电装机容量",
+        "value": "7982万",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "新增光伏装机容量",
+        "value": "2.78亿",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "新增水电装机容量",
+        "value": "1378万",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "新增生物质装机容量",
+        "value": "185万",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "总可再生能源装机容量",
+        "value": "18.89亿",
+        "unit": "千瓦",
+        "year": "2024"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政府政策 -> 可再生能源装机增长"
+    ],
+    "confidence": "high",
+    "source_title": "2024年可再生能源并网运行情况",
+    "url": "http://www.nea.gov.cn/20250221/e10f363cabe3458aaf78ba4558970054/c.html",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "report",
+    "year": "2021",
+    "geography": "中国",
+    "sectors": [],
+    "stakeholders": [
+      "政府",
+      "企业"
+    ],
+    "stance_score": 0,
+    "policy_refs": [
+      "对新建海上风电场的公共资金终止",
+      "太阳能光伏FIT补贴取消"
+    ],
+    "drivers": [],
+    "barriers": [
+      {
+        "factor": "财政激励政策削减",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "中国减少了对可再生能源的财政激励政策"
+      },
+      {
+        "factor": "新建海上风电场公共资金终止",
+        "category": "制度障碍",
+        "severity_score": 5,
+        "evidence": "全面终止了对新建海上风电场的公共资金"
+      },
+      {
+        "factor": "太阳能补贴预算从30亿元减半至15亿元",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "大力缩减新太阳能的补贴预算"
+      },
+      {
+        "factor": "缺乏可再生能源在TFEC中的具体目标",
+        "category": "政策障碍",
+        "severity_score": 3,
+        "evidence": "2020年没有设定可再生能源在最终能源消费总量中的具体目标"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "可再生能源占TFEC份额",
+        "value": "10%",
+        "unit": "%",
+        "year": "2019"
+      },
+      {
+        "name": "可再生能源占TFEC份额",
+        "value": "?",
+        "unit": "%",
+        "year": "2020"
+      },
+      {
+        "name": "可再生能源总装机容量",
+        "value": "?",
+        "unit": "GW",
+        "year": "2020"
+      },
+      {
+        "name": "中国占全球可再生能源装机总量份额",
+        "value": "45",
+        "unit": "%",
+        "year": "2020"
+      },
+      {
+        "name": "投资环比相对2019下降",
+        "value": "12",
+        "unit": "%",
+        "year": "2020"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "财政激励政策削减 -> 太阳能补贴预算下降 -> 可再生能源投资下降"
+    ],
+    "confidence": "medium",
+    "source_title": "[PDF] 中国趋势2021 年全球可再生能源现状报告 - REN21",
+    "url": "https://www.ren21.net/wp-content/uploads/2021/07/REN21_GSR2021_Factsheet_China_CH.pdf",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "report",
+    "year": "2023",
+    "geography": "global",
+    "sectors": [
+      "solar PV",
+      "wind",
+      "utilities",
+      "energy storage",
+      "distributed generation"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "平台"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "净计量计划",
+      "上网电价",
+      "税收减免",
+      "拍卖",
+      "COP28 2030可再生能源发电容量目标"
+    ],
+    "drivers": [
+      {
+        "factor": "政府政策支持",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "世界各国政府持续的政策支持仍然是这一增长的主要驱动力"
+      },
+      {
+        "factor": "技术进步（PV 轻量化、成本降低、效率提升）",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "太阳能光伏技术的进步正在生产出重量更轻、成本更低、效率更高的太阳能电池板"
+      },
+      {
+        "factor": "市场激励（净计量、上网电价、税收减免、拍卖）",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "净计量计划激励个人和企业进行可再生能源发电"
+      },
+      {
+        "factor": "供应链扩张与制造业能力提升",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "太阳能光伏供应链的扩张使制造业得以实现"
+      },
+      {
+        "factor": "气候变化压力",
+        "category": "环境",
+        "strength_score": 3,
+        "evidence": "从化石燃料向可再生能源的过渡正在升温"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "环境条件不稳定导致发电波动",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "由于可再生能源（尤其是风能和太阳能）易受环境条件的影响"
+      },
+      {
+        "factor": "能源存储需求与技术瓶颈",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "太阳能、风能和水力发电都需要能源存储系统"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "Solar PV share of new renewable capacity",
+        "value": "75",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "Number of countries using renewables as main power source by 2028",
+        "value": "68",
+        "unit": "countries",
+        "year": "2028"
+      },
+      {
+        "name": "Forecast accuracy of IBM Renewables Forecasting Platform",
+        "value": "92",
+        "unit": "%",
+        "year": null
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政府政策激励 -> 成本下降 -> 采用率提升",
+      "技术进步 -> 设备成本降低 -> 采用率提升",
+      "能源存储技术提升 -> 电网弹性提升 -> 可再生能源比例提高"
+    ],
+    "confidence": "high",
+    "source_title": "可再生能源主要趋势 - IBM",
+    "url": "https://www.ibm.com/cn-zh/think/insights/renewable-energy-trends",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "policy",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "电解铝行业",
+      "钢铁行业",
+      "水泥行业",
+      "多晶硅行业",
+      "数据中心",
+      "国家枢纽节点"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "《中华人民共和国能源法》",
+      "《2024—2025年节能降碳行动方案》（国发〔2024〕12号）",
+      "《关于大力实施可再生能源替代行动的指导意见》（发改能源〔2024〕1537号）",
+      "《全国碳排放权交易市场覆盖水泥、钢铁、铝冶炼行业工作方案》（环气候〔2025〕23号）",
+      "《数据中心绿色低碳发展专项行动计划》（发改环资〔2024〕970号）"
+    ],
+    "drivers": [
+      {
+        "factor": "政策激励",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "为贯彻《中华人民共和国能源法》...落实《2024—2025年节能降碳行动方案》"
+      },
+      {
+        "factor": "绿色电力消费比例要求",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "2025年增设钢铁、水泥、多晶硅行业和国家枢纽节点新建数据中心绿色电力消费比例"
+      },
+      {
+        "factor": "省级能源主管部门协同",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "各省级能源主管部门会同经济运行管理部门要按照下达的可再生能源电力消纳责任权重和绿色电力消费比例"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "可再生能源电力消纳责任权重完成情况",
+        "value": null,
+        "unit": null,
+        "year": null
+      },
+      {
+        "name": "重点用能行业绿色电力消费比例完成情况",
+        "value": null,
+        "unit": null,
+        "year": null
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "可再生能源电力消纳责任权重 -> 省级能源主管部门制定实施方案 -> 重点用能行业绿色电力消费比例提升"
+    ],
+    "confidence": "high",
+    "source_title": "关于2025年可再生能源电力消纳责任权重及有关事项的通知(发改办 ...",
+    "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202507/t20250711_1399141.html",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "report",
+    "year": "2024",
+    "geography": "China",
+    "sectors": [
+      "高技术制造业",
+      "装备制造业",
+      "光伏设备制造业",
+      "新能源汽车制造业",
+      "消费品制造业",
+      "高载能行业",
+      "清洁能源"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 0,
+    "policy_refs": [
+      "绿色低碳产业转型指导目录"
+    ],
+    "drivers": [
+      {
+        "factor": "发布绿色低碳产业转型指导目录",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "发布绿色低碳产业转型指导目录"
+      },
+      {
+        "factor": "技术突破：先进高效光伏电池、漂浮式海上风电等",
+        "category": "技术",
+        "strength_score": 5,
+        "evidence": "先进高效光伏电池、漂浮式海上风电、氢基竖炉15冶金、碳捕集利用与封存、第三代核电"
+      },
+      {
+        "factor": "高技术及装备制造业用电量增长",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "高技术及装备制造业用电量同比增长11.3%"
+      },
+      {
+        "factor": "新能源汽车制造用电量增长",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "新能源车整车制造用电量同比增长38.8%"
+      },
+      {
+        "factor": "可再生能源装机规模快速增长",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "可再生能源装机同比增长超19.5%"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "疫情影响导致2020年及2022年增长低于复合增长率",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "受疫情影响造成2020 年和2022 年的增幅低于复合增长率"
+      },
+      {
+        "factor": "原煤生产占比回升",
+        "category": "制度障碍",
+        "severity_score": 2,
+        "evidence": "原煤生产占比有所回升"
+      },
+      {
+        "factor": "合成氨综合能耗上升",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "单位合成氨综合能耗上升0.9%"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "全社会用电量",
+        "value": "92241",
+        "unit": "亿千瓦时",
+        "year": "2023"
+      },
+      {
+        "name": "全社会用电量同比增长率",
+        "value": "6.7",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "高技术及装备制造业用电量同比增长率",
+        "value": "11.3",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "光伏设备及元器件制造业用电量同比增长率",
+        "value": "76.8",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "新能源汽车整车制造用电量同比增长率",
+        "value": "38.8",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "可再生能源装机同比增长率",
+        "value": "19.5",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "风电平均利用率",
+        "value": "97.3",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "光伏利用率",
+        "value": "98",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "电力总装机容量",
+        "value": "29",
+        "unit": "亿千瓦",
+        "year": "2023"
+      },
+      {
+        "name": "全国万元国内生产总值二氧化碳排放持平",
+        "value": "持平",
+        "unit": null,
+        "year": "2023"
+      },
+      {
+        "name": "烟尘排放总量",
+        "value": "9.9",
+        "unit": "万吨",
+        "year": "2022"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政府政策激励 -> 技术突破与研发投入提升 -> 可再生能源装机规模快速增长",
+      "高技术与装备制造业用电需求增长 -> 新能源汽车制造需求提升 -> 相关行业用电量快速增长"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 中国能源大数据报告（2024） - 低碳网",
+    "url": "https://www.ditan.com/static/upload/file/20240807/1722999594947998.pdf",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "report",
+    "year": null,
+    "geography": "MENA region",
+    "sectors": [
+      "能源发电",
+      "能源消费"
+    ],
+    "stakeholders": [
+      "政府",
+      "国际组织"
+    ],
+    "stance_score": "0",
+    "policy_refs": [
+      "Oman Vision 2040",
+      "Qatar National Vision 2030",
+      "Egypt’s Vision 2030",
+      "2035年综合可持续能源战略",
+      "Kuwait Vision 2035",
+      "Morocco National Renewable Energy Development Plan"
+    ],
+    "drivers": [
+      {
+        "factor": "经济多元化目标",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "卡塔尔计划到2030年可再生能源装机容量达到4GW"
+      },
+      {
+        "factor": "降低碳排放并提升能源安全",
+        "category": "环境",
+        "strength_score": 3,
+        "evidence": "Oman Vision 2040 目标2030年可再生能源消费占比20%，2040年35-39%"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "现有可再生能源占比极低",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "2023阿曼可再生能源发电量仅1,700GWh，占比约3.83%"
+      },
+      {
+        "factor": "能源基础设施与技术短板",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "2023科威特可再生能源发电量为200GWh，占比0.23%"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "阿曼可再生能源消费占比目标 2030",
+        "value": "20",
+        "unit": "%",
+        "year": "2030"
+      },
+      {
+        "name": "阿曼可再生能源消费占比目标 2040",
+        "value": "35-39",
+        "unit": "%",
+        "year": "2040"
+      },
+      {
+        "name": "阿曼2023年可再生能源发电量",
+        "value": "1,700",
+        "unit": "GWh",
+        "year": "2023"
+      },
+      {
+        "name": "阿曼2023年总发电量",
+        "value": "44,346.3",
+        "unit": "GWh",
+        "year": "2023"
+      },
+      {
+        "name": "卡塔尔2023年可再生能源发电量",
+        "value": "1,500",
+        "unit": "GWh",
+        "year": "2023"
+      },
+      {
+        "name": "卡塔尔2023年可再生能源占比",
+        "value": "2.76",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "卡塔尔2024年可再生能源占比",
+        "value": "5",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "埃及2024年可再生能源装机总量",
+        "value": "7,734.3",
+        "unit": "MW",
+        "year": "2024"
+      },
+      {
+        "name": "埃及2024年可再生能源发电占比",
+        "value": "11.6",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "科威特2023年可再生能源发电量",
+        "value": "200",
+        "unit": "GWh",
+        "year": "2023"
+      },
+      {
+        "name": "科威特2023年可再生能源占比",
+        "value": "0.23",
+        "unit": "%",
+        "year": "2023"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "Vision plan -> renewable targets -> increased deployment"
+    ],
+    "confidence": "medium",
+    "source_title": "新能源出海丨机遇与挑战：中国新能源转舵MENA（上）",
+    "url": "https://www.kwm.com/cn/zh/insights/latest-thinking/new-energy-enterprises-going-global-opportunities-and-challenges-in-mena-i.html",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "academic",
+    "year": null,
+    "geography": "China",
+    "sectors": [
+      "电力系统"
+    ],
+    "stakeholders": [
+      "政府",
+      "电网",
+      "企业"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "国家能源局。2015年。《关于推进电力市场建设的实施意见》",
+      "国家能源局。2016a。《能源生产和消费革命战略（2016-2030）》",
+      "国家能源局。2016b。《可再生能源发电全额保障性收购管理办法》"
+    ],
+    "drivers": [
+      {
+        "factor": "可再生能源技术部署（风电、光伏、电池储能）",
+        "category": "技术",
+        "strength_score": 5,
+        "evidence": "容量扩展模型建设了大量电池储能"
+      },
+      {
+        "factor": "政策支持与调度优化",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "国家能源局……政策原因建设抽水蓄能容量"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "可再生能源装机比例",
+        "value": "60",
+        "unit": "%",
+        "year": "2035"
+      },
+      {
+        "name": "经营备用容量",
+        "value": "10",
+        "unit": "%",
+        "year": "2035"
+      }
+    ],
+    "method": "实证",
+    "sample_size": "35",
+    "causal_links": [
+      "政策激励 -> 规模化部署 -> 能源结构转型 -> 可靠性提升"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 中国电力系统可在2035年实现80%零碳排放 - Energy Innovation",
+    "url": "https://energyinnovation.org/wp-content/uploads/LBNL_China-2035_Chinese.pdf",
+    "keyword": "可再生能源消费",
+    "crawl_time": "2025-12-11T09:20:37.288839"
+  },
+  {
+    "source_type": "news",
+    "year": "2024",
+    "geography": "中国",
+    "sectors": [
+      "能源",
+      "居民",
+      "交通"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "中共中央 国务院关于加快经济社会发展全面绿色转型的意见",
+      "2024—2025年节能降碳行动方案"
+    ],
+    "drivers": [
+      {
+        "factor": "政策激励",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "印发实施的《中共中央 国务院关于加快经济社会发展全面绿色转型的意见》《2024—2025年节能降碳行动方案》"
+      },
+      {
+        "factor": "技术突破",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "建成风电、光伏全产业链研发设计和制造体系，掌握大型三代压水堆和高温气冷堆第四代核电技术"
+      },
+      {
+        "factor": "市场价格机制形成",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "统一开放的能源市场体系逐步完善，形成能源价格机制"
+      },
+      {
+        "factor": "公众绿色低碳意识提升",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "积极倡导绿色低碳的生活理念，鼓励公众优先选择公共交通、自行车和步行"
+      },
+      {
+        "factor": "能源安全保障",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "统筹发展与安全，确保能源安全稳定供应"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "清洁能源消费比重",
+        "value": "26.4",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "煤炭消费比重下降",
+        "value": "12.1",
+        "unit": "pp",
+        "year": "2023"
+      },
+      {
+        "name": "非化石能源消费量翻倍",
+        "value": "2",
+        "unit": "倍",
+        "year": "2023"
+      },
+      {
+        "name": "电气化水平提升",
+        "value": "7",
+        "unit": "%",
+        "year": "2023"
+      },
+      {
+        "name": "风光发电量占城乡居民用电量比例",
+        "value": "1",
+        "unit": "比",
+        "year": "2023"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 清洁能源投资增加 -> 绿色能源消费提升",
+      "技术突破 -> 清洁能源发电规模扩大 -> 电力系统新能源消纳能力提升",
+      "市场价格机制形成 -> 引导投资向新能源 -> 绿色能源占比提升"
+    ],
+    "confidence": "high",
+    "source_title": "国新办举行《中国的能源转型》白皮书新闻发布会",
+    "url": "https://www.nea.gov.cn/2024-08/29/c_1310785400.htm",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "report",
+    "year": "2025",
+    "geography": "China",
+    "sectors": [
+      "电力",
+      "工业",
+      "建筑",
+      "交通"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 0,
+    "policy_refs": [
+      "2024—2025年节能降碳行动方案"
+    ],
+    "drivers": [
+      {
+        "factor": "国务院印发《2024—2025年节能降碳行动方案》",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "国务院印发《2024—2025年节能降碳行动方案》"
+      },
+      {
+        "factor": "电力需求呈现多元化和快速增长",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "电力需求呈现多元化和快速增长"
+      },
+      {
+        "factor": "全国非化石能源发电量占比达到39%",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "全国非化石能源发电量占比达到39%"
+      },
+      {
+        "factor": "能源消费结构持续向清洁低碳转型",
+        "category": "环境",
+        "strength_score": 2,
+        "evidence": "能源消费结构持续向清洁低碳转型"
+      },
+      {
+        "factor": "全国能源投资保持较快增长态势",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "全国能源投资保持较快增长态势"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "煤炭消费量占能源消费总量比重为53.2%",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "煤炭消费量占能源消费总量比重为53.2%"
+      },
+      {
+        "factor": "基本淘汰每小时35蒸吨及以下燃煤锅炉",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "基本淘汰每小时35蒸吨及以下燃煤锅炉"
+      },
+      {
+        "factor": "需求响应能力一般应达到最大用电负荷的3%～5%",
+        "category": "技术障碍",
+        "severity_score": 2,
+        "evidence": "需求响应能力一般应达到最大用电负荷的3%～5%"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "清洁能源消费占比",
+        "value": "28.6%",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "电力消费",
+        "value": "9.85万亿",
+        "unit": "千瓦时",
+        "year": "2024"
+      },
+      {
+        "name": "煤炭行业固定资产投资增速",
+        "value": "9.1%",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "非化石能源发电量占比",
+        "value": "39%",
+        "unit": "%",
+        "year": "2025"
+      }
+    ],
+    "method": "报告",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 清洁能源消费比例提升"
+    ],
+    "confidence": "high",
+    "source_title": "年度重磅| 中国能源大数据报告（2025）——能源综合篇",
+    "url": "https://gdshe.org/article/25052.html",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "report",
+    "year": "2025",
+    "geography": "全球",
+    "sectors": [
+      "能源",
+      "发电",
+      "可再生能源",
+      "天然气"
+    ],
+    "stakeholders": [
+      "政府",
+      "国际组织"
+    ],
+    "stance_score": "0",
+    "policy_refs": [
+      "世界能源统计年鉴2025",
+      "全球能源展望2025",
+      "巴黎协定",
+      "清华大学《2025全球碳中和年度进展报告》",
+      "中国非化石能源消费占比30%以上目标",
+      "中国风电和太阳能发电总装机容量6倍以上目标"
+    ],
+    "drivers": [
+      {
+        "factor": "可再生能源发电量占总量近3/4",
+        "category": "环境",
+        "strength_score": 4,
+        "evidence": "可再生能源发电量增长占总量近3/4"
+      },
+      {
+        "factor": "巴黎协定及各国国家自主贡献的实施",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "巴黎协定达成10周年...提交新一轮国家自主贡献"
+      },
+      {
+        "factor": "技术进步提升太阳能与风电装机容量",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "太阳能发电增量约480亿千瓦时"
+      },
+      {
+        "factor": "经济与碳排放脱钩的需求",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "实现‘两个脱钩’"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "2024年全球温室气体排放量同比增加2.3%",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "2024年全球温室气体排放量同比增加2.3%"
+      },
+      {
+        "factor": "2021年煤炭消费强劲增长导致脱钩趋势中断",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "2021年，煤炭消费强劲增长...脱钩趋势中断"
+      },
+      {
+        "factor": "风电增速仅8%，创20年来新低",
+        "category": "技术障碍",
+        "severity_score": 2,
+        "evidence": "风电增速8%创20年来新低"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "全球天然气消费量",
+        "value": "4.13",
+        "unit": "万亿立方米",
+        "year": "2024"
+      },
+      {
+        "name": "全球天然气占比",
+        "value": "25",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "可再生能源发电占比",
+        "value": "75",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "太阳能发电增量",
+        "value": "480",
+        "unit": "亿千瓦时",
+        "year": "2024"
+      },
+      {
+        "name": "风电发电增量",
+        "value": "180",
+        "unit": "亿千瓦时",
+        "year": "2024"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "巴黎协定 -> 国家自主贡献 -> 绿色低碳发展",
+      "可再生能源增长 -> 发电量增加",
+      "碳排放与能源消耗脱钩 -> 经济增长与排放脱钩"
+    ],
+    "confidence": "high",
+    "source_title": "全球能源转型报告（2025）（摘要）",
+    "url": "https://epaper.ceic.com/pad/content/202511/26/content_18651.html",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "report",
+    "year": "2023",
+    "geography": "China, Global",
+    "sectors": [
+      "transportation",
+      "heating",
+      "electricity industry"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网"
+    ],
+    "stance_score": 1,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "电气化带来的清洁能源需求增加",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "电气化有助于不同行业脱碳"
+      },
+      {
+        "factor": "实现1.5°C温升控制路径的排放快速下降需求",
+        "category": "政治",
+        "strength_score": 3,
+        "evidence": "实现符合1.5ºC温升控制路径所需的排放快速下降"
+      },
+      {
+        "factor": "风能和太阳能增长满足电力需求增长",
+        "category": "技术",
+        "strength_score": 5,
+        "evidence": "风能和太阳能的增长满足了电力需求增长80%"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "中国高煤电占比导致清洁能源不足",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "煤电在中国电力结构的占比为61%"
+      },
+      {
+        "factor": "煤电和其他化石燃料发电仍需上涨以填补需求缺口",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "煤电和其他化石燃料发电仍必须上涨"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "清洁能源在中国电力结构占比",
+        "value": "14",
+        "unit": "%",
+        "year": "2022"
+      },
+      {
+        "name": "煤电在中国电力结构占比",
+        "value": "61",
+        "unit": "%",
+        "year": "2022"
+      },
+      {
+        "name": "总化石燃料发电在中国电力结构占比",
+        "value": "64",
+        "unit": "%",
+        "year": "2022"
+      },
+      {
+        "name": "中国电力行业排放强度",
+        "value": "530",
+        "unit": "gCO2/kWh",
+        "year": "2022"
+      },
+      {
+        "name": "全球电力行业排放强度",
+        "value": "436",
+        "unit": "gCO2/kWh",
+        "year": "2022"
+      },
+      {
+        "name": "中国人均电力需求",
+        "value": "6.2",
+        "unit": "MWh",
+        "year": "2022"
+      },
+      {
+        "name": "全球人均电力需求",
+        "value": "3.6",
+        "unit": "MWh",
+        "year": "2022"
+      },
+      {
+        "name": "2022年电力需求增长",
+        "value": "694",
+        "unit": "TWh",
+        "year": "2022"
+      },
+      {
+        "name": "2022年电力需求增长率",
+        "value": "2.5",
+        "unit": "%",
+        "year": "2022"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "清洁能源增长 -> 满足电力需求增长",
+      "电气化 -> 清洁能源需求增加",
+      "高煤电占比 -> 排放强度高"
+    ],
+    "confidence": "medium",
+    "source_title": "[PDF] 2023年",
+    "url": "https://ember-energy.org/app/uploads/2023/04/Global-Electricity-Review-2023_ZH.pdf",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "news",
+    "year": "2023",
+    "geography": "中国",
+    "sectors": [
+      "电力系统",
+      "建筑业",
+      "制造业",
+      "新能源汽车"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "国际组织"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "《国家自主贡献》更新版",
+      "《“十四五”能源发展规划》",
+      "《“十四五”可再生能源发展规划》",
+      "《“十四五”建筑发展规划》"
+    ],
+    "drivers": [
+      {
+        "factor": "可再生能源成本的历史性下降",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "可再生能源成本的历史性下降"
+      },
+      {
+        "factor": "双碳政策目标的指引",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "双碳政策目标的指引"
+      },
+      {
+        "factor": "市场需求不断满足",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "市场需求不断满足"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "二氧化碳排放量",
+        "value": "121",
+        "unit": "亿吨",
+        "year": "2022"
+      },
+      {
+        "name": "清洁能源年均投资额",
+        "value": "6500",
+        "unit": "亿美元",
+        "year": null
+      },
+      {
+        "name": "非化石燃料能源结构比例",
+        "value": "20",
+        "unit": "%",
+        "year": "2025"
+      },
+      {
+        "name": "可再生能源发电量",
+        "value": "3.3",
+        "unit": "万亿千瓦时",
+        "year": "2025"
+      },
+      {
+        "name": "可再生能源占电力消费增长比例",
+        "value": "50",
+        "unit": "%",
+        "year": "2025"
+      },
+      {
+        "name": "现有建筑节能改造面积",
+        "value": "3.5",
+        "unit": "亿平方米",
+        "year": "2025"
+      },
+      {
+        "name": "近零能耗建筑面积",
+        "value": "5000",
+        "unit": "万平方米",
+        "year": "2025"
+      },
+      {
+        "name": "地热能源建筑面积",
+        "value": "1",
+        "unit": "亿平方米",
+        "year": "2025"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "双碳政策目标 -> 绿色能源投资增加",
+      "可再生能源成本下降 -> 清洁能源需求提升",
+      "非化石燃料比例提升 -> 煤炭消费下降"
+    ],
+    "confidence": "medium",
+    "source_title": "世界能源展望2023：中国煤炭消费有望于2025年左右达峰",
+    "url": "https://www.cet.net.cn/zh/news/851",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "report",
+    "year": null,
+    "geography": "全球",
+    "sectors": [
+      "交通运输",
+      "工业",
+      "建筑物",
+      "能源供热",
+      "电力"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "消费者",
+      "电网",
+      "国际组织"
+    ],
+    "stance_score": 2,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "能效提升措施",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "能效提升措施将发挥重要作用"
+      },
+      {
+        "factor": "政策指令和标准",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "指令和标准对于驱动消费者支出、推进行业投资"
+      },
+      {
+        "factor": "目标和竞争性拍卖",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "目标和竞争性拍卖可以赋能风能和太阳能"
+      },
+      {
+        "factor": "化石燃料补贴取消与碳定价",
+        "category": "政治/经济",
+        "strength_score": 4,
+        "evidence": "化石燃料补贴逐步取消、碳定价以及其他市场改革"
+      },
+      {
+        "factor": "技术创新",
+        "category": "技术",
+        "strength_score": 5,
+        "evidence": "2050 年实现净零排放需要清洁能源技术创新取得巨大飞跃"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "技术尚未进入市场",
+        "category": "技术障碍",
+        "severity_score": 4,
+        "evidence": "目前尚未进入市场的技术"
+      },
+      {
+        "factor": "大规模基础设施投资需求",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "智能输配电网络等大规模基础设施投资"
+      },
+      {
+        "factor": "政府领导作用不足",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "政府必须发挥领导作用"
+      },
+      {
+        "factor": "碳定价缺乏",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "碳定价以及其他市场改革"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "终端消费总量增长率",
+        "value": "20%",
+        "unit": "%",
+        "year": "2020-2050"
+      },
+      {
+        "name": "发电量",
+        "value": "超过50,000",
+        "unit": "TWh",
+        "year": "2050"
+      },
+      {
+        "name": "发电量增长量",
+        "value": "约4,000",
+        "unit": "TWh",
+        "year": "2050"
+      },
+      {
+        "name": "可再生能源占比",
+        "value": "近70%",
+        "unit": "%",
+        "year": "2050"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "能效提升 -> 需求减少 -> 采用率提升",
+      "政策指令和标准 -> 消费者支出增加 -> 行业投资",
+      "碳定价 -> 价格信号 -> 低碳技术采用"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 2050年净零排放路线图 - NET",
+    "url": "https://iea.blob.core.windows.net/assets/f4d0ac07-ef03-4ef7-8ad3-795340b37679/NetZeroby2050-ARoadmapfortheGlobalEnergySector_Chinese_CORR.pdf",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "能源",
+      "电力",
+      "可再生能源"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "金融",
+      "国际组织"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "十四五规划纲要"
+    ],
+    "drivers": [
+      {
+        "factor": "非化石能源占比提升",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "非化石能源占比每年增加1个百分点"
+      },
+      {
+        "factor": "技术创新驱动成本下降",
+        "category": "技术",
+        "strength_score": 5,
+        "evidence": "技术创新驱动成本持续下降"
+      },
+      {
+        "factor": "国家政策支持",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "十四五规划纲要提出，加快发展非化石能源"
+      },
+      {
+        "factor": "跨区域绿电外送交易",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "首笔沪藏跨区域绿电外送交易顺利落地"
+      },
+      {
+        "factor": "国际组织气候目标",
+        "category": "政治",
+        "strength_score": 3,
+        "evidence": "到2035年，非化石能源消费占能源消费总量的比重达到30％以上"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "输电网络限制",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "西电东送的电量也正在从煤电主导逐步转向绿色电力主导"
+      },
+      {
+        "factor": "高成本压力",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "技术创新驱动成本持续下降，仍需进一步降低成本"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "非化石能源消费比重",
+        "value": "19.8",
+        "unit": "%",
+        "year": "2024"
+      },
+      {
+        "name": "可再生能源装机规模",
+        "value": "21.7亿",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "风电装机规模",
+        "value": "5.7亿",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "光伏装机规模",
+        "value": "11亿",
+        "unit": "千瓦",
+        "year": "2024"
+      },
+      {
+        "name": "绿电外送交易量",
+        "value": "785万",
+        "unit": "千瓦时",
+        "year": "2025"
+      },
+      {
+        "name": "CO2减排量",
+        "value": "6.01",
+        "unit": "万吨",
+        "year": "2025"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "国家政策支持 -> 投资增加 -> 非化石能源装机规模提升",
+      "技术创新 -> 成本下降 -> 绿色电力主导"
+    ],
+    "confidence": "high",
+    "source_title": "逐绿向新“十四五”时期能源转型“加速跑” - 新华网",
+    "url": "http://www.xinhuanet.com/fortune/20251015/c30b12e813ce482985476492919c77f4/c.html",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "全球",
+    "sectors": [
+      "能源",
+      "电力",
+      "可再生能源"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "金融",
+      "国际组织"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "巴黎协定"
+    ],
+    "drivers": [
+      {
+        "factor": "成本下降",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "太阳能成本现在便宜41%"
+      },
+      {
+        "factor": "国际合作与报告支持",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "联合国特殊报告得到了各机构支持"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "化石燃料补贴",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "化石燃料在全球消费补贴上仍享有9比1的优势"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "全球新增电力装机容量比例",
+        "value": "几乎全部",
+        "unit": null,
+        "year": "2024"
+      },
+      {
+        "name": "清洁能源行业对GDP增长贡献",
+        "value": "10",
+        "unit": "%",
+        "year": "2023"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "成本下降 -> 清洁能源成本低于化石燃料",
+      "巴黎协定 -> 清洁能源增长"
+    ],
+    "confidence": "high",
+    "source_title": "能源革命新纪元：联合国秘书长呼吁加速清洁能源转型 - UN News",
+    "url": "https://news.un.org/zh/story/2025/07/1140389",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": [
+      "Global",
+      "Sub-Saharan Africa",
+      "Central Asia",
+      "South Asia"
+    ],
+    "sectors": [
+      "电力供应",
+      "清洁能源消费",
+      "清洁烹饪",
+      "农村能源"
+    ],
+    "stakeholders": [
+      "政府",
+      "居民",
+      "金融",
+      "国际组织",
+      "电网"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "Sustainable Development Goal 7",
+      "国际清洁能源融资计划",
+      "分散式可再生能源专项融资"
+    ],
+    "drivers": [
+      {
+        "factor": "Sustainable Development Goal 7的推动",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "报告指出该报告由可持续发展目标7的五家托管机构共同完成"
+      },
+      {
+        "factor": "国际清洁能源融资连续增长",
+        "category": "金融",
+        "strength_score": 5,
+        "evidence": "2023年发展中国家获得的国际清洁能源融资连续第三年增长，达到216亿美元"
+      },
+      {
+        "factor": "分布式可再生能源技术成熟",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "分布式可再生能源（离网太阳能系统与迷你电网的组合）对加速电力普及具有关键作用"
+      },
+      {
+        "factor": "全球最终能源消费增长推动能源需求",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "2022年，在全球最终能源消费总量持续稳步增长的情况下，可再生能源占比达到17.9%"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "疫情、能源价格冲击及债务危机制约",
+        "category": "经济障碍",
+        "severity_score": 5,
+        "evidence": "新冠疫情造成的挫折、能源价格冲击及债务危机持续制约着相关努力"
+      },
+      {
+        "factor": "撒哈拉以南非洲地区低装机容量",
+        "category": "技术障碍",
+        "severity_score": 4,
+        "evidence": "人均装机容量仍停留在40瓦平均水平，仅为其他发展中国家平均值的八分之一"
+      },
+      {
+        "factor": "清洁烹饪推广成本高、信息不足",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "清洁烹饪的普及虽在推进，但进展速度低于2010年代水平"
+      },
+      {
+        "factor": "缺乏分散式能源支持",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "报告呼吁扩大分散式可再生能源专项融资"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "可再生能源占比",
+        "value": "17.9",
+        "unit": "%",
+        "year": "2022"
+      },
+      {
+        "name": "人均可再生能源装机容量",
+        "value": "478",
+        "unit": "瓦",
+        "year": "2023"
+      },
+      {
+        "name": "发展中国家人均装机容量",
+        "value": "341",
+        "unit": "瓦",
+        "year": "2023"
+      },
+      {
+        "name": "撒哈拉以南非洲人均装机容量",
+        "value": "40",
+        "unit": "瓦",
+        "year": "2023"
+      },
+      {
+        "name": "国际清洁能源融资总额",
+        "value": "216",
+        "unit": "亿美元",
+        "year": "2023"
+      },
+      {
+        "name": "无法用电人口",
+        "value": "6.66",
+        "unit": "亿",
+        "year": "2025"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "Sustainable Development Goal 7 -> 国际清洁能源融资增加 -> 可再生能源装机容量提升",
+      "分散式可再生能源技术成熟 -> 电力普及率提升"
+    ],
+    "confidence": "high",
+    "source_title": "最新报告：能源普及率有所提升，仍需国际融资以加速进展并消除差距",
+    "url": "https://news.un.org/zh/story/2025/06/1139926",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "news",
+    "year": "2024",
+    "geography": "撒哈拉以南非洲",
+    "sectors": [
+      "清洁烹饪技术",
+      "可再生能源部署"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "国际组织",
+      "金融"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "可持续发展目标7"
+    ],
+    "drivers": [
+      {
+        "factor": "国际公共资金流动",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "资金流量反弹确实表明了一个积极的信号"
+      },
+      {
+        "factor": "技术创新提升可再生能源装机容量",
+        "category": "技术",
+        "strength_score": 5,
+        "evidence": "可再生能源通过稳步扩大发电装机容量"
+      },
+      {
+        "factor": "社会经济优势（性别平等、健康、教育、就业）",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "解决这些挑战还会带来一系列社会和经济优势"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "能源投资不足",
+        "category": "经济障碍",
+        "severity_score": 5,
+        "evidence": "能源投资总额中只有一小部分流向了通电和清洁烹饪问题严重的国家"
+      },
+      {
+        "factor": "分配差距明显",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "分配差距仍然明显"
+      },
+      {
+        "factor": "技术部署不足",
+        "category": "技术障碍",
+        "severity_score": 3,
+        "evidence": "能源投资缺口仍大"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "筹资额",
+        "value": "22",
+        "unit": "亿美元",
+        "year": null
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 投资增加 -> 清洁能源部署提升"
+    ],
+    "confidence": "medium",
+    "source_title": "基本能源获取进展十年来首次出现逆转 - 世界银行",
+    "url": "https://www.shihang.org/zh/news/press-release/2024/06/11/progress-on-basic-energy-access-reverses-for-first-time-in-a-decade",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "report",
+    "year": "2023",
+    "geography": "global",
+    "sectors": [
+      "能源供应",
+      "清洁烹饪技术"
+    ],
+    "stakeholders": [
+      "政府",
+      "国际组织",
+      "金融",
+      "居民"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "可持续发展目标7"
+    ],
+    "drivers": [
+      {
+        "factor": "全球能源危机刺激可再生能源部署",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "全球能源危机预计将刺激可再生能源的部署"
+      },
+      {
+        "factor": "政府政策指明增加投资",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "一些政府政策指明要增加投资"
+      },
+      {
+        "factor": "可持续发展目标7推动",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "可持续发展目标7旨在确保人人获得负担得起的、可靠和可持续的现代能源"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "不断增加的债务和能源价格上涨",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "不断增加的债务和不断上涨的能源价格正在恶化普及清洁烹饪技术和电力供应的前景"
+      },
+      {
+        "factor": "国际公共财政流动减少",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "自COVID-19大流行之前起，支持低收入和中等收入国家清洁能源的国际公共资金流动就一直在减少"
+      },
+      {
+        "factor": "进展不足以实现目标",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "目前的努力不足以按时实现可持续发展目标7"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "无法清洁烹饪的人口",
+        "value": "19亿",
+        "unit": "人",
+        "year": "2030"
+      },
+      {
+        "name": "无电力供应的人口",
+        "value": "6.6亿",
+        "unit": "人",
+        "year": "2030"
+      },
+      {
+        "name": "因污染燃料导致死亡人数",
+        "value": "320万",
+        "unit": "人/年",
+        "year": null
+      },
+      {
+        "name": "无电力供应的全球人口",
+        "value": "6.75亿",
+        "unit": "人",
+        "year": null
+      },
+      {
+        "name": "依赖有害烹饪燃料的人口",
+        "value": "23亿",
+        "unit": "人",
+        "year": null
+      }
+    ],
+    "method": "报告",
+    "sample_size": null,
+    "causal_links": [
+      "全球能源危机 -> 可再生能源部署增加 -> 能源效率提高",
+      "国际公共财政流动减少 -> 发展中国家清洁能源融资不足 -> 基础能源获取滞后"
+    ],
+    "confidence": "high",
+    "source_title": "新报告显示，可再生能源创造了机会，但基本能源的获取仍然滞后",
+    "url": "https://www.irena.org/News/pressreleases/2023/Jun/Basic-Energy-Access-Lags-Amid-Renewable-Opportunities-New-Report-Shows-ZH",
+    "keyword": "清洁能源消费",
+    "crawl_time": "2025-12-11T09:20:37.564944"
+  },
+  {
+    "source_type": "news",
+    "year": null,
+    "geography": "中国",
+    "sectors": [
+      "企业",
+      "居民"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网"
+    ],
+    "stance_score": 0,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "政策支持",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "绿色电力证书是可再生能源发电企业所发绿色电力的“电子身份证”"
+      },
+      {
+        "factor": "环保意识提升",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "用以证明与核算可再生能源的发电和使用"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "绿证对应发电量",
+        "value": "1000",
+        "unit": "kWh",
+        "year": null
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "绿证发行 -> 证明可再生能源发电与使用"
+    ],
+    "confidence": "medium",
+    "source_title": "购买绿色电力证书有什么用途？如何购买绿证？ - 知乎专栏",
+    "url": "https://zhuanlan.zhihu.com/p/581480687",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "policy",
+    "year": null,
+    "geography": "中国",
+    "sectors": [
+      "风电",
+      "光伏发电"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "平台"
+    ],
+    "stance_score": "0",
+    "policy_refs": [
+      "绿色电力证书申领和挂牌出售操作指南"
+    ],
+    "drivers": [
+      {
+        "factor": "国家可再生能源电价附加资金补助目录",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "国家可再生能源电价附加资金补助目录"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "信息中心审核",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "待信息中心审核通过"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "国家补贴 -> 绿证申领 -> 绿证交易"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 绿色电力证书申领和挂牌出售操作指南 - 可再生能源信息管理中心",
+    "url": "http://djfj.renewable.org.cn/default/greenop.pdf",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "policy",
+    "year": "2018",
+    "geography": "China",
+    "sectors": [
+      "wind power",
+      "photovoltaic power"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "平台"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "可再生能源绿色电力证书自愿认购体系",
+      "绿色电力证书自愿认购规则"
+    ],
+    "drivers": [
+      {
+        "factor": "降低国家财政资金的直接补贴强度",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "降低国家财政资金的直接补贴强度"
+      },
+      {
+        "factor": "国家对绿色电力证书的核发和认购平台管理",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "国家可再生能源信息管理中心负责对购买绿色电力证书的机构和个人核发凭证"
+      },
+      {
+        "factor": "促进清洁能源高效利用",
+        "category": "环境",
+        "strength_score": 3,
+        "evidence": "促进清洁能源高效利用"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "认购平台需要满足账户条件",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "认购方必须保证其认购账户中持有满足认购成交条件的证书或资金"
+      },
+      {
+        "factor": "认购价格由买卖双方自行协商或竞价确定",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "认购价格由买卖双方自行协商或者通过竞价确定"
+      },
+      {
+        "factor": "依赖可再生能源发电项目信息管理系统的技术支持",
+        "category": "技术障碍",
+        "severity_score": 2,
+        "evidence": "使用可再生能源发电项目信息管理系统"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "国家可再生能源信息管理中心负责发放绿色电力证书 -> 企业能够出售证书 -> 消费者能够自愿认购绿色电力证书"
+    ],
+    "confidence": "high",
+    "source_title": "Trial implementation of renewable energy green power certificate ...",
+    "url": "https://chinaenergyportal.org/trial-implementation-renewable-energy-green-power-certificate-issuance-voluntary-trading-system/",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "policy",
+    "year": "2024",
+    "geography": "宜兴市",
+    "sectors": [],
+    "stakeholders": [],
+    "stance_score": 0,
+    "policy_refs": [],
+    "drivers": [],
+    "barriers": [],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [],
+    "confidence": "low",
+    "source_title": "绿证政策解读手册 - 宜兴市人民政府",
+    "url": "http://www.yixing.gov.cn/doc/2024/04/13/1223825.shtml",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "news",
+    "year": "2024",
+    "geography": "China",
+    "sectors": [
+      "企业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "个人",
+      "国际组织"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "中国绿色电力证书（GEC）",
+      "I-REC"
+    ],
+    "drivers": [
+      {
+        "factor": "政府强制GEC为唯一可再生能源证书",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "2024 年 8 月，中国发布公告，明确规定绿色电力证书（GEC）为本国可再生能源发电和消费的唯一证书"
+      },
+      {
+        "factor": "GEC 发行量激增推动市场扩张",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "自新政策实施以来，GEC 证书发行量呈现井喷之势... 2024 年前五个月，GEC交易量达 1.87 亿张"
+      },
+      {
+        "factor": "企业可持续发展承诺驱动采购",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "参与 RE100、SBTi 和 CDP 等国际倡议的企业可选择采购绿证 GEC"
+      },
+      {
+        "factor": "GEC 为关键用能单位提供减少化石能源消费方案",
+        "category": "环境",
+        "strength_score": 3,
+        "evidence": "GEC 体系为其减少化石能源消费提供了市场化解决方案"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "I-REC 证书停止签发带来转型压力",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "自 2025 年 3 月 31 日起，中国将停止签发I-REC证书"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "GEC 发行量",
+        "value": "1.76亿",
+        "unit": "张",
+        "year": "2023"
+      },
+      {
+        "name": "GEC 交易量（2024前五个月）",
+        "value": "1.87亿",
+        "unit": "张",
+        "year": "2024"
+      },
+      {
+        "name": "I-REC 2023 交易量",
+        "value": "470亿",
+        "unit": "千瓦时",
+        "year": "2023"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> GEC 发行量激增 -> 企业可再生能源采购提升",
+      "停止 I-REC -> GEC 成为主流 -> 企业转向 GEC"
+    ],
+    "confidence": "high",
+    "source_title": "中国绿色电力证书（GEC）：重要政策更新 - ACT Group",
+    "url": "https://www.actgroup.com/zh/latest/news/regulatory-update-chinas-green-electricity-certificates-gecs",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "report",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "能源",
+      "电信",
+      "石化",
+      "钢铁",
+      "互联网科技",
+      "汽车制造",
+      "生活服务"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "平台",
+      "第三方机构"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "《关于加强绿色电力证书与节能降碳政策衔接大力促进非化石能源消费的通知》（发改环资〔2024〕113 号）",
+      "绿证全覆盖政策"
+    ],
+    "drivers": [
+      {
+        "factor": "提高绿证市场需求",
+        "category": "政治/法律",
+        "strength_score": 4,
+        "evidence": "下一步，将从多个方面持续发力，推动绿证市场高质量发展。"
+      },
+      {
+        "factor": "加快建立绿色能源消费促进机制",
+        "category": "政治/法律",
+        "strength_score": 4,
+        "evidence": "加快建立绿色能源消费促进机制，稳步推进绿证强制消费，逐步扩大绿证强制消费行业范围。"
+      },
+      {
+        "factor": "健全绿证自愿消费机制",
+        "category": "政治/法律",
+        "strength_score": 3,
+        "evidence": "健全绿证自愿消费机制，鼓励企业打造绿色供应链、绿色产业链。"
+      }
+    ],
+    "barriers": [],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证强制消费 -> 企业绿色电力消费提升"
+    ],
+    "confidence": "high",
+    "source_title": "[PDF] 中国可再生能源绿色电力证书百问百答（2025 年版）",
+    "url": "https://sdb.nea.gov.cn/zxbs/bzzn/202503/P020250331456228948352.pdf",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "policy",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "企业",
+      "居民",
+      "电力用户",
+      "能源"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "《电力中长期交易基本规则—绿色电力交易专章》（发改能源〔2024〕1123号）",
+      "绿色电力消费认证标准立项"
+    ],
+    "drivers": [
+      {
+        "factor": "绿证提供环境属性溯源，促进绿色电力消费",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "绿证是认定绿色电力消费的唯一凭证，用能企业或个人均可以通过持有绿证证明完成绿色电力消费"
+      },
+      {
+        "factor": "绿证为发电企业带来环境收益，激励可再生能源项目开发",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "发电企业通过出售绿证，可获得绿色电力的环境收益，有利于调动项目开发建设的积极性"
+      },
+      {
+        "factor": "绿证打通电碳协同关键环节，助力双碳目标",
+        "category": "环境",
+        "strength_score": 4,
+        "evidence": "绿证作为追溯和证明绿色电力消费的权威凭证，打通了电碳协同的关键环节"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "绿证对应电量",
+        "value": "1000",
+        "unit": "度",
+        "year": null
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "国家能源局推广绿证 -> 用电企业购买绿证 -> 绿色电力消费提升"
+    ],
+    "confidence": "high",
+    "source_title": "国家能源局：《中国可再生能源绿色电力证书百问百答（2025年版）》",
+    "url": "http://www.scxunhuan.com/xwzx/hyxw/202508/t20250815_65972.html",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "policy",
+    "year": "2024",
+    "geography": "中国",
+    "sectors": [
+      "发电",
+      "电网",
+      "能源消费"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "平台"
+    ],
+    "stance_score": 0,
+    "policy_refs": [
+      "国家发展改革委 财政部 国家能源局关于做好可再生能源绿色电力证书全覆盖工作 促进可再生能源电力消费的通知（发改能源〔2023〕1044号）",
+      "国家发展改革委、国家能源局批复同意国家电网有限公司、中国南方电网有限责任公司和内蒙古电力(集团)有限责任公司的绿色电力交易试点工作方案"
+    ],
+    "drivers": [
+      {
+        "factor": "国家层面政策支持",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "国家能源局批准绿色电力交易试点工作方案"
+      },
+      {
+        "factor": "绿证收益归属清晰",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "绿证收益归发电企业或项目业主所有"
+      },
+      {
+        "factor": "交易平台建设",
+        "category": "技术/经济",
+        "strength_score": 4,
+        "evidence": "依托北京电力交易中心、广州电力交易中心"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿证归属规则复杂",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "对不再享受中央财政补贴的项目，绿证收益归发电企业或项目业主所有"
+      },
+      {
+        "factor": "抵消机制不一致",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "补贴项目绿证与无补贴项目绿证抵消作用是否一样"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "国家能源局政策 -> 绿证交易平台建设 -> 绿电交易业务开展"
+    ],
+    "confidence": "high",
+    "source_title": "关于绿电、绿证政策咨询 - 国家能源局",
+    "url": "https://www.nea.gov.cn/2024-08/20/c_1212390067.htm",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "全国",
+    "sectors": [
+      "风电",
+      "太阳能发电",
+      "生物质发电",
+      "其他可再生能源发电"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "平台"
+    ],
+    "stance_score": 0,
+    "policy_refs": [
+      "国家能源局绿色电力证书政策"
+    ],
+    "drivers": [
+      {
+        "factor": "交易价格下降",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "交易平均价格为4.99元/个，环比下降11.78%"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "9月绿证交易总量",
+        "value": "6512",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "2025年1—9月绿证交易总量",
+        "value": "52937",
+        "unit": "万个",
+        "year": "2025-01-09"
+      },
+      {
+        "name": "9月风电绿证交易量",
+        "value": "2860",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月太阳能绿证交易量",
+        "value": "3288",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月生物质绿证交易量",
+        "value": "162",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月其他可再生能源绿证交易量",
+        "value": "201",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月绿证平均价格",
+        "value": "4.99",
+        "unit": "元/个",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月绿证平均价格环比变化",
+        "value": "-11.78%",
+        "unit": "%",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月核发绿证总量",
+        "value": "22939",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "2025年1—9月核发绿证总量",
+        "value": "210758",
+        "unit": "万个",
+        "year": "2025-01-09"
+      },
+      {
+        "name": "9月风电核发绿证量",
+        "value": "7216",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月太阳能核发绿证量",
+        "value": "7324",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月常规水电核发绿证量",
+        "value": "6876",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月生物质核发绿证量",
+        "value": "1369",
+        "unit": "万个",
+        "year": "2025-09"
+      },
+      {
+        "name": "9月其他可再生能源核发绿证量",
+        "value": "155",
+        "unit": "万个",
+        "year": "2025-09"
+      }
+    ],
+    "method": "统计",
+    "sample_size": null,
+    "causal_links": [],
+    "confidence": "high",
+    "source_title": "国家能源局发布2025年9月全国可再生能源绿色电力证书核发及交易数据",
+    "url": "https://www.gjxfj.gov.cn/20251107/e28d112a0460499985fc33a157f84959/c.html",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "news",
+    "year": "2024",
+    "geography": "中国",
+    "sectors": [
+      "电力",
+      "绿色能源"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "平台"
+    ],
+    "stance_score": "0",
+    "policy_refs": [
+      "国家能源局电力业务资质管理中心"
+    ],
+    "drivers": [
+      {
+        "factor": "允许多次流转交易突破平台限制",
+        "category": "制度",
+        "strength_score": 4,
+        "evidence": "实际上GEC可以实现多次流转交易，突破了交易次数的限制"
+      },
+      {
+        "factor": "价格差异激励交易",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "越是新生产的绿证，其单价越高"
+      },
+      {
+        "factor": "代理交易机制提升交易灵活性",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "北京电力交易平台支持代理交易"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "平台交易次数限制",
+        "category": "制度障碍",
+        "severity_score": 4,
+        "evidence": "只能交易2次"
+      },
+      {
+        "factor": "缺乏平台代理交易支持",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "中国绿色电力证书交易平台不支持代理交易"
+      },
+      {
+        "factor": "采购价格低于平台交易价格",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "实际大宗采购成交价格低于平台交易价格"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "挂牌价格区间",
+        "value": "11-15",
+        "unit": "元/个",
+        "year": null
+      },
+      {
+        "name": "挂牌价格区间",
+        "value": "26-30",
+        "unit": "元/个",
+        "year": null
+      },
+      {
+        "name": "成交均价",
+        "value": "15",
+        "unit": "元/个",
+        "year": null
+      },
+      {
+        "name": "最低交易均价",
+        "value": "2",
+        "unit": "元/个",
+        "year": null
+      },
+      {
+        "name": "采购折合单价",
+        "value": "3.2",
+        "unit": "元/个",
+        "year": null
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "代理交易机制 -> 交易次数增加 -> 市场活跃度提升"
+    ],
+    "confidence": "medium",
+    "source_title": "中国绿证GEC交易流程最详细指南！一文读懂！",
+    "url": "https://www.carbon922.com/2024/07/17/%E4%B8%AD%E5%9B%BD%E7%BB%BF%E8%AF%81gec%E4%BA%A4%E6%98%93%E6%B5%81%E7%A8%8B%E6%9C%80%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97%EF%BC%81%E4%B8%80%E6%96%87%E8%AF%BB%E6%87%82%EF%BC%81/",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "电力"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "平台"
+    ],
+    "stance_score": 0,
+    "policy_refs": [
+      "中国可再生能源绿色电力证书百问百答（2025年版）"
+    ],
+    "drivers": [],
+    "barriers": [],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [],
+    "confidence": "high",
+    "source_title": "《中国可再生能源绿色电力证书百问百答（2025年版）》发布-新华网",
+    "url": "https://www.nea.gov.cn/20250318/78dbc76b24434bd9ae9db87c3e1f18eb/c.html",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "policy",
+    "year": "2024",
+    "geography": "China",
+    "sectors": [
+      "风电",
+      "光伏",
+      "光热发电"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "关于做好可再生能源绿色电力证书与自愿减排市场衔接工作的通知"
+    ],
+    "drivers": [
+      {
+        "factor": "政策支持与碳达峰碳中和目标",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "积极稳妥推进碳达峰碳中和"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "双重收益风险及合规复杂性",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "避免可再生能源发电项目从绿证和CCER重复获益"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 监管机制 -> 预防双重收益"
+    ],
+    "confidence": "high",
+    "source_title": "国家能源局综合司生态环境部办公厅关于做好可再生能源绿色电力 ...",
+    "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk10/202409/t20240911_1085663.html",
+    "keyword": "绿色电力证书",
+    "crawl_time": "2025-12-11T09:20:37.840060"
+  },
+  {
+    "source_type": "report",
+    "year": "2024",
+    "geography": "中国",
+    "sectors": [
+      "居民"
+    ],
+    "stakeholders": [
+      "政府",
+      "居民"
+    ],
+    "stance_score": 0,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "居民绿色电力消费意识提升",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "居民绿色电力消费意识也在不断的提升"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "居民自主购买绿证数量",
+        "value": "118万",
+        "unit": "份",
+        "year": "2024"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "居民绿色电力消费意识提升 -> 绿证购买数量增加"
+    ],
+    "confidence": "medium",
+    "source_title": "国家能源局发布《中国绿色电力证书发展报告（2024）》",
+    "url": "https://www.szgfa.com/down_view.aspx?nid=14&typeid=13&id=565",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "China",
+    "sectors": [
+      "居民",
+      "企业",
+      "公共机构",
+      "大型活动",
+      "用能企业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "平台"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "关于促进可再生能源绿色电力证书市场高质量发展的意见",
+      "中华人民共和国能源法",
+      "关于加强绿色电力证书与节能降碳政策衔接 大力促进非化石能源消费的通知"
+    ],
+    "drivers": [
+      {
+        "factor": "政府政策支持绿证市场",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "国家发展改革委、国家能源局、工业和信息化部、商务部和国家数据局近日联合印发了《关于促进可再生能源绿色电力证书市场高质量发展的意见》"
+      },
+      {
+        "factor": "居民及企业购买绿证需求增长",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "居民自主购买绿证数量不断提升…大规模活动、用能企业、公共机构、居民用电均通过购买绿证实现绿色电力消费"
+      },
+      {
+        "factor": "绿色发展与碳中和目标",
+        "category": "环境",
+        "strength_score": 4,
+        "evidence": "助力实现“双碳”目标具有重大意义"
+      },
+      {
+        "factor": "法律制度保障",
+        "category": "法律",
+        "strength_score": 5,
+        "evidence": "2025年起实施的《中华人民共和国能源法》明确，国家通过实施可再生能源绿色电力证书（绿证）等制度建立绿色能源消费促进机制"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "缺乏强制绿色电力消费比例目标",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "对行业提出强制绿色电力消费比例目标"
+      }
+    ],
+    "metrics": [],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 市场规模扩大 -> 绿证需求提升",
+      "居民购买量增加 -> 社会绿色电力消费水平提升"
+    ],
+    "confidence": "medium",
+    "source_title": "推动绿证市场高质量发展提升社会用电“含绿量” - 国家能源局",
+    "url": "https://www.nea.gov.cn/20250321/03fd118e38fe4c6990c2eeb6a238ae25/c.html",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "news",
+    "year": null,
+    "geography": "中国",
+    "sectors": [
+      "居民"
+    ],
+    "stakeholders": [
+      "居民"
+    ],
+    "stance_score": 2,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "可再生能源装机容量快速增长",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "风电和太阳能光伏发电的累计装机容量都居世界第一"
+      }
+    ],
+    "barriers": [],
+    "metrics": [],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [],
+    "confidence": "low",
+    "source_title": "中国消费者愿为“绿色电力”买单| 对话地球 - Dialogue Earth",
+    "url": "https://dialogue.earth/zh/4/43337/",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "news",
+    "year": "2024",
+    "geography": "中国",
+    "sectors": [
+      "居民",
+      "企业",
+      "公共机构"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "广东省可再生能源消纳责任权重分解政策",
+      "山西省高载能企业绿色电力强制消费机制",
+      "深圳市绿色电力碳排放核算规则",
+      "北京市绿色电力碳排放核算规则",
+      "湖北省绿色电力碳排放核算规则",
+      "上海市绿色电力碳排放核算规则",
+      "国家能源局中欧绿证互认调研"
+    ],
+    "drivers": [
+      {
+        "factor": "政策支持",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "地方政府出台政策推动绿证应用"
+      },
+      {
+        "factor": "碳排放核算衔接",
+        "category": "技术/环境",
+        "strength_score": 4,
+        "evidence": "绿证在碳排放核算中的具体方法和规则"
+      },
+      {
+        "factor": "国际互认",
+        "category": "政治/法律",
+        "strength_score": 4,
+        "evidence": "中欧绿证互认调研及与欧盟的合作"
+      },
+      {
+        "factor": "市场需求增长",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "2024年居民自主购买绿证近118万张"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "低价格导致环境价值被低估",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "低价会对促进用户侧绿色电力消费具有一定的助力作用，但绿色电力环境价值被低估在一定程度上也削弱了对可再生能源的激励作用"
+      },
+      {
+        "factor": "价格下行可能削弱供给侧激励",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "绿证交易价格呈下行趋势，可能削弱对可再生能源的激励作用"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "居民绿证购买量",
+        "value": "118万张",
+        "unit": "张",
+        "year": "2024"
+      },
+      {
+        "name": "绿证单独交易均价",
+        "value": "5.59",
+        "unit": "元/个",
+        "year": "2024"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 市场供给扩大 -> 绿证需求提升",
+      "价格下降 -> 用户购买行为变化"
+    ],
+    "confidence": "high",
+    "source_title": "【中国电力报】《中国绿色电力证书发展报告（2024）》发布",
+    "url": "https://www.ctgne.com/sxxnychina/1077761/1077770/2025050711512219773/index.html",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "大型活动",
+      "用能企业",
+      "公共机构",
+      "居民",
+      "企业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "金融"
+    ],
+    "stance_score": 2,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "居民绿色电力消费意识提升，2024年居民自主购买绿证近118万个",
+        "category": "社会",
+        "strength_score": 4,
+        "evidence": "2024年居民自主购买绿证近118万个"
+      },
+      {
+        "factor": "国家能源局贯彻党中央、国务院决策部署，推动绿证市场培育",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "国家能源局将认真贯彻落实党中央、国务院决策部署"
+      },
+      {
+        "factor": "绿证价格监测和价格指数研究，提升价格合理性",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "健全绿证价格形成机制，加强绿证价格监测，研究建立绿证价格指数"
+      },
+      {
+        "factor": "企业利用绿证进行ESG报告披露，推动绿色产业链建设",
+        "category": "法律",
+        "strength_score": 3,
+        "evidence": "绿证已成为企业建设绿色产业链，报告碳足迹，完成ESG报告披露"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿证市场供需不平衡",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "绿证市场供需不平衡"
+      },
+      {
+        "factor": "绿证价格较低，绿色电力环境价值未充分体现",
+        "category": "经济障碍",
+        "severity_score": 4,
+        "evidence": "绿证价格较低，绿色电力环境价值尚未充分体现"
+      },
+      {
+        "factor": "绿证纳入碳排放核算方法尚不明确",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "绿证纳入碳排放核算的具体方法还需要进一步明确"
+      },
+      {
+        "factor": "相关标准需进一步健全",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "相关标准还需要进一步健全"
+      },
+      {
+        "factor": "绿证国际互认仍需推进",
+        "category": "制度障碍",
+        "severity_score": 3,
+        "evidence": "绿证国际互认仍需持续推进"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "居民购买绿证数量",
+        "value": "118万",
+        "unit": "份",
+        "year": "2024"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 市场活力提升 -> 绿证购买增加"
+    ],
+    "confidence": "medium",
+    "source_title": "国家能源局绿证专题新闻发布会文字实录",
+    "url": "https://www.nea.gov.cn/20250318/764a752a063f48e590068bdd521d0cee/c.html",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "news",
+    "year": "2022",
+    "geography": "China",
+    "sectors": [
+      "居民"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "平台"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "促进绿色消费实施方案",
+      "分时电价政策"
+    ],
+    "drivers": [
+      {
+        "factor": "智能家电",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "大力推广智能家电，通过优化开关时间、错峰启停，减少非必要耗能"
+      },
+      {
+        "factor": "分时电价政策",
+        "category": "政策",
+        "strength_score": 5,
+        "evidence": "完善分时电价政策，有效拉大峰谷价差和浮动幅度，引导用户错峰储能和用电"
+      },
+      {
+        "factor": "绿色消费积分与碳普惠积分",
+        "category": "政策",
+        "strength_score": 4,
+        "evidence": "绿色消费积分、碳普惠积分、社区排名、虚拟电厂等激励措施"
+      },
+      {
+        "factor": "互联网与人工智能技术",
+        "category": "技术",
+        "strength_score": 4,
+        "evidence": "充分利用互联网与人工智能等数字技术"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "长期行为难以改变",
+        "category": "心理障碍",
+        "severity_score": 3,
+        "evidence": "人的行为具有静默性，一段时间内很难做出改变"
+      },
+      {
+        "factor": "缺少本地绿色电力时段分布信息",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "组织电网企业定期梳理、公布本地绿色电力时段分布"
+      }
+    ],
+    "metrics": [],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "分时电价政策 -> 引导用户错峰储能和用电",
+      "智能家电 -> 减少非必要耗能 -> 参与电网调峰"
+    ],
+    "confidence": "medium",
+    "source_title": "产业观察| 居民侧绿色电力消费的四个关键因素",
+    "url": "http://www.ceia.eea.tsinghua.edu.cn/hyzx/9bbbdbc165dd498395ec5e533a48537d.htm",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "制造业",
+      "能源行业",
+      "居民"
+    ],
+    "stakeholders": [
+      "企业",
+      "居民"
+    ],
+    "stance_score": 1,
+    "policy_refs": [],
+    "drivers": [
+      {
+        "factor": "绿证消费主体范围显著提升",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "绿证消费主体范围显著提升"
+      },
+      {
+        "factor": "80%以上消费主体来自制造业和能源行业",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "80%以上消费主体来自制造业和能源行业"
+      },
+      {
+        "factor": "居民绿色电力消费意识不断增长",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "居民绿色电力消费意识不断增长"
+      },
+      {
+        "factor": "截至2025年4月底，居民自主购买",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "截至2025年4月底，居民自主购买"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "消费主体占比",
+        "value": "80%",
+        "unit": "%",
+        "year": null
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "绿证消费主体范围提升 -> 80%以上消费主体来自制造业和能源行业",
+      "居民绿色电力消费意识提升 -> 居民自主购买"
+    ],
+    "confidence": "high",
+    "source_title": "中国绿证将重塑全球绿色供应链格局 - 能源发展网",
+    "url": "https://www.nationalee.com/newsinfo/8364166.html",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "居民",
+      "高耗能行业"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网",
+      "平台"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "关于推进绿色电力消费的意见",
+      "中国绿色电力证书发展报告（2024）"
+    ],
+    "drivers": [
+      {
+        "factor": "政策激励促进绿证消费",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "提出推广绿色充电桩，支持新能源汽车充绿色电力"
+      },
+      {
+        "factor": "居民绿色消费意识提升",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "2024年，我国居民自主购买绿证近118万个"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "居民对绿证认知不足",
+        "category": "信息障碍",
+        "severity_score": 3,
+        "evidence": "政策出台后，不一定会立竿见影地看到居民账户购买绿证的规模有很大幅度的增长"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "居民自主购买绿证数量",
+        "value": "118万",
+        "unit": "个",
+        "year": "2024"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "政策激励 -> 绿证推广 -> 居民购买绿证",
+      "绿证推广 -> 绿色充电桩普及 -> 新能源汽车充电绿色电力"
+    ],
+    "confidence": "medium",
+    "source_title": "打通绿色能源消费需求侧“梗阻” - 中国青年报",
+    "url": "http://zqb.cyol.com/pc/content/202503/25/content_408877.html",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "news",
+    "year": "2025",
+    "geography": "中国",
+    "sectors": [
+      "新能源",
+      "居民"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民"
+    ],
+    "stance_score": 1,
+    "policy_refs": [
+      "绿证制度体系"
+    ],
+    "drivers": [
+      {
+        "factor": "政策推动",
+        "category": "政治",
+        "strength_score": 5,
+        "evidence": "在政策推动、产业需求以及市场机制的共同驱动之下"
+      },
+      {
+        "factor": "产业需求",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "在政策推动、产业需求以及市场机制的共同驱动之下"
+      },
+      {
+        "factor": "市场机制",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "在政策推动、产业需求以及市场机制的共同驱动之下"
+      },
+      {
+        "factor": "居民绿色电力消费意识提升",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "居民绿色电力消费意识不断增长"
+      },
+      {
+        "factor": "可再生能源装机快速增长",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "随着我国可再生能源装机的快速增长，绿证的供给量也将持续增长"
+      },
+      {
+        "factor": "价格回升",
+        "category": "经济",
+        "strength_score": 3,
+        "evidence": "价格也触底回升"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "绿证交易价格震荡下行",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "绿证交易价格呈现震荡下行态势"
+      },
+      {
+        "factor": "供需关系不均衡",
+        "category": "经济障碍",
+        "severity_score": 2,
+        "evidence": "受政策、供需关系等因素影响"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "全年核发绿证",
+        "value": "47.34亿",
+        "unit": "个",
+        "year": "2024"
+      },
+      {
+        "name": "全国绿证交易规模",
+        "value": "4.46亿",
+        "unit": "个",
+        "year": "2024"
+      },
+      {
+        "name": "绿证单独交易量",
+        "value": "2.77亿",
+        "unit": "个",
+        "year": "2024"
+      },
+      {
+        "name": "绿色电力交易绿证量",
+        "value": "1.69亿",
+        "unit": "个",
+        "year": "2024"
+      },
+      {
+        "name": "参与绿证交易的消费主体数",
+        "value": "5.9万",
+        "unit": "个",
+        "year": "2024"
+      },
+      {
+        "name": "居民自主购买绿证量",
+        "value": "270万",
+        "unit": "个",
+        "year": "2025"
+      },
+      {
+        "name": "绿证单独交易月度均价",
+        "value": "3—24",
+        "unit": "元/个区间",
+        "year": "2024"
+      }
+    ],
+    "method": "新闻",
+    "sample_size": null,
+    "causal_links": [
+      "政策推动 -> 绿证核发扩大 -> 绿证交易规模提升",
+      "居民绿色电力消费意识提升 -> 居民购买绿证量增加"
+    ],
+    "confidence": "medium",
+    "source_title": "中国绿证国际化迈上新台阶 - 人民日报",
+    "url": "https://paper.people.com.cn/zgnyb/pc/content/202505/26/content_30076179.html",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "report",
+    "year": "2019",
+    "geography": "United States",
+    "sectors": [
+      "居民用电",
+      "小型商业用户",
+      "大型非居民用户",
+      "社区太阳能",
+      "自行发电"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "居民",
+      "电网"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "非捆绑绿证市场",
+      "社区太阳能项目"
+    ],
+    "drivers": [
+      {
+        "factor": "低廉价格",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "绿电附加费用为1～2美分/kWh"
+      },
+      {
+        "factor": "透明来源与信息",
+        "category": "技术",
+        "strength_score": 3,
+        "evidence": "绿色电费项目采购的绿电有清晰的来源及发电项目信息"
+      },
+      {
+        "factor": "价格确定性",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "消费者可以获得某种形式的确定价格"
+      },
+      {
+        "factor": "长期合同",
+        "category": "政治",
+        "strength_score": 3,
+        "evidence": "消费者往往与公用事业机构签订了更长的合同（大于两年）"
+      },
+      {
+        "factor": "社区参与与规模效应",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "社区集中采购已在多州实施，参与用户约273万"
+      }
+    ],
+    "barriers": [
+      {
+        "factor": "成本不确定",
+        "category": "经济障碍",
+        "severity_score": 3,
+        "evidence": "非捆绑绿证市场价格在2014-2017年间下跌了一半多，2018年有所回升"
+      },
+      {
+        "factor": "信息障碍",
+        "category": "信息障碍",
+        "severity_score": 2,
+        "evidence": "过去几年，非捆绑绿证市场主要由大型买家参与；一部分居民用户和小型商业用户也参与进来"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "非捆绑绿证市场用户数量",
+        "value": "192,000",
+        "unit": "人",
+        "year": "2017"
+      },
+      {
+        "name": "非捆绑绿证市场采购量",
+        "value": "518",
+        "unit": "亿kWh",
+        "year": "2017"
+      },
+      {
+        "name": "社区太阳能销售",
+        "value": "88.8",
+        "unit": "亿kWh",
+        "year": "2017"
+      }
+    ],
+    "method": "评论",
+    "sample_size": null,
+    "causal_links": [
+      "绿色电费项目 -> 价格确定性 -> 采用率提升",
+      "社区太阳能 -> 降低成本 -> 采用率提升"
+    ],
+    "confidence": "medium",
+    "source_title": "[PDF] 美国绿色电力市场综述 - 世界资源研究所",
+    "url": "https://wri.org.cn/sites/default/files/2021-12/green-power-market-us-experience-CN.pdf",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  },
+  {
+    "source_type": "news",
+    "year": "2023",
+    "geography": "中国",
+    "sectors": [
+      "能源"
+    ],
+    "stakeholders": [
+      "政府",
+      "企业",
+      "电网",
+      "居民"
+    ],
+    "stance_score": 2,
+    "policy_refs": [
+      "《进一步做好新增可再生能源消费不纳入能源消费总量控制有关工作的通知》",
+      "《党的二十大报告》"
+    ],
+    "drivers": [
+      {
+        "factor": "绿证为发电企业提供额外环境收益，激励投资",
+        "category": "经济",
+        "strength_score": 4,
+        "evidence": "通过出售绿证，发电企业可以获得独立于可再生能源电能量价值的额外绿色环境收益"
+      },
+      {
+        "factor": "政府主导推广绿证交易，引导绿色电力消费",
+        "category": "政治",
+        "strength_score": 4,
+        "evidence": "国家能源局积极推进绿色电力证书交易，引导绿色电力消费"
+      },
+      {
+        "factor": "国际企业承诺100%使用绿色电力",
+        "category": "社会",
+        "strength_score": 3,
+        "evidence": "一些有环保意识的跨国企业已作出100%使用绿色电力的承诺"
+      }
+    ],
+    "barriers": [],
+    "metrics": [
+      {
+        "name": "绿证核发数量",
+        "value": "2060万",
+        "unit": "个",
+        "year": "2022"
+      },
+      {
+        "name": "绿证核发对应电量",
+        "value": "206",
+        "unit": "亿千瓦时",
+        "year": "2022"
+      },
+      {
+        "name": "绿证交易数量",
+        "value": "969万",
+        "unit": "个",
+        "year": "2022"
+      },
+      {
+        "name": "绿证交易对应电量",
+        "value": "96.9",
+        "unit": "亿千瓦时",
+        "year": "2022"
+      },
+      {
+        "name": "累计核发绿证",
+        "value": "5954万",
+        "unit": "个",
+        "year": "2022"
+      },
+      {
+        "name": "累计交易数量",
+        "value": "1031万",
+        "unit": "个",
+        "year": "2022"
+      }
+    ],
+    "method": "政策解读",
+    "sample_size": null,
+    "causal_links": [
+      "绿证发行 -> 额外环境收益 -> 推动新能源投资",
+      "绿证交易 -> 引导绿色电力消费"
+    ],
+    "confidence": "high",
+    "source_title": "并介绍完善可再生能源绿色电力证书制度有关工作进展 - 中国政府网",
+    "url": "https://www.gov.cn/xinwen/2023-02/14/content_5741481.htm",
+    "keyword": "居民绿色电力",
+    "crawl_time": "2025-12-11T09:20:38.114240"
+  }
+]

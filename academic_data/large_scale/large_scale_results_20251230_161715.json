@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "research_topic": "中国绿电消费驱动和阻碍因素大规模研究",
+    "crawl_time": "2025-12-30T16:17:15.400680",
+    "total_keywords": 185,
+    "keywords_processed": 140,
+    "total_documents": 0,
+    "statistics": {
+      "total_documents": 0,
+      "keywords_processed": 140,
+      "unique_urls": 1330,
+      "keyword_coverage": {
+        "core_concepts": 15,
+        "driving_factors": 20,
+        "barrier_factors": 20,
+        "policy_institutional": 25,
+        "market_economic": 20,
+        "technology_innovation": 15,
+        "industry_scenarios": 20,
+        "regional_studies": 5,
+        "international_comparison": 0,
+        "consumer_behavior": 0,
+        "research_methods": 0
+      }
+    }
+  },
+  "results": []
+}
