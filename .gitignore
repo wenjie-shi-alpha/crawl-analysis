@@ -30,3 +30,23 @@ node_modules/
 
 # Misc
 .DS_Store
+
+# Auto visualization artifacts (ignore generated charts, keep JSON/JSONL as needed)
+output/
+data/output/advanced_viz_*/
+data/output/analysis_audit_*/
+data/output/analysis_refactor_*/
+data/output/analysis_schema_fix_*/
+data/output/viz_*/
+data/output/**/charts/
+data/output/**/*.png
+data/output/**/*.pdf
+data/output/**/*.svg
+data/output/**/*.html
+
+# Paper-writing outputs
+academic_research/output/papers/
+RCR_Advance_Submission_*.docx
+*_RCR_Advance投稿稿.docx
+RCR_Advances_highlights.txt
+methods_section_rewrite_aligned.md
